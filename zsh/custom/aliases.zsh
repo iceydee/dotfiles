@@ -10,6 +10,8 @@ alias rogo='git log --oneline --author=mio --after=`date +%Y-%m-%d`" 00:00" | cu
 alias rbp='rails_best_practices -f html --with-textmate . ; open rails_best_practices_output.html'
 alias web='python -m SimpleHTTPServer'
 
+alias crontab="VIM_CRONTAB=true crontab"
+
 alias gf='git flow'
 alias gff='gf feature'
 alias gfc='gff checkout'
