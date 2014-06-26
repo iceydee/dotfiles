@@ -48,5 +48,5 @@ function redis-prod {
   echo -n "Production password: "
   read P
   clear
-  redis-cli -h pub-redis-14363.eu-west-1-1.2.ec2.garantiadata.com -p 14363 -a ${P}
+  redis-cli -h pub-redis-14363.eu-west-1-1.2.ec2.garantiadata.com -p 14363 -a '${P}'
 }
