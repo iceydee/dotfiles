@@ -43,3 +43,10 @@ function vt {
   git log --oneline ${PREVIOUS_TAG}..HEAD
   git log --oneline ${PREVIOUS_TAG}..HEAD | cut -d" " -f2- | pbcopy
 }
+
+function redis-prod {
+  echo -n "Production password: "
+  read P
+  clear
+  redis-cli -h pub-redis-14363.eu-west-1-1.2.ec2.garantiadata.com -p 14363 -a ${P}
+}
