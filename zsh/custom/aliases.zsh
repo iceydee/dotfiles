@@ -19,6 +19,10 @@ alias gfr='gf release'
 
 alias yb='rake yolo:release:ipa'
 
+alias v='vagrant'
+alias vp='vagrant provision'
+alias vu='vagrant up'
+
 function gitstats {
   # Arg1 = from
   # Arg2 = to
