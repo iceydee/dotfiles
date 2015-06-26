@@ -17,6 +17,11 @@ alias gff='gf feature'
 alias gfc='gff checkout'
 alias gfr='gf release'
 
+alias vp='vagrant provision'
+alias vu='vagrant up'
+
+alias gi='ghi open --claim -M'
+
 alias yb='rake yolo:release:ipa'
 
 alias v='vagrant'
