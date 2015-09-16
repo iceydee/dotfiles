@@ -52,5 +52,8 @@ export PATH=$PATH:/Users/mio/.nvm/v0.10.4/bin:/usr/local/bin:/opt/local/bin:/opt
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+# Add algolia search client
+export PATH="/Users/mio/src/algoliasearch-client-cmd:$PATH"
+
 # added by travis gem
 [ -f /Users/mio/.travis/travis.sh ] && source /Users/mio/.travis/travis.sh
