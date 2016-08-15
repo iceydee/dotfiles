@@ -21,12 +21,16 @@ alias vp='vagrant provision'
 alias vu='vagrant up'
 
 alias gi='ghi open --claim -M'
+alias git='hub'
 
 alias yb='rake yolo:release:ipa'
 
 alias v='vagrant'
 alias vp='vagrant provision'
 alias vu='vagrant up'
+
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
 
 function gitstats {
   # Arg1 = from
