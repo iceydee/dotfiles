@@ -4,3 +4,12 @@ ln -sf ~/my/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 for FILE in `find ~/my/dotfiles/zsh/custom -type f`; do
   ln -sf ${FILE} ~/.oh-my-zsh/custom/`basename ${FILE}`
 done
+
+# Install powerline fonts
+mkdir -p ~/.fonts
+mkdir -p ~/.config/fontconfig/conf.d
+wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
+wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
+mv PowerlineSymbols.otf ~/.fonts/
+fc-cache -vf ~/.fonts/
+mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
