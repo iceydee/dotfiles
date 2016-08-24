@@ -25,6 +25,9 @@ alt + w
 alt + x
   $HOME/scripts/tmux_purge
 
+ctrl + q
+  bspc node -c
+
 # Close window
 alt + shift + x
   bspc  window -c
