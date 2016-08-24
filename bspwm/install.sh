@@ -35,3 +35,20 @@ cd ~/src/github.com/krypt-n
 cd !:1
 git clone https://github.com/krypt-n/bar.git
 cd bar && make && sudo make install
+
+# Install termite
+~/my/dotfiles/install_termite.sh
+
+echo
+echo
+echo
+
+# Setup bspwm
+mkdir -p ~/.config/bspwm
+mkdir -p ~/.config/sxhkd
+ln -sf ~/my/dotfiles/bspwm/bspwmrc ~/.config/bspwm/bspwmrc
+ln -sf ~/my/dotfiles/bspwm/sxhkdrc ~/.config/sxhkd/sxhkdrc
+ln -sf ~/my/dotfiles/bspwm/panel ~/.config/bspwm/panel
+ln -sf ~/my/dotfiles/bspwm/panel_bar ~/.config/bspwm/panel_bar
+ln -sf ~/my/dotfiles/bspwm/panel_colors ~/.config/bspwm/panel_colors
+sudo cp ~/my/dotfiles/bspwm/bspwm.desktop /usr/share/xsessions/
