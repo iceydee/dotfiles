@@ -9,8 +9,10 @@ alt + shift + q
 # Toggle panels
 alt + q
   {pkill panel; pkill cat; pkill conky; bspc config top_padding 0 ,\
-  bspc config top_padding 14; $HOME/.config/bspwm/panel/panel & }
+  ${HOME}/.config/bspwm/panel & }
 
+alt + ctrl + {Right,Down,Left,Up}
+  bspc desktop -f {next,next,prev,prev}.local
 
 alt + {Right,Down,Left,Up}
   bspc node -f {next,next,prev,prev}.local
