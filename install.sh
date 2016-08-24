@@ -16,3 +16,6 @@ mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 
 # Install bspwm
 ./bspwm/install.sh
+
+# Install termite
+./termite/install.sh

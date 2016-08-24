@@ -157,7 +157,7 @@ alt + shift + backslash
   create_frame
 
 alt + shift + Return
-  termite
+  termite -e tmux
 
 alt + ctrl + Return
    bspc rule -a termite -o pseudo_tiled=on && termite

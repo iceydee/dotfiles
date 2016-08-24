@@ -36,9 +36,6 @@ cd !:1
 git clone https://github.com/krypt-n/bar.git
 cd bar && make && sudo make install
 
-# Install termite
-~/my/dotfiles/install_termite.sh
-
 echo
 echo
 echo
