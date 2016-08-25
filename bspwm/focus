@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ -z "${1}" ]; then
+  exit 1
+fi
+
+for NODE in $(bspc query -N); do
+  NAME=$(bspc query -T -n ${NODE} | jq -r .client.instanceName)
+  if [ "${NAME}" == "${1}" ]; then
+    bspc node -f ${NODE}
+    break
+  fi
+done
