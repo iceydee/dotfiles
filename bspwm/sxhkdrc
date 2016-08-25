@@ -7,6 +7,10 @@
 super + space
   {setxkbmap se, setxkbmap us}
 
+# Launcher
+super + Tab
+  launcher
+
 # Lock screen
 super + l
   dm-tool lock
@@ -89,17 +93,11 @@ alt + shift + r
 super + b
   chromium-browser
 
-alt + shift + n
-  xterm
-
 super + s
   slack
 
-alt + z
-  zathura
-
-alt + Tab
-  {$HOME/.config/bspwm/panel/launcher_menu $HOME/.config/bspwm/panel/launcher_apps, pkill dzen2}
+super + f
+  nautilus
 
 Print
   scrot -q 100

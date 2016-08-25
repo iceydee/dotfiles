@@ -19,3 +19,6 @@ mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 
 # Install termite
 ./termite/install.sh
+
+# Install dmenu2
+./dmenu2/install.sh
