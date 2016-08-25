@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Setup tmux for bg processes
+tmux new -s bgprocs -d
+
 function setDesktop() {
   sleep 0.5
   bspc desktop -f ${1}
@@ -7,11 +10,11 @@ function setDesktop() {
 }
 
 function launch() {
-  ${1} &
+  tmux send-keys -t bgprocs "${1} &" C-m
   if [ -n "${2}" ]; then
     sleep ${2}
   else
-    sleep 0.5
+    sleep 1
   fi
 }
 
@@ -25,6 +28,11 @@ function launchWithRule() {
   launch "${1}"
 }
 
+function lockNode() {
+  bspc node -g private
+  sleep 0.5
+}
+
 # Setup desktop 1
 setDesktop I
 launch slack 3
@@ -36,8 +44,14 @@ launch "chromium-browser"
 # Setup desktop 2
 setDesktop II
 launch subl
-launchWithRule "termite -e tmux" Termite south 0.6
+lockNode
+tmux new -s main -d
+launchWithRule "termite -e 'tmux a -t main'" Termite south 0.6
+lockNode
 launchWithRule "termite -e '${HOME}/my/dotfiles/bspwm/task_panel'" Termite east 0.7
+lockNode
+focus termite
 
 # Setup panel
-#~/.config/bspwm/panel &
+tmux new -s panel -d
+tmux send-keys -t panel '~/.config/bspwm/panel &' C-m
