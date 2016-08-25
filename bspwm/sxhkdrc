@@ -3,96 +3,33 @@
 # bspwm hotkeys
 #
 
-alt + shift + q
-  bspc quit 1 && pkill bar && pkill dzen2
+# Change keyboard language
+super + space
+  {setxkbmap se, setxkbmap us}
 
-# Toggle panels
-alt + q
-  {pkill panel; pkill cat; pkill conky; bspc config top_padding 0 ,\
-  ${HOME}/.config/bspwm/panel & }
+# Lock screen
+super + l
+  dm-tool lock
 
+# Logout
+super + alt + l
+  sudo service lightdm restart
+
+# Cycle desktops
 alt + ctrl + {Right,Down,Left,Up}
   bspc desktop -f {next,next,prev,prev}.local
 
-alt + {Right,Down,Left,Up}
+# Cycle nodes
+shift + alt + {Right,Down,Left,Up}
   bspc node -f {next,next,prev,prev}.local
 
-# Workstation Monitor
-alt + w
-  bspc monitor -f next
-
-# Kill all detached tmux sessions
-alt + x
-  $HOME/scripts/tmux_purge
-
+# Kill node
 ctrl + q
-  bspc node -c
-
-# Close window
-alt + shift + x
-  bspc  window -c
-
-# Kill window
-alt + ctrl + shift + x
-  bspc  window -k
-
-# Toggle tile
-alt + {_,shift +} t
-  bspc window -t {floating,fullscreen}
-
-# Lock node
-alt + shift + p
-  bspc window -t private
+  bspc node -k
 
 # Balance tree
 alt + b
   bspc desktop -B
-
-# Presel window for splitting
-alt + ctrl + {h,j,k,l}
-  bspc window -p {left,down,up,right}
-
-# Move window into presel position
-alt + shift {a,s,d,f}
-  bspc window -w {left.manual,down.manual,up.manual,right.manual}
-
-# Select windows, or move
-alt + {_,shift + }{h,j,k,l}
-  bspc window -{f,s} {left,down,up,right} || bspc window -f {prev, prev, next, next}
-
-# Resize nodes
-alt + {a,f}
-  $HOME/scripts/window_move.sh {-p,-n} -x -s 20
-alt + {s,d}
-  $HOME/scripts/window_move.sh {-p,-n} -y -s 20
-
-# Move floating windows (requires baskerville's xdo)
-alt + {Left,Right,Up,Down}
-    xdo move {-x -20,-x +20,-y -20,-y +20}
-
-# Resize floating windows
-alt + shift + {Left,Right,Up,Down}
-    xdo resize {-w -20,-w +20,-h -20,-h +20}    bspc window -e {left -10,down +10,up -10,right +10} || {right -10,up +10,down -10,left +10}
-
-# Move current window to largest space
-alt + Return
-  bspc window -s biggest
-
-# Mirror and flip leaves of tree
-alt + {comma,period}
-  bspc desktop -F {horizontal,vertical}
-
-# Rotate leaves of tree
-alt + shift + {comma,period}
-  bspc desktop -R {90,270}
-
-# Select previous / next desktop
-alt + {p,n}
-  bspc desktop -f {prev.occupied,next.occupied}
-
-# Lock a window from closing
-alt + Escape
-  bspc window -t locked
 
 # Toggle monocle
 alt + space
@@ -101,30 +38,6 @@ alt + space
 # Toggle pseudotiled (floating in tile)
 alt + shift + space
   bspc window -t pseudo_tiled
-
-# Focus on floating / tiled
-alt + e
-  bspc window -f {next.floating,next.tiled}
-
-# Change desktop padding
-alt + {_, shift} + bracketright
-  bspc config -d focused right_padding $((`bspc config -d focused right_padding` {+,-} 20 ))
-
-alt + {_, shift} + bracketleft
-  bspc config -d focused left_padding $((`bspc config -d focused left_padding` {+,-} 20 ))
-
-ctrl + {_, shift} + bracketright
-  bspc config -d focused bottom_padding $((`bspc config -d focused bottom_padding` {+,-} 20 ))
-
-ctrl + {_, shift} + bracketleft
-  bspc config -d focused top_padding $((`bspc config -d focused top_padding` {+,-} 20 ))
-
-alt + shift + {minus,equal}
-  bspc config -d focused right_padding $((`bspc config -d focused right_padding` {+,-} 20 )); \
-  bspc config -d focused left_padding $((`bspc config -d focused left_padding` {+,-} 20 )); \
-  bspc config -d focused bottom_padding $((`bspc config -d focused bottom_padding` {+,-} 20 )); \
-  bspc config -d focused top_padding $((`bspc config -d focused top_padding` {+,-} 20 ));
-
 
 # Change window gap
 alt + {minus,equal}
