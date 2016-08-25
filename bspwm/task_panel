@@ -1,0 +1,7 @@
+#!/bin/bash
+
+while :; do
+  task next
+  sleep 10
+  clear
+done

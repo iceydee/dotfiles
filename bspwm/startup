@@ -1,0 +1,43 @@
+#!/bin/bash
+
+function setDesktop() {
+  sleep 0.5
+  bspc desktop -f ${1}
+  sleep 0.5
+}
+
+function launch() {
+  ${1} &
+  if [ -n "${2}" ]; then
+    sleep ${2}
+  else
+    sleep 0.5
+  fi
+}
+
+function launchWithRule() {
+  if [ -z "${4}" ]; then
+    ratio=0.5
+  else
+    ratio=${4}
+  fi
+  bspc rule -a ${2} -o split_dir="${3}" split_ratio=${ratio}
+  launch "${1}"
+}
+
+# Setup desktop 1
+setDesktop I
+launch slack 3
+
+# Setup desktop 3
+setDesktop III
+launch "chromium-browser"
+
+# Setup desktop 2
+setDesktop II
+launch subl
+launchWithRule "termite -e tmux" Termite south 0.6
+launchWithRule "termite -e '${HOME}/my/dotfiles/bspwm/task_panel'" Termite east 0.7
+
+# Setup panel
+#~/.config/bspwm/panel &
