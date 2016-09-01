@@ -11,6 +11,10 @@ super + space
 super + Tab
   launcher
 
+# Reload startup screen
+super + alt + r
+  ~/.config/bspwm/startup
+
 # Lock screen
 super + l
   dm-tool lock

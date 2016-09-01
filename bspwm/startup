@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Cleanup (if we're reloading)
+if [ -n "$(tmux ls | cut -d":" -f1 | grep "bgprocs")" ]; then
+  tmux kill-session -t bgprocs
+fi
+killall sublime_text
+killall slack
+
 # Setup tmux for bg processes
 tmux new -s bgprocs -d
 
@@ -51,6 +58,9 @@ lockNode
 launchWithRule "termite -e '${HOME}/my/dotfiles/bspwm/task_panel'" Termite east 0.7
 lockNode
 focus termite
+
+# Run xwrits
+launch "xwrits breaktime=2:00 typetime=30:00 +mouse" 0.05
 
 # Setup panel
 tmux new -s panel -d
