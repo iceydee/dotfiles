@@ -21,7 +21,7 @@ super + l
 
 # Logout
 super + alt + l
-  sudo service lightdm restart
+  pkill chromium ; sudo service lightdm restart
 
 # Focus termite
 ctrl + grave
