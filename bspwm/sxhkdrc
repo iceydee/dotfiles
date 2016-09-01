@@ -23,6 +23,10 @@ super + l
 super + alt + l
   pkill chromium ; sudo service lightdm restart
 
+# Shutdown
+ctrl + super + alt + l
+  pkill chromium ; shutdown now
+
 # Focus termite
 ctrl + grave
   focus termite ; bspc desktop -l next
