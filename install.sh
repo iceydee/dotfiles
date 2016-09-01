@@ -14,6 +14,9 @@ mv PowerlineSymbols.otf ~/.fonts/
 fc-cache -vf ~/.fonts/
 mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 
+# Install Compton
+./compton/install.sh
+
 # Install bspwm
 ./bspwm/install.sh
 
