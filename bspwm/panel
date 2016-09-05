@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/bash
 
 if xdo id -a "$PANEL_WM_NAME" > /dev/null ; then
 	printf "%s\n" "The panel is already running." >&2
@@ -14,6 +14,25 @@ bspc config top_padding $PANEL_HEIGHT
 bspc subscribe report > "$PANEL_FIFO" &
 xtitle -sf 'T%s' > "$PANEL_FIFO" &
 clock -sf 'S%b %d %H:%M' > "$PANEL_FIFO" &
+
+while :; do
+  cur_battery="$(acpi | awk '{gsub(",",""); print $4+0}')"
+  if [[ $cur_battery -le 20 ]]; then
+    printf "BLOWBAT:%3s%%\n" "$cur_battery" > ${PANEL_FIFO}
+  else
+    printf "BBAT:%3s%%\n" "$cur_battery" > ${PANEL_FIFO}
+  fi
+
+  sleep 20
+done &
+
+while :; do
+  wifi=$(nmcli --fields IN-USE,SSID,BARS dev wifi | grep "^*" | grep -v "SSID" | cut -c4- | tr -d "_" | sed 's/[^0-9a-zA-Z\-\ \_]/|/g' | sed 's/[\ ]*|/\ |/')
+
+  printf "Q%s\n" "${wifi}" > ${PANEL_FIFO}
+
+  sleep 20
+done &
 
 . ~/.config/bspwm/panel_colors
 
