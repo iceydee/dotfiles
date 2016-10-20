@@ -48,5 +48,6 @@ ln -sf ~/my/dotfiles/bspwm/sxhkdrc ~/.config/sxhkd/sxhkdrc
 ln -sf ~/my/dotfiles/bspwm/panel ~/.config/bspwm/panel
 ln -sf ~/my/dotfiles/bspwm/panel_bar ~/.config/bspwm/panel_bar
 ln -sf ~/my/dotfiles/bspwm/panel_colors ~/.config/bspwm/panel_colors
+ln -sf ~/my/dotfiles/bspwm/startup ~/.config/bspwm/startup
 sudo ln -sf ~/my/dotfiles/bspwm/focus /usr/local/bin/focus
 sudo cp ~/my/dotfiles/bspwm/bspwm.desktop /usr/share/xsessions/
