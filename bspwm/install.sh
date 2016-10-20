@@ -13,7 +13,10 @@ sudo apt-get install -y git \
                         make \
                         libxcb-xtest0-dev \
                         libxft-dev \
-                        libx11-xcb-dev
+                        libx11-xcb-dev \
+			acpi \
+			jq \
+			xwrits
 
 mkdir -p ~/src/github.com/{defektive,baskerville,krypt-n}
 cd  ~/src/github.com/baskerville
@@ -49,5 +52,6 @@ ln -sf ~/my/dotfiles/bspwm/panel ~/.config/bspwm/panel
 ln -sf ~/my/dotfiles/bspwm/panel_bar ~/.config/bspwm/panel_bar
 ln -sf ~/my/dotfiles/bspwm/panel_colors ~/.config/bspwm/panel_colors
 ln -sf ~/my/dotfiles/bspwm/startup ~/.config/bspwm/startup
+ln -sf ~/my/dotfiles/bspwm/task_panel ~/.config/bspwm/task_panel
 sudo ln -sf ~/my/dotfiles/bspwm/focus /usr/local/bin/focus
 sudo cp ~/my/dotfiles/bspwm/bspwm.desktop /usr/share/xsessions/
