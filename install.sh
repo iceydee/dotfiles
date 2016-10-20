@@ -25,3 +25,6 @@ mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 
 # Install dmenu2
 ./dmenu2/install.sh
+
+# Install hub command
+./github/install.sh
