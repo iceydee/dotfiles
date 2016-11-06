@@ -1,5 +1,6 @@
 #!/bin/bash
 
+./package go
 mkdir -p ~/src
 cd ~/src
 git clone https://github.com/github/hub.git

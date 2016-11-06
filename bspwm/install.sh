@@ -1,22 +1,20 @@
 #!/bin/bash
 
-sudo apt-get install -y git \
-                        xcb \
-                        libxcb-util0-dev \
-                        libxcb-ewmh-dev \
-                        libxcb-randr0-dev \
-                        libxcb-icccm4-dev \
-                        libxcb-keysyms1-dev \
-                        libxcb-xinerama0-dev \
-                        libasound2-dev \
-                        gcc \
-                        make \
-                        libxcb-xtest0-dev \
-                        libxft-dev \
-                        libx11-xcb-dev \
-			acpi \
-			jq \
-			xwrits
+./package git \
+          xcb \
+          libxcb-util0-dev \
+	  libxcb-ewmh-dev \
+	  libxcb-randr0-dev \
+	  libxcb-keysyms1-dev \
+	  libasound2-dev \
+	  gcc \
+	  make \
+	  libxcb-xtest0-dev \
+	  libxft-dev \
+	  libx11-xcb-dev \
+	  acpi \
+	  jq \
+	  xwrits
 
 mkdir -p ~/src/github.com/{defektive,baskerville,krypt-n}
 cd  ~/src/github.com/baskerville

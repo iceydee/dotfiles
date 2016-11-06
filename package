@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ -n "$(which pacman)" ]; then
+  CMD="pacman -Sy --needed --noconfirm"
+elif [ -n "$(which apt)" ]; then
+  CMD="apt -y install"
+else
+  echo "error: Couldn't find package manager to use"
+  exit 1
+fi
+
+sudo ${CMD} $@

@@ -1,3 +1,7 @@
+#!/bin/bash
+
+./package wget
+
 ln -sf ~/my/dotfiles/zsh/.zshrc ~/.zshrc
 ln -sf ~/my/dotfiles/vim/.vimrc ~/.vimrc
 ln -sf ~/my/dotfiles/tmux/.tmux.conf ~/.tmux.conf
