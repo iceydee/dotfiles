@@ -28,3 +28,6 @@ mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 
 # Install hub command
 ./github/install.sh
+
+# Install task warrior
+./task/install.sh
