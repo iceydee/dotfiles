@@ -9,6 +9,7 @@ alias gu='g- && g+'
 alias rogo='git log --oneline --author=mio --after=`date +%Y-%m-%d`" 00:00" | cut -d" " -f2- | pbcopy'
 alias rbp='rails_best_practices -f html --with-textmate . ; open rails_best_practices_output.html'
 alias web='python -m SimpleHTTPServer'
+alias t='task add project:scratch'
 
 alias crontab="VIM_CRONTAB=true crontab"
 
