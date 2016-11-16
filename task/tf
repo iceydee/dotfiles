@@ -1,0 +1,8 @@
+#!/bin/bash
+
+task $@ modify +focus rc.confirmation=off rc.bulk=100 > /dev/null 2>&1
+task +TODAY -defer -focus modify +defer due:tomorrow rc.confirmation=off rc.bulk=100 > /dev/null 2>&1
+
+at now +2 hours << EOF
+task +defer modify -defer due:eod rc.confirmation=off rc.bulk=100 > /dev/null 2>&1
+EOF
