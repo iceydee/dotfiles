@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ -n "$(readlink ~/.taskrc | grep plingot)" ]; then
+  ln -sf ${HOME}/my/dotfiles/task/.taskrc ${HOME}/.taskrc
+else
+  ln -sf ${HOME}/my/dotfiles/task/.taskrc ${HOME}/.taskrc-plingot
+fi
