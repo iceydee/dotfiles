@@ -5,6 +5,9 @@ for FILE in `find ~/my/dotfiles/zsh/custom -type f`; do
   ln -sf ${FILE} ~/.oh-my-zsh/custom/`basename ${FILE}`
 done
 
+# Install dircolors
+git clone https://github.com/seebi/dircolors-solarized.git ~/.solarized
+
 # Install powerline fonts
 mkdir -p ~/.fonts
 mkdir -p ~/.config/fontconfig/conf.d
