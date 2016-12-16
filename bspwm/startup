@@ -42,7 +42,7 @@ function lockNode() {
 
 # Setup desktop 1
 setDesktop I
-launch slack 3
+launch slack 5
 
 # Setup desktop 3
 setDesktop III
