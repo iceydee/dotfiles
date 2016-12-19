@@ -58,4 +58,6 @@ export PATH="/Users/mio/src/algoliasearch-client-cmd:$PATH"
 # added by travis gem
 [ -f /Users/mio/.travis/travis.sh ] && source /Users/mio/.travis/travis.sh
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
