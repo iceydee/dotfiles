@@ -16,7 +16,8 @@ sudo apt-get install -y git \
                         libx11-xcb-dev \
 			acpi \
 			jq \
-			xwrits
+			xwrits \
+			numlockx
 
 mkdir -p ~/src/github.com/{defektive,baskerville,krypt-n}
 cd  ~/src/github.com/baskerville
