@@ -14,12 +14,13 @@ sudo apt-get install -y git \
                         libxcb-xtest0-dev \
                         libxft-dev \
                         libx11-xcb-dev \
-			acpi \
-			jq \
-			xwrits \
-			numlockx
+                        acpi \
+                        jq \
+                        xwrits \
+                        numlockx \
+                        hsetroot
 
-mkdir -p ~/src/github.com/{defektive,baskerville,krypt-n}
+mkdir -p ~/src/github.com/{defektive,baskerville}
 cd  ~/src/github.com/baskerville
 git clone https://github.com/baskerville/bspwm.git
 git clone https://github.com/baskerville/sxhkd.git
@@ -34,12 +35,6 @@ cd ../sutils/ && make && sudo make install
 cd ../xtitle/ && make && sudo make install
 cd ../xdo/ && make && sudo make install
 
-# patched lemonbar
-cd ~/src/github.com/krypt-n
-cd !:1
-git clone https://github.com/krypt-n/bar.git
-cd bar && make && sudo make install
-
 echo
 echo
 echo
@@ -49,9 +44,6 @@ mkdir -p ~/.config/bspwm
 mkdir -p ~/.config/sxhkd
 ln -sf ~/my/dotfiles/bspwm/bspwmrc ~/.config/bspwm/bspwmrc
 ln -sf ~/my/dotfiles/bspwm/sxhkdrc ~/.config/sxhkd/sxhkdrc
-ln -sf ~/my/dotfiles/bspwm/panel ~/.config/bspwm/panel
-ln -sf ~/my/dotfiles/bspwm/panel_bar ~/.config/bspwm/panel_bar
-ln -sf ~/my/dotfiles/bspwm/panel_colors ~/.config/bspwm/panel_colors
 ln -sf ~/my/dotfiles/bspwm/startup ~/.config/bspwm/startup
 ln -sf ~/my/dotfiles/bspwm/task_panel ~/.config/bspwm/task_panel
 sudo ln -sf ~/my/dotfiles/bspwm/focus /usr/local/bin/focus

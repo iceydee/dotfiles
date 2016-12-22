@@ -2,7 +2,8 @@
 
 sxhkd &
 
-bspc monitor -d I II III IV
+bspc monitor HDMI-0 -n 1 -d I III V
+bspc monitor HDMI-1 -n 2 -d II IV VI
 
 bspc config border_width         2
 bspc config window_gap          12
@@ -12,12 +13,12 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config click_to_focus       true
 
-bspc rule -a slack desktop='^1'
-bspc rule -a subl desktop='^2'
-bspc rule -a termite desktop='^2'
-bspc rule -a chromium-browser desktop='^3'
+#bspc rule -a slack desktop='^1'
+#bspc rule -a subl desktop='^2'
+#bspc rule -a termite desktop='^2'
+#bspc rule -a chromium-browser desktop='^3'
 
-compton --config "${HOME}/.config/compton/compton.conf" -b
+#compton --config "${HOME}/.config/compton/compton.conf" -b
 hsetroot -fill ~/Pictures/Wallpapers/wallhaven-313179.jpg
 numlockx on &
 

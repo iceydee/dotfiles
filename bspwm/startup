@@ -4,11 +4,14 @@
 if [ -n "$(tmux ls | cut -d":" -f1 | grep "bgprocs")" ]; then
   tmux kill-session -t bgprocs
 fi
-killall sublime_text
-killall slack
 
 # Setup tmux for bg processes
 tmux new -s bgprocs -d
+
+function slowKill() {
+  pgrep ${1} | xargs kill
+  while pgrep ${1} >/dev/null; do sleep 0.2; done
+}
 
 function setDesktop() {
   sleep 0.5
@@ -40,16 +43,32 @@ function lockNode() {
   sleep 0.5
 }
 
+slowKill slack
+slowKill sublime
+slowKill chromium
+slowKill polybar
+
+# Setup panel
+tmux new -s panel -d
+tmux send-keys -t panel 'MONITOR=HDMI-0 polybar default &' C-m
+tmux send-keys -t panel 'MONITOR=HDMI-1 polybar default &' C-m
+
 # Setup desktop 1
 setDesktop I
+pkill slack
+while pgrep -x slack >/dev/null; do sleep 0.2; done
 launch slack 5
+
+# Setup desktop 2
+setDesktop II
+launch "chromium-browser"
 
 # Setup desktop 3
 setDesktop III
 launch "chromium-browser"
 
-# Setup desktop 2
-setDesktop II
+# Setup desktop 4
+setDesktop IV
 launch subl
 lockNode
 tmux new -s main -d
@@ -58,10 +77,3 @@ lockNode
 launchWithRule "termite -e '${HOME}/my/dotfiles/bspwm/task_panel'" Termite east 0.7
 lockNode
 focus termite
-
-# Run xwrits
-launch "xwrits breaktime=2:00 typetime=30:00 +mouse" 0.05
-
-# Setup panel
-tmux new -s panel -d
-tmux send-keys -t panel '~/.config/bspwm/panel &' C-m
