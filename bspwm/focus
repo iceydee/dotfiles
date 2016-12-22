@@ -4,10 +4,54 @@ if [ -z "${1}" ]; then
   exit 1
 fi
 
-for NODE in $(bspc query -N); do
-  NAME=$(bspc query -T -n ${NODE} | jq -r .client.instanceName)
-  if [ "${NAME}" == "${1}" ]; then
-    bspc node -f ${NODE}
-    break
-  fi
-done
+FINDNODE=${1}
+FOUND=0
+
+function selectDesktop {
+  bspc desktop -f ${1}
+  case ${1} in
+    "I")
+      bspc desktop -f II
+    ;;
+
+    "II")
+      bspc desktop -f I
+    ;;
+
+    "III")
+      bspc desktop -f IV
+    ;;
+
+    "IV")
+      bspc desktop -f III
+    ;;
+
+    "V")
+      bspc desktop -f VI
+    ;;
+
+    "VI")
+      bspc desktop -f V
+    ;;
+  esac
+}
+
+function queryDesktop {
+  FOUND=0
+  for NODE in $(bspc query -N -d ${1}); do
+    NAME=$(bspc query -T -n ${NODE} | jq -r .client.instanceName)
+    if [ "${NAME}" == "${2}" ]; then
+      selectDesktop ${1}
+      bspc node -f ${NODE}
+      FOUND=1
+      break
+    fi
+  done
+}
+
+[[ "${FOUND}" == 0 ]] && queryDesktop I ${FINDNODE}
+[[ "${FOUND}" == 0 ]] && queryDesktop II ${FINDNODE}
+[[ "${FOUND}" == 0 ]] && queryDesktop III ${FINDNODE}
+[[ "${FOUND}" == 0 ]] && queryDesktop IV ${FINDNODE}
+[[ "${FOUND}" == 0 ]] && queryDesktop V ${FINDNODE}
+[[ "${FOUND}" == 0 ]] && queryDesktop VI ${FINDNODE}
