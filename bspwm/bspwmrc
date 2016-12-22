@@ -13,12 +13,7 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config click_to_focus       true
 
-#bspc rule -a slack desktop='^1'
-#bspc rule -a subl desktop='^2'
-#bspc rule -a termite desktop='^2'
-#bspc rule -a chromium-browser desktop='^3'
-
-#compton --config "${HOME}/.config/compton/compton.conf" -b
+compton --config "${HOME}/.config/compton/compton.conf" -b
 hsetroot -fill ~/Pictures/Wallpapers/wallhaven-313179.jpg
 numlockx on &
 
