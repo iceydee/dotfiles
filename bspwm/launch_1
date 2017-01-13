@@ -2,6 +2,8 @@
 
 . ~/my/dotfiles/bspwm/startup_functions
 
+pkill slack
+pkill slack
 slowKill slack
 
 setDesktop I
