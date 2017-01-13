@@ -65,7 +65,19 @@ alt + ctrl + {1-9}
 
 # Focus or move window to desktops
 alt + {_,shift + }{1-9,0}
-    bspc {desktop -f, window -d} $(bspc query -M -m)/{i,ii,iii,iv,v,vi,vii,viii,ix,x}
+  bspc {desktop -f, window -d} $(bspc query -M -m)/{i,ii,iii,iv,v,vi,vii,viii,ix,x}
+
+# swap the node in the given direction
+super + {a,s,w,d}
+  bspc node -s {west,south,north,east}
+
+# resize the node horizontally
+super + {_, alt +}{Right,Left}
+  bspc node -z {right,left} {20 0,-20 0}
+
+# resize the node vertically
+super + {_, alt +}{Down,Up}
+  bspc node -z {bottom,top} {0 20,0 -20}
 
 #
 # mouse bindings
@@ -77,11 +89,10 @@ alt + button{1-3}
 
 # Needed for ^^^^
 alt + !button{1-3}
-    bspc pointer -t %i %i
-
+  bspc pointer -t %i %i
 
 super + @button{1-3}
-    bspc pointer -u
+  bspc pointer -u
 
 #
 # spawn programs
@@ -94,7 +105,7 @@ alt + shift + Return
   termite -e tmux
 
 alt + ctrl + Return
-   bspc rule -a termite -o pseudo_tiled=on && termite
+  bspc rule -a termite -o pseudo_tiled=on && termite
 
 alt + r
   $HOME/scripts/lens
@@ -109,7 +120,7 @@ super + s
   slack
 
 super + f
-  nautilus
+  spacefm
 
 Print
   scrot -q 100
