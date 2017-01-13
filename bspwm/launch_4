@@ -1,0 +1,16 @@
+#!/bin/bash
+
+. ~/my/dotfiles/bspwm/startup_functions
+
+slowKill sublime
+slowKill termite
+
+setDesktop IV
+launch subl
+lockNode
+tmux new -s main -d
+launchWithRule "termite -e 'tmux a -t main'" Termite south 0.6
+lockNode
+launchWithRule "termite -e '${HOME}/my/dotfiles/bspwm/task_panel'" Termite east 0.7
+lockNode
+focus termite

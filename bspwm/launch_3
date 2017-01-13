@@ -1,0 +1,6 @@
+#!/bin/bash
+
+. ~/my/dotfiles/bspwm/startup_functions
+
+setDesktop III
+launch "chromium-browser" 2

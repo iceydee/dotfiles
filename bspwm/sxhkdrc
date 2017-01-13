@@ -15,6 +15,10 @@ super + Tab
 super + alt + r
   ~/.config/bspwm/startup
 
+# Reload specific desktop
+super + alt + {1,2,3,4}
+  ~/my/dotfiles/bspwm/launch_{1,2,3,4}
+
 # Lock screen
 super + l
   dm-tool lock

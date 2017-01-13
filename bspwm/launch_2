@@ -1,0 +1,8 @@
+#!/bin/bash
+
+. ~/my/dotfiles/bspwm/startup_functions
+
+slowKill chromium
+
+setDesktop II
+launch "chromium-browser" 2

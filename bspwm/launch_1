@@ -1,0 +1,8 @@
+#!/bin/bash
+
+. ~/my/dotfiles/bspwm/startup_functions
+
+slowKill slack
+
+setDesktop I
+launch slack 5

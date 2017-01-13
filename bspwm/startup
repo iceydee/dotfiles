@@ -8,44 +8,8 @@ fi
 # Setup tmux for bg processes
 tmux new -s bgprocs -d
 
-function slowKill() {
-  pgrep ${1} | xargs kill
-  while pgrep ${1} >/dev/null; do sleep 0.2; done
-}
+. ~/my/dotfiles/bspwm/startup_functions
 
-function setDesktop() {
-  sleep 0.5
-  bspc desktop -f ${1}
-  sleep 0.5
-}
-
-function launch() {
-  tmux send-keys -t bgprocs "${1} &" C-m
-  if [ -n "${2}" ]; then
-    sleep ${2}
-  else
-    sleep 2
-  fi
-}
-
-function launchWithRule() {
-  if [ -z "${4}" ]; then
-    ratio=0.5
-  else
-    ratio=${4}
-  fi
-  bspc rule -a ${2} -o split_dir="${3}" split_ratio=${ratio}
-  launch "${1}"
-}
-
-function lockNode() {
-  bspc node -g private
-  sleep 0.5
-}
-
-slowKill slack
-slowKill sublime
-slowKill chromium
 slowKill polybar
 
 # Setup panel
@@ -54,26 +18,13 @@ tmux send-keys -t panel 'MONITOR=HDMI-0 polybar default &' C-m
 tmux send-keys -t panel 'MONITOR=HDMI-1 polybar default &' C-m
 
 # Setup desktop 1
-setDesktop I
-pkill slack
-while pgrep -x slack >/dev/null; do sleep 0.2; done
-launch slack 5
+. ~/my/dotfiles/bspwm/launch_1
 
 # Setup desktop 2
-setDesktop II
-launch "chromium-browser"
+. ~/my/dotfiles/bspwm/launch_2
 
 # Setup desktop 3
-setDesktop III
-launch "chromium-browser"
+. ~/my/dotfiles/bspwm/launch_3
 
 # Setup desktop 4
-setDesktop IV
-launch subl
-lockNode
-tmux new -s main -d
-launchWithRule "termite -e 'tmux a -t main'" Termite south 0.6
-lockNode
-launchWithRule "termite -e '${HOME}/my/dotfiles/bspwm/task_panel'" Termite east 0.7
-lockNode
-focus termite
+. ~/my/dotfiles/bspwm/launch_4
