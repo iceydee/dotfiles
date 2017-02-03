@@ -14,7 +14,7 @@ bspc config gapless_monocle      true
 bspc config click_to_focus       true
 
 compton --config "${HOME}/.config/compton/compton.conf" -b
-hsetroot -fill ~/Pictures/Wallpapers/wallhaven-313179.jpg
+hsetroot -fill ~/Pictures/Wallpapers/green_hills_forest.jpg
 numlockx on &
 
 dropbox start
