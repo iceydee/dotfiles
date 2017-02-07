@@ -17,14 +17,12 @@ tmux new -s panel -d
 tmux send-keys -t panel 'MONITOR=HDMI-0 polybar default &' C-m
 tmux send-keys -t panel 'MONITOR=HDMI-1 polybar default &' C-m
 
-# Setup desktop 1
-. ~/my/dotfiles/bspwm/launch_1
+function launch {
+  . ~/my/dotfiles/bspwm/launch_${1}
+}
 
-# Setup desktop 2
-. ~/my/dotfiles/bspwm/launch_2
-
-# Setup desktop 3
-. ~/my/dotfiles/bspwm/launch_3
-
-# Setup desktop 4
-. ~/my/dotfiles/bspwm/launch_4
+launch 1
+launch 2
+launch 3
+launch 4
+launch 6
