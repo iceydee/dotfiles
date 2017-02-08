@@ -23,3 +23,5 @@ tmux send-keys -t panel 'MONITOR=HDMI-0 polybar default &' C-m
 . ~/my/dotfiles/bspwm/launch_4
 . ~/my/dotfiles/bspwm/launch_5
 . ~/my/dotfiles/bspwm/launch_6
+
+setDesktop IV
