@@ -14,15 +14,12 @@ slowKill polybar
 
 # Setup panel
 tmux new -s panel -d
+tmux send-keys -t panel 'MONITOR=DVI-D-0 polybar default &' C-m
 tmux send-keys -t panel 'MONITOR=HDMI-0 polybar default &' C-m
-tmux send-keys -t panel 'MONITOR=HDMI-1 polybar default &' C-m
 
-function launch {
-  . ~/my/dotfiles/bspwm/launch_${1}
-}
-
-launch 1
-launch 2
-launch 3
-launch 4
-launch 6
+. ~/my/dotfiles/bspwm/launch_1
+. ~/my/dotfiles/bspwm/launch_2
+. ~/my/dotfiles/bspwm/launch_3
+. ~/my/dotfiles/bspwm/launch_4
+. ~/my/dotfiles/bspwm/launch_5
+. ~/my/dotfiles/bspwm/launch_6

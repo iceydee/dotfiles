@@ -2,8 +2,8 @@
 
 sxhkd &
 
-bspc monitor HDMI-0 -n 1 -d I III V
-bspc monitor HDMI-1 -n 2 -d II IV VI
+bspc monitor DVI-D-0 -n 1 -d I III V
+bspc monitor HDMI-0 -n 2 -d II IV VI
 
 bspc config border_width         2
 bspc config window_gap          12
