@@ -1,3 +1,21 @@
+#!/bin/bash
+
+echo "Which config?"
+echo
+echo "1) 3x monitor desktop"
+echo "2) laptop"
+echo
+echo -n "? "
+read A
+
+if [ "${A}" -eq "2" ]; then
+  echo "laptop" > ~/.computer-config
+else
+  echo "desktop" > ~/.computer-config
+fi
+
+clear
+
 ln -sf ~/my/dotfiles/zsh/.zshrc ~/.zshrc
 for FILE in `find ~/my/dotfiles/zsh/custom -type f`; do
   ln -sf ${FILE} ~/.oh-my-zsh/custom/`basename ${FILE}`

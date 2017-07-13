@@ -2,8 +2,12 @@
 
 sxhkd &
 
-bspc monitor DVI-D-0 -n 1 -d I III V
-bspc monitor HDMI-0 -n 2 -d II IV VI
+if [ -n "$(cat ~/.computer-config | grep "laptop")" ]; then
+  bspc monitor -d I II III IV V VI
+else
+  bspc monitor DVI-D-0 -n 1 -d I III V
+  bspc monitor HDMI-0 -n 2 -d II IV VI
+fi
 
 bspc config border_width         2
 bspc config window_gap          12
