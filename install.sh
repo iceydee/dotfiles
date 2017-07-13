@@ -1,5 +1,4 @@
 ln -sf ~/my/dotfiles/zsh/.zshrc ~/.zshrc
-ln -sf ~/my/dotfiles/vim/.vimrc ~/.vimrc
 for FILE in `find ~/my/dotfiles/zsh/custom -type f`; do
   ln -sf ${FILE} ~/.oh-my-zsh/custom/`basename ${FILE}`
 done
@@ -15,6 +14,9 @@ wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbol
 mv PowerlineSymbols.otf ~/.fonts/
 fc-cache -vf ~/.fonts/
 mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
+
+# Setup vim
+./vim/install.sh
 
 # Setup tmux
 ./tmux/install.sh
