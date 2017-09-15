@@ -2,11 +2,11 @@
 
 . ~/my/dotfiles/bspwm/startup_functions
 
-slowKill sublime
+slowKill code 
 slowKill termite
 
 setDesktop IV
-launch subl
+launch code
 lockNode
 tmux new -s main -d
 launchWithRule "termite -e 'tmux a -t main'" Termite south 0.6
