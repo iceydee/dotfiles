@@ -16,10 +16,8 @@ fi
 
 clear
 
-ln -sf ~/my/dotfiles/zsh/.zshrc ~/.zshrc
-for FILE in `find ~/my/dotfiles/zsh/custom -type f`; do
-  ln -sf ${FILE} ~/.oh-my-zsh/custom/`basename ${FILE}`
-done
+# Install zsh
+./zsh/install.sh
 
 # Install dircolors
 git clone https://github.com/seebi/dircolors-solarized.git ~/.solarized
