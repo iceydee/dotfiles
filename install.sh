@@ -33,9 +33,6 @@ mv PowerlineSymbols.otf ~/.fonts/
 fc-cache -vf ~/.fonts/
 mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 
-# Setup vim
-./vim/install.sh
-
 # Setup tmux
 ./tmux/install.sh
 
@@ -56,6 +53,9 @@ mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 
 # Install hub command
 ./github/install.sh
+
+# Setup vim
+./vim/install.sh
 
 # Install task warrior
 ./task/install.sh
