@@ -7,4 +7,4 @@ for FILE in `find ~/my/dotfiles/zsh/custom -type f`; do
 done
 
 # Install plugins
-g clone gusaiani/elixir-oh-my-zsh ~/.oh-my-zsh/custom/plugins/elixir
+git clone git@github.com:gusaiani/elixir-oh-my-zsh ~/.oh-my-zsh/custom/plugins/elixir
