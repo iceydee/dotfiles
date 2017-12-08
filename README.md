@@ -12,3 +12,7 @@ My zsh and vim configuration
 * tmux
 * curl
 * oh-my-zsh
+* chromium
+* dropbox
+* slack
+* vscode
