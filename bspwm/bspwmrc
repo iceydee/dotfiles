@@ -2,7 +2,7 @@
 
 sxhkd &
 
-if [ -n "$(cat ~/.computer-config | grep "laptop")" ]; then
+if [ -z "$(cat ~/.computer-config | grep "desktop")" ]; then
   bspc monitor -d I II III IV V VI
 else
   bspc monitor DVI-D-0 -n 1 -d I III V
@@ -17,7 +17,9 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config click_to_focus       true
 
-compton --config "${HOME}/.config/compton/compton.conf" -b
+if [ -z "$(cat ~/.computer-config | grep "vm")" ]; then
+  compton --config "${HOME}/.config/compton/compton.conf" -b
+fi
 hsetroot -fill ~/Pictures/Wallpapers/green_hills_forest.jpg
 numlockx on &
 

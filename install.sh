@@ -4,12 +4,15 @@ echo "Which config?"
 echo
 echo "1) 3x monitor desktop"
 echo "2) laptop"
+echo "3) vm"
 echo
 echo -n "? "
 read A
 
 if [ "${A}" -eq "2" ]; then
   echo "laptop" > ~/.computer-config
+if [ "${A}" -eq "3" ]; then
+  echo "vm" > ~/.computer-config
 else
   echo "desktop" > ~/.computer-config
 fi
