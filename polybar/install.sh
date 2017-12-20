@@ -22,7 +22,7 @@ sudo apt-get -y install cmake \
 
 mkdir -p ~/src/github.com/jaagr
 cd  ~/src/github.com/jaagr
-git clone --branch 2.5.1 --recursive https://github.com/jaagr/polybar
+git clone --branch 3.1.0 --recursive https://github.com/jaagr/polybar
 mkdir -p polybar/build
 cd polybar/build
 cmake -DCMAKE_BUILD_TYPE=Release ..
