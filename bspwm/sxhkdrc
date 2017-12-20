@@ -25,7 +25,7 @@ super + l
 
 # Logout
 super + alt + l
-  pkill chromium ; sudo service lightdm restart
+  bspc quit
 
 # Shutdown
 ctrl + super + alt + l
