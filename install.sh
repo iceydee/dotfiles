@@ -11,7 +11,7 @@ read A
 
 if [ "${A}" -eq "2" ]; then
   echo "laptop" > ~/.computer-config
-if [ "${A}" -eq "3" ]; then
+elif [ "${A}" -eq "3" ]; then
   echo "vm" > ~/.computer-config
 else
   echo "desktop" > ~/.computer-config
