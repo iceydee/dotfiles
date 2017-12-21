@@ -14,7 +14,7 @@ slowKill polybar
 
 # Setup panel
 tmux new -s panel -d
-tmux send-keys -t panel 'MONITOR=DVI-D-0 polybar default &' C-m
+#tmux send-keys -t panel 'MONITOR=DVI-D-0 polybar default &' C-m
 tmux send-keys -t panel 'MONITOR=HDMI-0 polybar default &' C-m
 
 . ~/my/dotfiles/bspwm/launch_1
