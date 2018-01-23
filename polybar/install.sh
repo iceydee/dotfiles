@@ -28,4 +28,5 @@ cd polybar/build
 cmake -DCMAKE_BUILD_TYPE=Release ..
 sudo make install
 
+mkdir -p ~/.config/polybar
 ln -sf ~/my/dotfiles/polybar/config ~/.config/polybar/config
