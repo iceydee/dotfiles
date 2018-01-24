@@ -1,20 +1,26 @@
 #!/bin/bash
 
-echo "Which config?"
-echo
-echo "1) 3x monitor desktop"
-echo "2) laptop"
-echo "3) vm"
-echo
-echo -n "? "
-read A
+FIRST_RUN=0
 
-if [ "${A}" -eq "2" ]; then
-  echo "laptop" > ~/.computer-config
-elif [ "${A}" -eq "3" ]; then
-  echo "vm" > ~/.computer-config
-else
-  echo "desktop" > ~/.computer-config
+if [ ! -f "~/.computer-config" ]; then
+  FIRST_RUN=1
+
+  echo "Which config?"
+  echo
+  echo "1) 3x monitor desktop"
+  echo "2) laptop"
+  echo "3) vm"
+  echo
+  echo -n "? "
+  read A
+
+  if [ "${A}" -eq "2" ]; then
+    echo "laptop" > ~/.computer-config
+  elif [ "${A}" -eq "3" ]; then
+    echo "vm" > ~/.computer-config
+  else
+    echo "desktop" > ~/.computer-config
+  fi
 fi
 
 clear
@@ -36,6 +42,16 @@ mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 
 # Setup tmux
 ./tmux/install.sh
+
+# From this point onwards - we need to have new env running
+if [ "${FIRST_RUN}" -eq 1 ]; then
+  echo "Configuration prepared. Please open new terminal window so new environment is loaded."
+  echo
+  echo "${0}"
+  echo
+
+  exit 0
+fi
 
 # Install Compton
 ./compton/install.sh
