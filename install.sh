@@ -58,5 +58,8 @@ mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 # Setup vim
 ./vim/install.sh
 
+# Setup vscode
+./vscode/install.sh
+
 # Install task warrior
 ./task/install.sh

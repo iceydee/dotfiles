@@ -1,0 +1,13 @@
+{
+    "workbench.colorTheme": "Ayu Mirage",
+    "editor.renderWhitespace": "boundary",
+    "editor.tabSize": 2,
+    "editor.fontSize": 16,
+    "window.zoomLevel": 0,
+    "extensions.ignoreRecommendations": true,
+    "sublimeTextKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "editor.formatOnPaste": true,
+    "files.insertFinalNewline": true
+}
