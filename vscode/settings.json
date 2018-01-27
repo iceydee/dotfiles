@@ -9,5 +9,6 @@
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.snippetSuggestions": "top",
     "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
     "files.insertFinalNewline": true
 }
