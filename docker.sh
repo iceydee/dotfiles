@@ -4,7 +4,11 @@
 
 # Remove the rvm prompt
 mv ~/my/dotfiles/zsh/custom/zsh-config.zsh /tmp/zsh-config-old.zsh
-tail -n+3 /tmp/zsh-config-old.zsh > ~/my/dotfiles/zsh/custom/zsh-config.zsh
+cat /tmp/zsh-config-old.zsh | grep -v "rvm-prompt" > ~/my/dotfiles/zsh/custom/zsh-config.zsh
+
+# Remove the nvm config
+mv ~/my/dotfiles/zsh/custom/env-config.zsh /tmp/env-config-old.zsh
+cat /tmp/env-config-old.zsh | grep -v "nvm" > ~/my/dotfiles/zsh/custom/env-config.zsh
 
 # Install zsh
 ./zsh/install.sh
