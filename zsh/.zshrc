@@ -49,15 +49,6 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=$PATH:/Users/mio/.nvm/v0.10.4/bin:/usr/local/bin:/opt/local/bin:/opt/local/sbin:/Users/mio/bin:/Users/mio/android-sdk/tools:/Users/mio/android-sdk/platform-tools:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/munki
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-# Add algolia search client
-export PATH="/Users/mio/src/algoliasearch-client-cmd:$PATH"
-
-# added by travis gem
-[ -f /Users/mio/.travis/travis.sh ] && source /Users/mio/.travis/travis.sh
-
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
