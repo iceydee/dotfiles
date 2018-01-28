@@ -10,6 +10,10 @@ cat /tmp/zsh-config-old.zsh | grep -v "rvm-prompt" > ~/my/dotfiles/zsh/custom/zs
 mv ~/my/dotfiles/zsh/custom/env-config.zsh /tmp/env_config-old.zsh
 cat /tmp/env_config-old.zsh | grep -v "nvm" > ~/my/dotfiles/zsh/custom/env_config.zsh
 
+# Remove hub alias
+mv ~/my/dotfiles/zsh/custom/aliases.zsh /tmp/aliases-old.zsh
+cat /tmp/aliases-old.zsh | grep -v "hub" > ~/my/dotfiles/zsh/custom/aliases.zsh
+
 # Install zsh
 ./zsh/install.sh
 
