@@ -10,5 +10,7 @@
     "editor.snippetSuggestions": "top",
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
-    "files.insertFinalNewline": true
+    "files.insertFinalNewline": true,
+    "c-cpp-flylint.flexelint.enable": false,
+    "c-cpp-flylint.cppcheck.enable": true
 }
