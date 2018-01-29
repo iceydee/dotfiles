@@ -25,6 +25,12 @@ fi
 
 clear
 
+# Install wallpaper
+mkdir -p ~/Pictures/Wallpapers
+for FILE in $(find ~/my/dotfiles/Wallpapers -type f); do
+  ln -sf ${FILE} ~/Pictures/Wallpapers/$(basename ${FILE})
+done
+
 # Install zsh
 ./zsh/install.sh
 
