@@ -6,7 +6,7 @@ if [ -z "$(which apk)" ]; then
 fi
 
 mkdir -p "${HOME}/.tasklists"
-ln -sf ${HOME}/my/dotfiles/task/.taskrc ${HOME}/.taskrc
+ln -sf ${HOME}/my/dotfiles/task/.taskrc-plingot ${HOME}/.taskrc
 ln -sf ${HOME}/my/dotfiles/task/task.theme ${HOME}/.task.theme
 
 # We're already root in docker
