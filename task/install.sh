@@ -1,6 +1,9 @@
 #!/bin/bash
 
-sudo apt-get -y install taskwarrior jq
+# Check we're on ubuntu first
+if [ -z "$(which apk)" ]; then
+  sudo apt-get -y install taskwarrior jq
+fi
 
 mkdir -p "${HOME}/.tasklists"
 ln -sf ${HOME}/my/dotfiles/task/.taskrc ${HOME}/.taskrc

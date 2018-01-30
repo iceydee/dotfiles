@@ -34,3 +34,6 @@ mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 
 # Setup vim
 ./vim/install.sh
+
+# Setup taskwarrior
+./task/install.sh
