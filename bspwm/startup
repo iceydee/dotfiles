@@ -16,7 +16,9 @@ slowKill polybar
 tmux new -s panel -d
 
 if [ -f "${HOME}/.polybar-monitor" ]; then
-  tmux send-keys -t panel "MONITOR=$(cat ${HOME}/.polybar-monitor) polybar default &" C-m
+  for M in $(cat ${HOME}/.polybar-monitor); do
+    tmux send-keys -t panel "MONITOR=${M} polybar default &" C-m
+  done
 else
   tmux send-keys -t panel 'MONITOR=HDMI-0 polybar default &' C-m
 fi
