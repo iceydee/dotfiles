@@ -37,7 +37,7 @@ ctrl + grave
 
 # Cycle desktops
 alt + ctrl + {Right,Down,Left,Up}
-  bspc desktop -f {next,next,prev,prev}
+  .desktop {next,next,prev,prev}
 
 # Cycle nodes
 shift + alt + {Right,Down,Left,Up}

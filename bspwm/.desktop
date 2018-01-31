@@ -1,6 +1,11 @@
 #!/bin/bash
 
-bspc monitor -f 2
-bspc desktop -f ${1}.local
-bspc monitor -f 1
-bspc desktop -f ${1}.local
+if [ "$(cat ~/.polybar-monitor 2>/dev/null | wc -l)" -gt 1 ]; then
+  # Multi monitor
+  bspc monitor -f 2
+  bspc desktop -f ${1}.local
+  bspc monitor -f 1
+  bspc desktop -f ${1}.local
+else
+  bspc desktop -f ${1}.local
+fi
