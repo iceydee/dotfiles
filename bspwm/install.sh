@@ -18,7 +18,7 @@ sudo apt-get install -y git \
                         jq \
                         xwrits \
                         numlockx \
-                        hsetroot
+                        feh
 
 mkdir -p ~/src/github.com/{defektive,baskerville}
 cd  ~/src/github.com/baskerville
