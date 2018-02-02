@@ -2,11 +2,11 @@
 
 sxhkd &
 
-if [ -z "$(cat ~/.computer-config | grep "desktop")" ]; then
-  bspc monitor -d I II III IV V VI
+if [ "$(wc -l ~/.polybar-monitor | awk '{print $1}')" -gt 1 ]; then
+  bspc monitor $(head -n1 ~/.polybar-monitor) -n 1 -d I III V
+  bspc monitor $(tail -n1 ~/.polybar-monitor) -n 2 -d II IV VI
 else
-  bspc monitor DVI-D-0 -n 1 -d I III V
-  bspc monitor HDMI-0 -n 2 -d II IV VI
+  bspc monitor -d I II III IV V VI
 fi
 
 bspc config border_width         2
@@ -17,7 +17,7 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config click_to_focus       any
 
-if [ -z "$(cat ~/.computer-config | grep "vm")" ]; then
+if [ -z "$(cat ~/.compton-config | grep "yes")" ]; then
   compton --config "${HOME}/.config/compton/compton.conf" -b
 fi
 feh --bg-tile ~/Pictures/Wallpapers/wallhaven-313179.jpg

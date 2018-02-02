@@ -2,26 +2,26 @@
 
 FIRST_RUN=0
 
-if [ ! -f "~/.computer-config" ]; then
+if [ ! -f "~/.compton-config" ]; then
   FIRST_RUN=1
 
   echo "Which config?"
   echo
-  echo "1) 3x monitor desktop"
-  echo "2) laptop"
-  echo "3) vm"
+  echo "1) Compton (screen bling - requires GPU)"
+  echo "2) Non-compton (for VMs etc, where GPU is missing)"
   echo
   echo -n "? "
   read A
 
   if [ "${A}" -eq "2" ]; then
-    echo "laptop" > ~/.computer-config
-  elif [ "${A}" -eq "3" ]; then
-    echo "vm" > ~/.computer-config
+    echo "no" > ~/.compton-config
   else
-    echo "desktop" > ~/.computer-config
+    echo "yes" > ~/.compton-config
   fi
 fi
+
+# Update the polybar monitor config
+xrandr --query | grep "\bconnected\b" | awk '{print $1}' > ~/.polybar-monitor
 
 clear
 
