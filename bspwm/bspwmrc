@@ -17,7 +17,7 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config click_to_focus       any
 
-if [ -z "$(cat ~/.compton-config | grep "yes")" ]; then
+if [ -n "$(cat ~/.compton-config | grep "yes")" ]; then
   compton --config "${HOME}/.config/compton/compton.conf" -b
 fi
 feh --bg-tile ~/Pictures/Wallpapers/wallhaven-313179.jpg
