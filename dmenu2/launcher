@@ -2,4 +2,4 @@
 
 font="Source Code Pro-12"
 
-dmenu_run -i -h 1440 -w 2560 -q -l 1 -class Launcher -p "                                     execute" -fn "$font" -nb "#000000" -nf "#bbbbbb" -sb "#000000" -sf "#377222"
+dmenu_run -i -h 1080 -w 1920 -q -l 1 -class Launcher -p "                                     execute" -fn "$font" -nb "#000000" -nf "#bbbbbb" -sb "#000000" -sf "#377222"
