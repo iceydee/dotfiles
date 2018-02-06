@@ -9,6 +9,6 @@ export NODE_ENV=development
 export JAVA_HOME=/usr/lib/jvm/default-java/jre
 export PATH=$PATH:${JAVA_HOME}/bin:${HOME}/.local/bin
 
-export AWS_VAULT_BACKEND=secret-service
+export AWS_VAULT_BACKEND=file
 
 . ~/.nvm/nvm.sh
