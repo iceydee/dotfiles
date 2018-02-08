@@ -29,7 +29,7 @@ include ~/.task.theme
 #include /usr/share/doc/task/rc/solarized-dark-256.theme
 #include /usr/share/doc/task/rc/solarized-light-256.theme
 #include /usr/share/doc/task/rc/no-color.theme
-uda.freshsales_id.type=numeric
+uda.freshsales_id.type=string
 uda.freshsales_id.label=Freshsales ID
 uda.freshsales_deal_id.type=numeric
 uda.freshsales_deal_id.label=Freshsales Deal ID
