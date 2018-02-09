@@ -1,0 +1,48 @@
+#!/bin/bash
+
+FRESHSALES_TOKEN=$(cat ~/.freshsales | jq -r '.token')
+FRESHSALES_DOMAIN=$(cat ~/.freshsales | jq -r '.domain')
+
+function fetch_tasks() {
+  curl -H "Authorization: Token token=${FRESHSALES_TOKEN}" \
+    -H "Content-Type: application/json" \
+    -X GET "https://${FRESHSALES_DOMAIN}.freshsales.io/api/tasks?filter=open&include=targetable"
+}
+
+function add_task() {
+  local _ID=${1}
+  local _DUE=${2}
+  shift 2
+  local _TITLE=${@}
+
+  # Check if task exists
+  task freshsales_id:${_ID} >/dev/null 2>&1
+  if [ "$?" -eq 0 ]; then
+    echo "warning: Task with id: ${_ID} already exists." >&2
+    return
+  fi
+
+  task add project:sales freshsales_id:${_ID} due:${_DUE} "\"${_TITLE}\""
+}
+
+for row in $(fetch_tasks | jq -r '.tasks[] | @base64'); do
+  _jq() {
+    echo ${row} | base64 --decode | jq -r ${1}
+  }
+  add_task $(_jq '.id') $(_jq '.due_date') $(_jq '.title')
+done
+
+# {                                                    
+#   "id": 2001232854,                                  
+#   "status": 0,                                       
+#   "title": "Draft new contract",                     
+#   "description": "",                                 
+#   "created_at": "2018-01-18T10:44:23+01:00",         
+#   "updated_at": "2018-01-18T10:44:23+01:00",         
+#   "owner_id": 2000041337,                            
+#   "due_date": "2018-03-07T11:00:00+01:00",           
+#   "creater_id": 2000041337,                          
+#   "updater_id": null,                                
+#   "outcome_id": null,                                
+#   "task_type_id": null                               
+# }
