@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ -z "$(readlink -f ~/.taskrc | grep "plingot")" ]; then
+  # Don't run the script if we're not in plingot taskrc
+  exit 1
+fi
+
 FRESHSALES_TOKEN=$(cat ~/.freshsales | jq -r '.token')
 FRESHSALES_DOMAIN=$(cat ~/.freshsales | jq -r '.domain')
 
