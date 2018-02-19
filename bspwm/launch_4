@@ -6,7 +6,7 @@ slowKill code
 slowKill termite
 
 setDesktop IV
-launch code 0.5
+launch code 1
 lockNode
 tmux new -s main -d
 launchWithRule "termite -e 'tmux a -t main'" Termite south 0.6
