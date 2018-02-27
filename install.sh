@@ -23,6 +23,9 @@ fi
 # Update the polybar monitor config
 xrandr --query | grep "\bconnected\b" | awk '{print $1}' > ~/.polybar-monitor
 
+# Update resolution for dmenu
+xrandr --query | grep "\bconnected\b" | head -n1 | awk '{print $3}' | cut -d'+' -f1 > ~/.dmenu-resolution
+
 clear
 
 # Install wallpaper
