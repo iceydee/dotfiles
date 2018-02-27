@@ -26,10 +26,7 @@ xrandr --query | grep "\bconnected\b" | awk '{print $1}' > ~/.polybar-monitor
 clear
 
 # Install wallpaper
-mkdir -p ~/Pictures/Wallpapers
-for FILE in $(find ~/my/dotfiles/Wallpapers -type f); do
-  ln -sf ${FILE} ~/Pictures/Wallpapers/$(basename ${FILE})
-done
+./Wallpapers/install.sh
 
 # Install zsh
 ./zsh/install.sh
