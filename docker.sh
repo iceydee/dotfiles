@@ -14,6 +14,9 @@ cat /tmp/env_config-old.zsh | grep -v "nvm" > ~/my/dotfiles/zsh/custom/env_confi
 mv ~/my/dotfiles/zsh/custom/aliases.zsh /tmp/aliases-old.zsh
 cat /tmp/aliases-old.zsh | grep -v "hub" > ~/my/dotfiles/zsh/custom/aliases.zsh
 
+# Remove nix-daemon
+rm ~/my/dotfiles/zsh/custom/nix.zsh
+
 # Install zsh
 ./zsh/install.sh
 
