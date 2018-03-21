@@ -12,5 +12,6 @@
     "editor.formatOnSave": true,
     "files.insertFinalNewline": true,
     "c-cpp-flylint.flexelint.enable": false,
-    "c-cpp-flylint.cppcheck.enable": true
+    "c-cpp-flylint.cppcheck.enable": true,
+    "eslint.autoFixOnSave": true
 }
