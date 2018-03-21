@@ -23,6 +23,10 @@ fi
 feh --bg-tile ~/Pictures/Wallpapers/humpback_whale_jumps_out_of_water-wallpaper-2560x1440.jpg
 numlockx on &
 
+# Fix sceen blanking issue
+xset dpms 0 0 0 -dpms
+xset s 0 0
+
 dropbox start
 
 ~/.config/bspwm/startup &
