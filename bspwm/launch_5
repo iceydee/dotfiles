@@ -1,5 +1,3 @@
 #!/bin/bash
 
 . ~/my/dotfiles/bspwm/startup_functions
-
-setDesktop V
