@@ -14,6 +14,7 @@
     "c-cpp-flylint.flexelint.enable": false,
     "c-cpp-flylint.cppcheck.enable": true,
     "eslint.autoFixOnSave": true,
+    "tslint.autoFixOnSave": true,
     "files.associations": {
         "*.jison": "lex"
     }
