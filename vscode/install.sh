@@ -1,12 +1,15 @@
 #!/bin/bash
 
-if [ -z "$(uname -s | grep "Darwin")" ]; then
-  mkdir -p ~/.config/Code/User
-  ln -sf ~/my/dotfiles/vscode/settings.json ~/.config/Code/User/settings.json
+if [ -n "$(uname -r | grep "Microsoft")" ]; then
+  CODE_PATH=/mnt/c/Users/${USER}/AppData/Roaming/Code/User
+elif [ -n "$(uname -s | grep "Darwin")" ]; then
+  CODE_PATH=~/Library/Application\ Support/Code/User
 else
-  mkdir -p ~/Library/Application\ Support/Code/User
-  ln -sf ~/my/dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+  CODE_PATH=~/.config/Code/User
 fi
+
+mkdir -p ${CODE_PATH}
+ln -sf ~/my/dotfiles/vscode/settings.json ${CODE_PATH}/settings.json
 
 CODE=$(which code)
 if [ -n "${CODE}" ]; then
