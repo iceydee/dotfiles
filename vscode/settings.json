@@ -16,6 +16,8 @@
     "eslint.autoFixOnSave": true,
     "tslint.autoFixOnSave": true,
     "files.associations": {
-        "*.jison": "lex"
+        "*.jison": "lex",
+        "*.tag": "jade",
+        "*.dev": "dockerfile"
     }
 }
