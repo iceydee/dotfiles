@@ -19,5 +19,7 @@
         "*.jison": "lex",
         "*.tag": "jade",
         "*.dev": "dockerfile"
-    }
+    },
+    "bashBeautify.tabSize": 2,
+    "beautify.tabSize": 2
 }

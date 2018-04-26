@@ -13,13 +13,16 @@ jbenden.c-cpp-flylint
 karunamurti.haml
 kube.clangcomplete
 mauve.terraform
+michelemelluso.code-beautifier
 mitaki28.vscode-clang
 mjmcloug.vscode-elixir
 ms-kubernetes-tools.vscode-kubernetes-tools
 ms-vscode.sublime-keybindings
 rebornix.Ruby
 redhat.vscode-yaml
+shakram02.bash-beautify
 sysoev.language-stylus
 teabyii.ayu
+timonwong.shellcheck
 twxs.cmake
 xaver.clang-format
