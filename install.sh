@@ -59,6 +59,9 @@ if [ "${FIRST_RUN}" -eq 1 ]; then
   exit 0
 fi
 
+# Install clang
+./clang/install.sh
+
 # Install Compton
 ./compton/install.sh
 
