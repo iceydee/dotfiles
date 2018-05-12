@@ -29,7 +29,7 @@ super + alt + l
 
 # Shutdown
 ctrl + super + alt + l
-  pkill chromium ; shutdown now
+  pkill chrome ; shutdown now
 
 # Focus termite
 ctrl + grave
@@ -118,7 +118,7 @@ alt + shift + r
   $HOME/scripts/dmenu/spotlight
 
 super + b
-  chromium-browser
+  chrome
 
 super + s
   slack
