@@ -1,6 +1,10 @@
 #!/bin/bash
 
-sudo apt install -y vim
+if [ -f "/etc/issue" ]; then
+  if [ -n "$(cat /etc/issue | grep "Ubuntu")" ]; then
+    sudo apt install -y vim
+  fi
+fi
 
 ln -sf ~/my/dotfiles/vim/.vimrc ~/.vimrc
 mkdir -p ~/.vim/bundle
