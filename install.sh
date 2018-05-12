@@ -65,6 +65,9 @@ fi
 # Install chrome
 ./chrome/install.sh
 
+# Install docker
+./docker/install.sh
+
 # Install Compton
 ./compton/install.sh
 
