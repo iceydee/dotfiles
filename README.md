@@ -8,8 +8,6 @@ My zsh and vim configuration
 * rvm, ruby and bundler
 * nvm and node
 * golang
-* vim
-* tmux
 * curl
 * oh-my-zsh
 * chromium

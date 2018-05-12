@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo apt install -y tmux
+
 mkdir -p ~/src/github.com/gpakosz/.tmux
 git clone https://github.com/gpakosz/.tmux ~/src/github.com/gpakosz/.tmux
 ln -sf ~/src/github.com/gpakosz/.tmux/.tmux.conf ~/.tmux.conf

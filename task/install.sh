@@ -2,7 +2,7 @@
 
 # Check we're on ubuntu first
 if [ -z "$(which apk)" ]; then
-  sudo apt-get -y install taskwarrior jq
+  sudo apt -y install taskwarrior jq
 fi
 
 mkdir -p "${HOME}/.tasklists"
