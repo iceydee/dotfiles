@@ -2,7 +2,7 @@
 
 . ~/my/dotfiles/bspwm/startup_functions
 
-slowKill chromium
+slowKill chrome
 
 setDesktop II
-launch "chromium-browser" 2
+launch "chrome" 2

@@ -62,6 +62,9 @@ fi
 # Install clang
 ./clang/install.sh
 
+# Install chrome
+./chrome/install.sh
+
 # Install Compton
 ./compton/install.sh
 
