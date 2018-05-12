@@ -1,8 +1,14 @@
 #!/bin/bash
 
+if [ -f "/etc/issue" ]; then
+  if [ -n "$(cat /etc/issue | grep "Ubuntu")" ]; then
+    sudo apt install -y shellcheck
+  fi
+fi
+
 if [ -n "$(uname -r | grep "Microsoft")" ]; then
   CODE_PATH=/mnt/c/Users/${USER}/AppData/Roaming/Code/User
-elif [ -n "$(uname -s | grep "Darwin")" ]; then
+  elif [ -n "$(uname -s | grep "Darwin")" ]; then
   CODE_PATH=~/Library/Application\ Support/Code/User
 else
   CODE_PATH=~/.config/Code/User
