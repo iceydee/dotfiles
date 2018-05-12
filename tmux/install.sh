@@ -1,6 +1,10 @@
 #!/bin/bash
 
-sudo apt install -y tmux
+if [ -f "/etc/issue" ]; then
+  if [ -n "$(cat /etc/issue | grep "Ubuntu")" ]; then
+    sudo apt install -y tmux
+  fi
+fi
 
 mkdir -p ~/src/github.com/gpakosz/.tmux
 git clone https://github.com/gpakosz/.tmux ~/src/github.com/gpakosz/.tmux
