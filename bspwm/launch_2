@@ -5,4 +5,4 @@
 slowKill chrome
 
 setDesktop II
-launch "chrome" 2
+launch "google-chrome" 2

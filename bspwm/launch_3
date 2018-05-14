@@ -3,4 +3,4 @@
 . ~/my/dotfiles/bspwm/startup_functions
 
 setDesktop III
-launch "chrome" 2
+launch "google-chrome" 2
