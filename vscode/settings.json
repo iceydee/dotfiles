@@ -3,6 +3,10 @@
     "editor.renderWhitespace": "boundary",
     "editor.tabSize": 2,
     "editor.fontSize": 16,
+    "editor.rulers": [
+        80,
+        120
+    ],
     "window.zoomLevel": 0,
     "extensions.ignoreRecommendations": true,
     "sublimeTextKeymap.promptV3Features": true,
