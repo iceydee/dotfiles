@@ -9,7 +9,6 @@
     ],
     "window.zoomLevel": 0,
     "extensions.ignoreRecommendations": true,
-    "sublimeTextKeymap.promptV3Features": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.snippetSuggestions": "top",
     "editor.formatOnPaste": true,
@@ -17,6 +16,19 @@
     "files.insertFinalNewline": true,
     "c-cpp-flylint.flexelint.enable": false,
     "c-cpp-flylint.cppcheck.enable": true,
+    "c-cpp-flylint.standard": [
+        "c11",
+        "gnu11",
+        "c++17"
+    ],
+    "c-cpp-flylint.includePaths": [
+        "${workspaceRoot}",
+        "./src",
+        "./lib",
+        "./lib/log",
+        "./lib/tidex_mutex"
+    ],
+    "c-cpp-flylint.run": "onType",
     "eslint.autoFixOnSave": true,
     "tslint.autoFixOnSave": true,
     "files.associations": {
