@@ -18,10 +18,12 @@ mitaki28.vscode-clang
 mjmcloug.vscode-elixir
 ms-kubernetes-tools.vscode-kubernetes-tools
 ms-python.python
+ms-vscode.cpptools
 ms-vscode.sublime-keybindings
 rebornix.Ruby
 redhat.vscode-yaml
 shakram02.bash-beautify
+sveggiani.vscode-field-lights
 sysoev.language-stylus
 teabyii.ayu
 timonwong.shellcheck

@@ -1,8 +1,9 @@
 {
-    "workbench.colorTheme": "Ayu Mirage",
+    "workbench.colorTheme": "Field Lights",
     "editor.renderWhitespace": "boundary",
     "editor.tabSize": 2,
     "editor.fontSize": 16,
+    "editor.fontFamily": "'Source Code Pro for Powerline', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.rulers": [
         80,
         120
@@ -10,9 +11,12 @@
     "window.zoomLevel": 0,
     "extensions.ignoreRecommendations": true,
     "editor.multiCursorModifier": "ctrlCmd",
+    "editor.cursorBlinking": "phase",
+    "editor.wordWrap": "bounded",
     "editor.snippetSuggestions": "top",
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
+    "editor.smoothScrolling": true,
     "files.insertFinalNewline": true,
     "c-cpp-flylint.flexelint.enable": false,
     "c-cpp-flylint.cppcheck.enable": true,
@@ -21,14 +25,16 @@
         "gnu11",
         "c++17"
     ],
+    "c-cpp-flylint.clang.standard": [
+        "c11",
+        "gnu11",
+        "c++17"
+    ],
     "c-cpp-flylint.includePaths": [
-        "${workspaceRoot}",
-        "./src",
-        "./lib",
-        "./lib/log",
-        "./lib/tidex_mutex"
+        "${workspaceRoot}"
     ],
     "c-cpp-flylint.run": "onType",
+    "c-cpp-flylint.enable": false,
     "eslint.autoFixOnSave": true,
     "tslint.autoFixOnSave": true,
     "files.associations": {
@@ -37,5 +43,8 @@
         "*.dev": "dockerfile"
     },
     "bashBeautify.tabSize": 2,
-    "beautify.tabSize": 2
+    "beautify.tabSize": 2,
+    "workbench.iconTheme": "field-lights-monochrome",
+    "C_Cpp.clang_format_path": "/usr/bin/clang-format",
+    "C_Cpp.clang_format_fallbackStyle": "LLVM"
 }
