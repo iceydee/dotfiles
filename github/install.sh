@@ -8,5 +8,5 @@ make
 make man-pages
 sudo make install
 
-git config --global user.email "mio@plingot.com"
+git config --global user.email "iceydee@users.noreply.github.com"
 git config --global user.name "Mio Nilsson"

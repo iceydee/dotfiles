@@ -50,5 +50,6 @@
     "git.confirmSync": false,
     "git.autofetch": true,
     "debug.allowBreakpointsEverywhere": true,
-    "debug.enableAllHovers": true
+    "debug.enableAllHovers": true,
+    "breadcrumbs.enabled": true
 }
