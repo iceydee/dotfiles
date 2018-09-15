@@ -1,4 +1,5 @@
 EditorConfig.EditorConfig
+PeterJausovec.vscode-docker
 arcticicestudio.nord-visual-studio-code
 atefth.haml-snippets
 castwide.solargraph
@@ -20,7 +21,6 @@ ms-kubernetes-tools.vscode-kubernetes-tools
 ms-python.python
 ms-vscode.cpptools
 ms-vscode.sublime-keybindings
-PeterJausovec.vscode-docker
 rebornix.ruby
 redhat.vscode-yaml
 shakram02.bash-beautify
