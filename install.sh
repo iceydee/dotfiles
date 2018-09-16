@@ -94,3 +94,6 @@ fi
 
 # Install task warrior
 ./task/install.sh
+
+# Install sqitch
+./sqitch/install.sh
