@@ -35,7 +35,6 @@
     ],
     "c-cpp-flylint.run": "onType",
     "c-cpp-flylint.enable": false,
-    "eslint.autoFixOnSave": true,
     "tslint.autoFixOnSave": true,
     "files.associations": {
         "*.jison": "lex",
@@ -51,5 +50,22 @@
     "git.autofetch": true,
     "debug.allowBreakpointsEverywhere": true,
     "debug.enableAllHovers": true,
-    "breadcrumbs.enabled": true
+    "breadcrumbs.enabled": true,
+    "eslint.packageManager": "yarn",
+    "eslint.autoFixOnSave": true,
+    "typescript.format.enable": false,
+    "typescript.autoImportSuggestions.enabled": false,
+    "typescript.check.npmIsInstalled": false,
+    "typescript.format.insertSpaceAfterCommaDelimiter": false,
+    "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+    "typescript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+    "typescript.format.insertSpaceAfterSemicolonInForStatements": false,
+    "typescript.format.insertSpaceBeforeAndAfterBinaryOperators": false,
+    "typescript.quickSuggestionsForPaths": false,
+    "typescript.reportStyleChecksAsWarnings": false,
+    "typescript.suggestionActions.enabled": false,
+    "clang-format.language.typescript.enable": false,
+    "typescript.validate.enable": false,
+    "javascript.validate.enable": false
 }
