@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Build dmenu2
-mkdir -p ~/src/github.com/mrshankly
-cd ~/src/github.com/mrshankly
-git clone git@github.com:mrshankly/dmenu2.git
+mkdir -p ~/src/github.com/nwenger
+cd ~/src/github.com/nwenger
+git clone git@github.com:nwenger/dmenu2.git
 cd dmenu2
 make
 sudo make install
