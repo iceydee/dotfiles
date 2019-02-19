@@ -52,3 +52,7 @@ export PATH=$PATH:/Users/mio/.nvm/v0.10.4/bin:/usr/local/bin:/opt/local/bin:/opt
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# tabtab source for electron-forge package
+# uninstall by removing these lines or running `tabtab uninstall electron-forge`
+[[ -f /Users/mio/src/personas/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /Users/mio/src/personas/node_modules/tabtab/.completions/electron-forge.zsh
