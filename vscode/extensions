@@ -1,11 +1,12 @@
-EditorConfig.EditorConfig
 animallogic.vscode-usda-syntax
 arcticicestudio.nord-visual-studio-code
 atefth.haml-snippets
 castwide.solargraph
+cschlosser.doxdocgen
 dbaeumer.vscode-eslint
 derek-nextty.openapi-viewer
 doublefint.pgsql
+EditorConfig.EditorConfig
 eg2.tslint
 erd0s.terraform-autocomplete
 faustinoaq.lex-flex-yacc-bison
@@ -22,6 +23,7 @@ mjmcloug.vscode-elixir
 ms-kubernetes-tools.vscode-kubernetes-tools
 ms-python.python
 ms-vscode.cpptools
+ms-vscode.csharp
 ms-vscode.sublime-keybindings
 octref.vetur
 PeterJausovec.vscode-docker
