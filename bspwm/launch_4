@@ -2,7 +2,7 @@
 
 . ~/my/dotfiles/bspwm/startup_functions
 
-slowKill code 
+slowKill code
 slowKill termite
 
 setDesktop IV
@@ -11,6 +11,7 @@ lockNode
 tmux new -s main -d
 launchWithRule "termite -e 'tmux a -t main'" Termite south 0.6
 lockNode
-launchWithRule "termite -e '${HOME}/my/dotfiles/bspwm/task_panel'" Termite east 0.7
+launch "google-chrome --app=https://trello.com" 2
 lockNode
 focus termite
+bspc node -z right 600 0
