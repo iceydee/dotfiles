@@ -1,6 +1,8 @@
 animallogic.vscode-usda-syntax
 arcticicestudio.nord-visual-studio-code
 atefth.haml-snippets
+belfz.search-crates-io
+bungcip.better-toml
 castwide.solargraph
 cschlosser.doxdocgen
 dbaeumer.vscode-eslint
@@ -29,6 +31,7 @@ octref.vetur
 PeterJausovec.vscode-docker
 rebornix.ruby
 redhat.vscode-yaml
+rust-lang.rust
 shakram02.bash-beautify
 sveggiani.vscode-field-lights
 sysoev.language-stylus

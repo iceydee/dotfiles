@@ -67,5 +67,6 @@
     "typescript.suggestionActions.enabled": false,
     "clang-format.language.typescript.enable": false,
     "typescript.validate.enable": false,
-    "javascript.validate.enable": false
+    "javascript.validate.enable": false,
+    "shellcheck.disableVersionCheck": true
 }
