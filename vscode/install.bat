@@ -1,0 +1,1 @@
+for /F "tokens=*" %%A in (extensions) do code --install-extension %%A
