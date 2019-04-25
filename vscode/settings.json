@@ -66,7 +66,13 @@
     "typescript.reportStyleChecksAsWarnings": false,
     "typescript.suggestionActions.enabled": false,
     "clang-format.language.typescript.enable": false,
+    "clang-format.language.javascript.enable": false,
     "typescript.validate.enable": false,
     "javascript.validate.enable": false,
-    "shellcheck.disableVersionCheck": true
+    "shellcheck.disableVersionCheck": true,
+    "workbench.settings.editor": "json",
+    "C_Cpp.default.cppStandard": "c++11",
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    }
 }
