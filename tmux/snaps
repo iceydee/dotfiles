@@ -8,7 +8,7 @@ function newwindow() {
   tmux send-keys -t "${name}" "${command}" C-m
 }
 
-newwindow "snapcollisions" "dev snapcollisions"
+newwindow "snap-collisions" "dev snap-collisions"
 newwindow "tree" "dev tree ; util/start"
 newwindow "snapviewer" "dev tree ; cd snapviewer ; yarn start"
 sleep 2
