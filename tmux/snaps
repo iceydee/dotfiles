@@ -11,4 +11,5 @@ function newwindow() {
 newwindow "snapcollisions" "dev snapcollisions"
 newwindow "tree" "dev tree ; util/start"
 newwindow "snapviewer" "dev tree ; cd snapviewer ; yarn start"
+sleep 2
 newwindow "tree logs" "dev tree ; docker-compose logs -f tree"
