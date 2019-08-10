@@ -11,3 +11,4 @@ git clone https://github.com/gpakosz/.tmux ~/src/github.com/gpakosz/.tmux
 ln -sf ~/src/github.com/gpakosz/.tmux/.tmux.conf ~/.tmux.conf
 ln -sf ~/my/dotfiles/tmux/.tmux.conf.local ~/.tmux.conf.local
 sudo cp ./tmux/snaps /usr/local/bin/
+sudo cp ./tmux/vuedev /usr/local/bin/
