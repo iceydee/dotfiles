@@ -10,7 +10,7 @@ function print_usage() {
 function sendcmd() {
   local target=${1}
   local command=${2}
-
+  
   tmux send-keys -t "${target}" "${command}" C-m
 }
 
@@ -21,8 +21,6 @@ function newwindow() {
   tmux new-window -n "${name}"
   sendcmd "${name}" "${command}"
 }
-
-DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 
 # Reset getopts
 OPTIND=1
@@ -44,6 +42,6 @@ done
 
 shift $((OPTIND-1))
 
-newwindow "${PROJECT}" "dev ${PROJECT} ; nvm use --delete-prefix"
-sendcmd "${PROJECT}" "code ."
-newwindow "${PROJECT}-logs" "dev ${PROJECT} ; nvm use --delete-prefix ; yarn serve"
+newwindow "project" "dev ${PROJECT} ; nvm use --delete-prefix"
+sendcmd "project" "code ."
+newwindow "logs" "dev ${PROJECT} ; nvm use --delete-prefix ; yarn serve"
