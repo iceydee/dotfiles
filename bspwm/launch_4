@@ -11,7 +11,7 @@ lockNode
 tmux new -s main -d
 launchWithRule "termite -e 'tmux a -t main'" Termite south 0.6
 lockNode
-launch "google-chrome --app=https://trello.com" 2
+launch "google-chrome --app=https://plingot.atlassian.net/jira/software/projects/WEB/boards/1" 2
 lockNode
 focus termite
 bspc node -z right 600 0
