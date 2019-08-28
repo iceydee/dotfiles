@@ -74,5 +74,9 @@
     "C_Cpp.default.cppStandard": "c++11",
     "[javascript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "cmake.configureOnOpen": true,
+    "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format"
     }
 }
