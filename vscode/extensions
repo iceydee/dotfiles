@@ -1,5 +1,6 @@
 animallogic.vscode-usda-syntax
 arcticicestudio.nord-visual-studio-code
+Arjun.swagger-viewer
 atefth.haml-snippets
 belfz.search-crates-io
 bungcip.better-toml
@@ -29,6 +30,7 @@ ms-python.python
 ms-vscode.cpptools
 ms-vscode.csharp
 ms-vscode.sublime-keybindings
+ms-vsliveshare.vsliveshare
 octref.vetur
 rebornix.ruby
 redhat.vscode-yaml
@@ -41,5 +43,6 @@ sysoev.language-stylus
 teabyii.ayu
 timonwong.shellcheck
 twxs.cmake
+vector-of-bool.cmake-tools
 webfreak.debug
 xaver.clang-format
