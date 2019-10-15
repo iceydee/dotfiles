@@ -6,6 +6,7 @@ alias g-='git pull --rebase'
 alias g+='git push'
 alias gu='g- && g+'
 alias t='task add project:scratch'
+alias pro='google-chrome $(g pr list -f "%U;" | cut -d";" -f1)'
 
 alias crontab="VIM_CRONTAB=true crontab"
 
