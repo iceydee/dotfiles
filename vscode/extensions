@@ -5,6 +5,7 @@ atefth.haml-snippets
 belfz.search-crates-io
 bungcip.better-toml
 castwide.solargraph
+cesium.gltf-vscode
 Connorcpu.vsc-rustfmt
 cschlosser.doxdocgen
 dbaeumer.vscode-eslint
@@ -35,6 +36,7 @@ octref.vetur
 rebornix.ruby
 redhat.vscode-yaml
 rust-lang.rust
+seanwu.vscode-qt-for-python
 serayuzgur.crates
 shakram02.bash-beautify
 shanoor.vscode-nginx
