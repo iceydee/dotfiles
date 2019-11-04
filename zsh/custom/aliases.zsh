@@ -6,6 +6,9 @@ alias g-='git pull --rebase'
 alias g+='git push'
 alias gu='g- && g+'
 alias t='task add project:scratch'
+if [ "$(uname -s)" == "Darwin" ]; then
+  alias 'google-chrome=open'
+fi
 alias pro='google-chrome $(g pr list -f "%U;" | cut -d";" -f1)'
 
 alias crontab="VIM_CRONTAB=true crontab"
@@ -25,8 +28,10 @@ alias v='vagrant'
 alias vp='vagrant provision'
 alias vu='vagrant up'
 
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
+if [ "$(uname -s)" != "Darwin" ]; then
+  alias pbcopy='xclip -selection clipboard'
+  alias pbpaste='xclip -selection clipboard -o'
+fi
 
 function gitstats {
   # Arg1 = from
