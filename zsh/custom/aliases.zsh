@@ -7,7 +7,7 @@ alias g+='git push'
 alias gu='g- && g+'
 alias t='task add project:scratch'
 if [ "$(uname -s)" == "Darwin" ]; then
-  alias 'google-chrome=open'
+  alias google-chrome='open'
 fi
 alias pro='google-chrome $(g pr list -f "%U;" | cut -d";" -f1)'
 
