@@ -1,20 +1,27 @@
 #!/bin/bash
 
-mkdir -p ~/src/github.com/thestinger
-cd ~/src/github.com/thestinger
+gunzip -c termite.gz > termite
+gunzip -c xterm-termite.gz > xterm-termite
 
-git clone --recursive https://github.com/thestinger/termite.git
-git clone https://github.com/thestinger/vte-ng.git
-sudo apt install -y g++ libgtk-3-dev gtk-doc-tools gnutls-bin valac intltool
-sudo apt install -y libglib3.0-cil-dev libgnutls28-dev libgirepository1.0-dev
-sudo apt install -y libxml2-utils gperf libpcre2-dev
-echo export LIBRARY_PATH="/usr/include/gtk-3.0:$LIBRARY_PATH"
-cd vte-ng && git checkout 0.48.2-ng && ./autogen.sh && make && sudo make install
-cd ../termite && make && sudo make install
+chmod +x termite
+chmod +x xterm-termite
+
+sudo mkdir -p /usr/local/share/terminfo/x
+sudo mv termite /usr/local/bin/
+sudo mv xterm-termite /usr/local/share/terminfo/x/
+
+pushd /usr/local/lib
+sudo tar zxvf /home/mio/my/dotfiles/termite/vte.tar.gz
+sudo ln -sf libvte-2.91.so.0.4800.2 libvte-2.91.so.0
+sudo ln -sf libvte-2.91.so.0 libvte-2.91.so
+popd
 
 sudo cp /usr/local/lib/libvte-2.91.a /usr/local/lib/libvte-2.91.la \
-/usr/local/lib/libvte-2.91.so /usr/local/lib/libvte-2.91.so.0 \
 /usr/local/lib/libvte-2.91.so.0.4800.2 /usr/lib
+pushd /usr/lib
+sudo ln -sf libvte-2.91.so.0.4800.2 libvte-2.91.so.0
+sudo ln -sf libvte-2.91.so.0 libvte-2.91.so
+popd
 sudo mkdir -p /lib/terminfo/x; sudo ln -sf \
 /usr/local/share/terminfo/x/xterm-termite \
 /lib/terminfo/x/xterm-termite
