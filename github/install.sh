@@ -13,6 +13,6 @@ sudo make install
 git config --global user.email "mio@plingot.com"
 git config --global user.name "Mio Nilsson"
 git config --global merge.tool vscode
-git config --global mergetool.vscode.cmd "code --wait $MERGED"
+git config --global mergetool.vscode.cmd "code --wait \$MERGED"
 git config --global diff.tool vscode
-git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE"
+git config --global difftool.vscode.cmd "code --wait --diff \$LOCAL \$REMOTE"
