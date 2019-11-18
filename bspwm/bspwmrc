@@ -3,8 +3,8 @@
 sxhkd &
 
 if [ "$(wc -l ~/.polybar-monitor | awk '{print $1}')" -gt 1 ]; then
-  bspc monitor $(head -n1 ~/.polybar-monitor) -n 1 -d I III V
-  bspc monitor $(tail -n1 ~/.polybar-monitor) -n 2 -d II IV VI
+  bspc monitor $(tail -n1 ~/.polybar-monitor) -n 1 -d I III V
+  bspc monitor $(head -n1 ~/.polybar-monitor) -n 2 -d II IV VI
 else
   bspc monitor -d I II III IV V VI
 fi
