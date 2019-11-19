@@ -58,3 +58,10 @@ if [ -z "$(which helm | grep -v "not found")" ]; then
     sudo rm -rf linux-amd64/
   fi
 fi
+
+# AZ Cli
+if [ -z "$(which az | grep -v "not found")" ]; then
+  if [ "$(uname -s)" = "Linux" ]; then
+    curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+  fi
+fi
