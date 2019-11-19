@@ -18,6 +18,8 @@ alias gff='gf feature'
 alias gfc='gff checkout'
 alias gfr='gf release'
 
+alias s='slack-term -config ~/snap/slack-term/current/slack-term.json'
+
 alias vp='vagrant provision'
 alias vu='vagrant up'
 
@@ -36,12 +38,12 @@ fi
 function gitstats {
   # Arg1 = from
   # Arg2 = to
-
+  
   local TO=${2}
   if [ -z "${2}" ]; then
     TO="HEAD"
   fi
-
+  
   echo `git diff --stat ${1}..${TO} | tail -n1`
   echo -n "Merges: "
   echo `git log --oneline --merges ${1}..${TO} | wc -l`
@@ -49,11 +51,11 @@ function gitstats {
 
 function vt {
   PREVIOUS_TAG=`git describe | cut -d'-' -f1`
-
+  
   echo
   echo "Showing commits from ${PREVIOUS_TAG} to HEAD"
   echo
-
+  
   git log --oneline ${PREVIOUS_TAG}..HEAD
   git log --oneline ${PREVIOUS_TAG}..HEAD | cut -d" " -f2- | pbcopy
 }
