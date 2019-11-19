@@ -1,0 +1,6 @@
+[default]
+output=json
+region=eu-central-1
+
+[profile plingot]
+mfa_serial=arn:aws:iam::660004461829:mfa/mio@plingot.com

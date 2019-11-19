@@ -4,7 +4,7 @@ FIRST_RUN=0
 
 if [ ! -f "${HOME}/.compton-config" ]; then
   FIRST_RUN=1
-
+  
   echo "Which config?"
   echo
   echo "1) Compton (screen bling - requires GPU)"
@@ -12,7 +12,7 @@ if [ ! -f "${HOME}/.compton-config" ]; then
   echo
   echo -n "? "
   read A
-
+  
   if [ "${A}" -eq "2" ]; then
     echo "no" > ~/.compton-config
   else
@@ -55,7 +55,7 @@ if [ "${FIRST_RUN}" -eq 1 ]; then
   echo
   echo "${0}"
   echo
-
+  
   exit 0
 fi
 
@@ -97,3 +97,6 @@ fi
 
 # Install sqitch
 ./sqitch/install.sh
+
+# Install aws
+./aws/install.sh
