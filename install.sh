@@ -100,3 +100,6 @@ fi
 
 # Install aws
 ./aws/install.sh
+
+# Install rust
+./rust/install.sh
