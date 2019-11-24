@@ -65,3 +65,12 @@ if [ -z "$(which az | grep -v "not found")" ]; then
     curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
   fi
 fi
+
+# SOPS
+if [ -z "$(which sops | grep -v "not found")" ]; then
+  if [ "$(uname -s)" = "Linux" ]; then
+    curl -L -o sops https://github.com/mozilla/sops/releases/download/v3.5.0/sops-v3.5.0.linux
+    chmod +x sops
+    sudo mv sops /usr/local/bin/
+  fi
+fi
