@@ -48,14 +48,24 @@ if [ -z "$(which kubectl | grep -v "not found")" ]; then
 fi
 
 # Helm
-if [ -z "$(which helm | grep -v "not found")" ]; then
+if [ -z "$(which helm2 | grep -v "not found")" ]; then
   if [ "$(uname -s)" = "Linux" ]; then
     curl -o helm.tar.gz https://get.helm.sh/helm-v2.16.1-linux-amd64.tar.gz
     tar zxvf helm.tar.gz
     rm -f helm.tar.gz
-    sudo mv linux-amd64/helm /usr/local/bin/
+    sudo mv linux-amd64/helm /usr/local/bin/helm2
     sudo mv linux-amd64/tiller /usr/local/bin/
     sudo rm -rf linux-amd64/
+  fi
+fi
+if [ -z "$(which helm3 | grep -v "not found")" ]; then
+  if [ "$(uname -s)" = "Linux" ]; then
+    curl -o helm.tar.gz https://get.helm.sh/helm-v3.0.0-linux-amd64.tar.gz
+    tar zxvf helm.tar.gz
+    rm -f helm.tar.gz
+    sudo mv linux-amd64/helm /usr/local/bin/helm3
+    sudo rm -rf linux-amd64/
+    sudo ln -sf /usr/local/bin/helm3 /usr/local/bin/helm
   fi
 fi
 
