@@ -24,7 +24,12 @@ fi
 xrandr --query | grep "\bconnected\b" | awk '{print $1}' > ~/.polybar-monitor
 
 # Update resolution for dmenu
-xrandr --query | grep "\bconnected\b" | head -n1 | awk '{print $3}' | cut -d'+' -f1 > ~/.dmenu-resolution
+MAIN_SCREEN=$(xrandr --query | grep "\bconnected\b" | head -n1)
+if [ -n "$(echo "${MAIN_SCREEN}" | grep "primary")" ]; then
+  echo "${MAIN_SCREEN}" | awk '{print $4}' | cut -d'+' -f1 > ~/.dmenu-resolution
+else
+  echo "${MAIN_SCREEN}" | awk '{print $3}' | cut -d'+' -f1 > ~/.dmenu-resolution
+fi
 
 clear
 
