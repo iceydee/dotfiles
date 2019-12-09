@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd ./termite
+
 gunzip -c termite.gz > termite
 gunzip -c xterm-termite.gz > xterm-termite
 
