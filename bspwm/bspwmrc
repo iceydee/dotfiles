@@ -1,5 +1,8 @@
 #! /bin/sh
 
+xrandr --output DP-0 --mode 2560x1440 --rate 59.95
+xrandr --output DP-2 --mode 2560x1440 --rate 59.95
+
 sxhkd &
 
 if [ "$(wc -l ~/.polybar-monitor | awk '{print $1}')" -gt 1 ]; then
