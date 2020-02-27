@@ -25,6 +25,7 @@ alias vu='vagrant up'
 
 alias gi='ghi open --claim -M'
 alias git='hub'
+alias gclean='git fetch -p | grep "origin/feature" | sed "s/^.*origin\///g" | xargs git branch -D'
 
 alias v='vagrant'
 alias vp='vagrant provision'
