@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ "${UID}" != 0 ]; then
+  echo "error: must run as root!"
+  exit -1
+fi
+
+route del default dev ppp0
+echo "d plingot" > /var/run/xl2tpd/l2tp-control
+sleep 2
+ipsec down plingot
+sleep 2

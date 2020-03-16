@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [ "${UID}" != 0 ]; then
+  echo "error: must run as root!"
+  exit -1
+fi
+
+ipsec up plingot
+sleep 2
+echo "c plingot" > /var/run/xl2tpd/l2tp-control
+
+echo -n "Waiting for ppp0: "
+while [ -z "$(ifconfig ppp0 2>&1 | grep -v "Device not found")" ]; do
+  sleep 0.5
+done
+sleep 4
+echo "finished."
+
+route add default dev ppp0

@@ -108,3 +108,6 @@ fi
 
 # Install rust
 ./rust/install.sh
+
+# Install VPN scripts
+./vpn/install.sh
