@@ -9,6 +9,10 @@ ipsec up plingot
 sleep 2
 echo "c plingot" > /var/run/xl2tpd/l2tp-control
 
+if [ -z "$(route | grep "185.96.154.90")" ]; then
+  route add 185.96.154.90 gw 192.1681.1
+fi
+
 echo -n "Waiting for ppp0: "
 while [ -z "$(ifconfig ppp0 2>&1 | grep -v "Device not found")" ]; do
   sleep 0.5
