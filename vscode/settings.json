@@ -94,8 +94,10 @@
         ]
     },
     "terraform.languageServer": {
-        "enabled": true,
-        "args": []
+        "external": true,
+        "args": [
+            "serve"
+        ]
     },
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
