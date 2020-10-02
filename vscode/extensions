@@ -1,4 +1,5 @@
 animallogic.vscode-usda-syntax
+aprilandjan.ascii-tree-generator
 arcticicestudio.nord-visual-studio-code
 Arjun.swagger-viewer
 atefth.haml-snippets
@@ -16,12 +17,12 @@ eg2.tslint
 erd0s.terraform-autocomplete
 faustinoaq.lex-flex-yacc-bison
 gamunu.vscode-yarn
+hashicorp.terraform
 jbenden.c-cpp-flylint
 joeandaverde.sqitch-plan
 karunamurti.haml
 Kasik96.swift
 kube.clangcomplete
-mauve.terraform
 michelemelluso.code-beautifier
 mitaki28.vscode-clang
 mjmcloug.vscode-elixir
