@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo apt -y install libmpdclient2
+
 cd ./polybar
 
 gunzip -c polybar.gz > polybar

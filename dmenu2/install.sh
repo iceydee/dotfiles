@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo apt -y install libx11-dev libxinerama-dev libxft-dev
+
 # Build dmenu2
 mkdir -p ~/src/github.com/nwenger
 cd ~/src/github.com/nwenger
