@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt install -y bspwm
+sudo apt install -y bspwm feh
 
 # Setup bspwm
 mkdir -p ~/.config/bspwm
