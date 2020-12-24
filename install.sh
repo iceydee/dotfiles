@@ -110,4 +110,4 @@ fi
 ./rust/install.sh
 
 # Install VPN scripts
-./vpn/install.sh
+sudo ./vpn/install.sh
