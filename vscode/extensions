@@ -1,3 +1,4 @@
+adamhartford.vscode-base64
 animallogic.vscode-usda-syntax
 aprilandjan.ascii-tree-generator
 arcticicestudio.nord-visual-studio-code
@@ -13,7 +14,6 @@ dbaeumer.vscode-eslint
 derek-nextty.openapi-viewer
 doublefint.pgsql
 EditorConfig.EditorConfig
-eg2.tslint
 erd0s.terraform-autocomplete
 faustinoaq.lex-flex-yacc-bison
 gamunu.vscode-yarn
@@ -28,12 +28,16 @@ mitaki28.vscode-clang
 mjmcloug.vscode-elixir
 ms-azuretools.vscode-docker
 ms-dotnettools.csharp
+ms-kubernetes-tools.vscode-aks-tools
 ms-kubernetes-tools.vscode-kubernetes-tools
 ms-python.python
+ms-toolsai.jupyter
+ms-vscode.azure-account
 ms-vscode.cmake-tools
 ms-vscode.cpptools
 ms-vscode.sublime-keybindings
 ms-vsliveshare.vsliveshare
+netcorext.uuid-generator
 octref.vetur
 rebornix.ruby
 redhat.vscode-yaml

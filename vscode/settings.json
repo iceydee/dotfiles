@@ -5,8 +5,7 @@
     "editor.fontSize": 16,
     "editor.fontFamily": "'Source Code Pro for Powerline', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.rulers": [
-        80,
-        120
+        140
     ],
     "window.zoomLevel": 0,
     "extensions.ignoreRecommendations": true,
@@ -35,21 +34,18 @@
     ],
     "c-cpp-flylint.run": "onType",
     "c-cpp-flylint.enable": false,
-    "tslint.autoFixOnSave": true,
     "files.associations": {
         "*.jison": "lex",
         "*.tag": "jade",
         "*.dev": "dockerfile"
     },
     "bashBeautify.tabSize": 2,
-    "beautify.tabSize": 2,
     "workbench.iconTheme": "field-lights-monochrome",
     "C_Cpp.clang_format_path": "/usr/bin/clang-format",
     "C_Cpp.clang_format_fallbackStyle": "LLVM",
     "git.confirmSync": false,
     "git.autofetch": true,
     "debug.allowBreakpointsEverywhere": true,
-    "debug.enableAllHovers": true,
     "breadcrumbs.enabled": true,
     "eslint.validate": [
         "javascript",
@@ -59,7 +55,6 @@
         "vue"
     ],
     "typescript.format.enable": false,
-    "typescript.autoImportSuggestions.enabled": false,
     "typescript.check.npmIsInstalled": false,
     "typescript.format.insertSpaceAfterCommaDelimiter": false,
     "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
@@ -67,7 +62,6 @@
     "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
     "typescript.format.insertSpaceAfterSemicolonInForStatements": false,
     "typescript.format.insertSpaceBeforeAndAfterBinaryOperators": false,
-    "typescript.quickSuggestionsForPaths": false,
     "typescript.reportStyleChecksAsWarnings": false,
     "typescript.suggestionActions.enabled": false,
     "clang-format.language.typescript.enable": false,
@@ -78,7 +72,7 @@
     "workbench.settings.editor": "json",
     "C_Cpp.default.cppStandard": "c++11",
     "[javascript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
     "cmake.configureOnOpen": true,
     "[cpp]": {
