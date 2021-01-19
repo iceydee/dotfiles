@@ -1,5 +1,5 @@
 #!/bin/bash
 
-sudo apt install -y cmake clang-10 clang-format-10 lldb-10 lld-10
+sudo apt install -y cmake clang-11 clang-format-11 lldb-11 lld-11
 
 ./clang/set_clang.sh
