@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Terraform
-if [ -z "$(which terraform | grep -v "not found")" ]; then
+# Terraform 0.12
+if [ -z "$(which terraform12 | grep -v "not found")" ]; then
   if [ "$(uname -s)" = "Linux" ]; then
     curl -o terraform.zip https://releases.hashicorp.com/terraform/0.12.29/terraform_0.12.29_linux_amd64.zip
     elif [ "$(uname -s)" = "Darwin" ]; then
@@ -10,8 +10,36 @@ if [ -z "$(which terraform | grep -v "not found")" ]; then
   
   unzip terraform.zip
   rm -f terraform.zip
-  sudo mv terraform /usr/local/bin/
+  sudo mv terraform /usr/local/bin/terraform12
 fi
+
+# Terraform 0.13
+if [ -z "$(which terraform13 | grep -v "not found")" ]; then
+  if [ "$(uname -s)" = "Linux" ]; then
+    curl -o terraform.zip https://releases.hashicorp.com/terraform/0.13.6/terraform_0.13.6_linux_amd64.zip
+    elif [ "$(uname -s)" = "Darwin" ]; then
+    curl -o terraform.zip https://releases.hashicorp.com/terraform/0.13.6/terraform_0.13.6_darwin_amd64.zip
+  fi
+  
+  unzip terraform.zip
+  rm -f terraform.zip
+  sudo mv terraform /usr/local/bin/terraform13
+fi
+
+# Terraform 0.14
+if [ -z "$(which terraform14 | grep -v "not found")" ]; then
+  if [ "$(uname -s)" = "Linux" ]; then
+    curl -o terraform.zip https://releases.hashicorp.com/terraform/0.14.7/terraform_0.14.7_linux_amd64.zip
+    elif [ "$(uname -s)" = "Darwin" ]; then
+    curl -o terraform.zip https://releases.hashicorp.com/terraform/0.14.7/terraform_0.14.7_darwin_amd64.zip
+  fi
+  
+  unzip terraform.zip
+  rm -f terraform.zip
+  sudo mv terraform /usr/local/bin/terraform14
+fi
+
+sudo ln -sf /usr/local/bin/terraform14 /usr/local/bin/terraform
 
 # AWS cli
 if [ -z "$(which aws | grep -v "not found")" ]; then
