@@ -109,6 +109,9 @@ if [ -z "$(which helm3 | grep -v "not found")" ]; then
   fi
 fi
 
+sudo rm -f /usr/local/bin/helm
+sudo ln -sf /usr/local/bin/helm3 /usr/local/bin/helm
+
 # AZ Cli
 if [ -z "$(which az | grep -v "not found")" ]; then
   if [ "$(uname -s)" = "Linux" ]; then
