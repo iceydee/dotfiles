@@ -109,5 +109,11 @@
     },
     "azure.resourceFilter": [
         "a33c6ac4-a52e-45c5-af07-b972df9bd004/09d5a0d5-7b16-4ec1-a142-f07419b6f596"
+    ],
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
     ]
 }
