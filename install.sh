@@ -1,5 +1,7 @@
 #!/bin/bash
 
+./preflight.sh || exit 1
+
 FIRST_RUN=0
 
 if [ ! -f "${HOME}/.compton-config" ]; then
