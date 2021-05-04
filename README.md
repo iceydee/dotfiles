@@ -10,7 +10,6 @@ My zsh and vim configuration
 * golang
 * curl
 * oh-my-zsh
-* chromium
-* dropbox
+* chrome
 * slack
 * vscode
