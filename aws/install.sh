@@ -2,6 +2,12 @@
 
 ./aws/version_cleanup.sh
 
+if [ -f "/etc/issue" ]; then
+  if [ -n "$(cat /etc/issue | grep "Ubuntu")" ]; then
+    sudo apt install -y python3-pip
+  fi
+fi
+
 # Terraform 0.12
 if [ -z "$(which terraform12 | grep -v "not found")" ]; then
   if [ "$(uname -s)" = "Linux" ]; then
