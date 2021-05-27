@@ -75,6 +75,10 @@ alt + {_,shift + }{1-9,0}
 super + {a,s,w,d}
   bspc node -s {west,south,north,east}
 
+# swap the node to monitor in the given direction
+super + shift + {a,s,w,d}
+  bspc node -m {west,south,noth,east} --follow
+
 # resize the node horizontally
 super + {_, alt +}{Right,Left}
   bspc node -z {right,left} {20 0,-20 0}
