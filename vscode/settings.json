@@ -38,7 +38,8 @@
     "files.associations": {
         "*.jison": "lex",
         "*.tag": "jade",
-        "*.dev": "dockerfile"
+        "*.dev": "dockerfile",
+        "*.in": "plaintext"
     },
     "bashBeautify.tabSize": 2,
     "workbench.iconTheme": "field-lights-monochrome",
