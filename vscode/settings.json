@@ -112,5 +112,8 @@
     ],
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
 }
