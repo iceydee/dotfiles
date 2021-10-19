@@ -115,5 +115,39 @@
     },
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "redhat.telemetry.enabled": false,
+    "yaml.schemas": {
+        "file:///home/mio/.vscode/extensions/atlassian.atlascode-2.9.1/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+    "atlascode.bitbucket.enabled": false,
+    "jira-plugin.baseUrl": "https://jira.build.ingka.ikea.com",
+    "jira-plugin.username": "minil16",
+    "atlascode.jira.jqlList": [
+        {
+            "id": "5d15363d-948b-4b3e-85c6-15a9f656d077",
+            "enabled": true,
+            "name": "My plingot Issues",
+            "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
+            "siteId": "f2ec5eb1-563c-4cb8-9ba5-738b74338469",
+            "monitor": true
+        },
+        {
+            "id": "3b02d524-5c1b-482a-a0f2-3bae8441128c",
+            "siteId": "7c8c6956-d7df-4946-b41c-316d4e42d25e",
+            "name": "DoIT - Assigned to me",
+            "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
+            "enabled": true,
+            "monitor": true
+        },
+        {
+            "id": "1af462a7-d12a-43f1-90cb-f0441f3ea157",
+            "siteId": "7c8c6956-d7df-4946-b41c-316d4e42d25e",
+            "name": "IDLab",
+            "query": "project = \"Digital Lab Projects\" AND assignee = currentUser() AND resolution != Resolved AND resolution != Done",
+            "enabled": true,
+            "monitor": true
+        }
+    ],
+    "github-enterprise.uri": "https://git.build.inter.ikea.com"
 }
