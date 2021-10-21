@@ -4,6 +4,7 @@ aprilandjan.ascii-tree-generator
 arcticicestudio.nord-visual-studio-code
 Arjun.swagger-viewer
 atefth.haml-snippets
+atlassian.atlascode
 belfz.search-crates-io
 bungcip.better-toml
 castwide.solargraph
@@ -13,10 +14,13 @@ cschlosser.doxdocgen
 dbaeumer.vscode-eslint
 derek-nextty.openapi-viewer
 doublefint.pgsql
+eamodio.gitlens
 EditorConfig.EditorConfig
 erd0s.terraform-autocomplete
+esbenp.prettier-vscode
 faustinoaq.lex-flex-yacc-bison
 gamunu.vscode-yarn
+GitHub.vscode-pull-request-github
 hashicorp.terraform
 jbenden.c-cpp-flylint
 joeandaverde.sqitch-plan
@@ -31,7 +35,10 @@ ms-dotnettools.csharp
 ms-kubernetes-tools.vscode-aks-tools
 ms-kubernetes-tools.vscode-kubernetes-tools
 ms-python.python
+ms-python.vscode-pylance
 ms-toolsai.jupyter
+ms-toolsai.jupyter-keymap
+ms-toolsai.jupyter-renderers
 ms-vscode.azure-account
 ms-vscode.cmake-tools
 ms-vscode.cpptools
@@ -39,6 +46,7 @@ ms-vscode.sublime-keybindings
 ms-vsliveshare.vsliveshare
 netcorext.uuid-generator
 octref.vetur
+Prisma.prisma
 rebornix.ruby
 redhat.vscode-yaml
 rust-lang.rust
