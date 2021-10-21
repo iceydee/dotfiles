@@ -149,5 +149,6 @@
             "monitor": true
         }
     ],
-    "github-enterprise.uri": "https://git.build.inter.ikea.com"
+    "github-enterprise.uri": "https://git.build.inter.ikea.com",
+    "markdown.preview.breaks": true
 }
