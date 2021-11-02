@@ -50,9 +50,9 @@ fi
 # Terraform 1.x
 if [ -z "$(which terraform1x | grep -v "not found")" ]; then
   if [ "$(uname -s)" = "Linux" ]; then
-    curl -o terraform.zip https://releases.hashicorp.com/terraform/1.0.9/terraform_1.0.9_linux_amd64.zip
+    curl -o terraform.zip https://releases.hashicorp.com/terraform/1.0.10/terraform_1.0.10_linux_amd64.zip
     elif [ "$(uname -s)" = "Darwin" ]; then
-    curl -o terraform.zip https://releases.hashicorp.com/terraform/1.0.9/terraform_1.0.9_darwin_amd64.zip
+    curl -o terraform.zip https://releases.hashicorp.com/terraform/1.0.10/terraform_1.0.10_darwin_amd64.zip
   fi
   
   unzip terraform.zip
