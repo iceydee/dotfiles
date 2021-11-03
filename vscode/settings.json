@@ -144,7 +144,7 @@
             "id": "1af462a7-d12a-43f1-90cb-f0441f3ea157",
             "siteId": "7c8c6956-d7df-4946-b41c-316d4e42d25e",
             "name": "IDLab",
-            "query": "project = \"Digital Lab Projects\" AND assignee = currentUser() AND resolution != Resolved AND resolution != Done",
+            "query": "project = \"Digital Lab Projects\" AND assignee = currentUser() AND resolution = Unresolved ORDER BY Rank ASC",
             "enabled": true,
             "monitor": true
         }
