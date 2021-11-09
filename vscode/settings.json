@@ -150,5 +150,6 @@
         }
     ],
     "github-enterprise.uri": "https://git.build.inter.ikea.com",
-    "markdown.preview.breaks": true
+    "markdown.preview.breaks": true,
+    "atlascode.jira.startWorkBranchTemplate.customTemplate": "feature/{{{prefix}}}{{{issueKey}}}-{{{summary}}}"
 }
