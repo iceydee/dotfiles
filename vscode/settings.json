@@ -136,7 +136,7 @@
             "id": "3b02d524-5c1b-482a-a0f2-3bae8441128c",
             "siteId": "7c8c6956-d7df-4946-b41c-316d4e42d25e",
             "name": "DoIT - Assigned to me",
-            "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
+            "query": "project = \"DevOps - 3D\" AND assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
             "enabled": true,
             "monitor": true
         },
@@ -151,5 +151,9 @@
     ],
     "github-enterprise.uri": "https://git.build.inter.ikea.com",
     "markdown.preview.breaks": true,
+    "atlascode.jira.lastCreateSiteAndProject": {
+        "siteId": "7c8c6956-d7df-4946-b41c-316d4e42d25e",
+        "projectKey": "IDLAB"
+    },
     "atlascode.jira.startWorkBranchTemplate.customTemplate": "feature/{{{prefix}}}{{{issueKey}}}-{{{summary}}}"
 }
