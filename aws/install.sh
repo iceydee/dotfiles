@@ -119,7 +119,7 @@ if [ -z "$(which helm2 | grep -v "not found")" ]; then
 fi
 if [ -z "$(which helm3 | grep -v "not found")" ]; then
   if [ "$(uname -s)" = "Linux" ]; then
-    curl -o helm.tar.gz https://get.helm.sh/helm-v3.5.2-linux-amd64.tar.gz
+    curl -o helm.tar.gz https://get.helm.sh/helm-v3.7.1-linux-amd64.tar.gz
     tar zxvf helm.tar.gz
     rm -f helm.tar.gz
     sudo mv linux-amd64/helm /usr/local/bin/helm3
