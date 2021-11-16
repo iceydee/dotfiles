@@ -28,7 +28,7 @@ function versionCheck {
 }
 
 checkInstalled terraform && {
-  versionCheck terraform "terraform version" "${TERRAFORM}"
+  versionCheck terraform1x "terraform version" "${TERRAFORM}"
 }
 
 checkInstalled aws-vault && {
