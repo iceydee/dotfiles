@@ -75,7 +75,7 @@ fi
 # AWS Vault
 if [ -z "$(which aws-vault | grep -v "not found")" ]; then
   if [ "$(uname -s)" = "Linux" ]; then
-    curl -L -o aws-vault https://github.com/99designs/aws-vault/releases/download/v6.2.0/aws-vault-linux-amd64
+    curl -L -o aws-vault https://github.com/99designs/aws-vault/releases/download/v6.3.1/aws-vault-linux-amd64
     chmod +x aws-vault
     sudo mv aws-vault /usr/local/bin/
   fi
