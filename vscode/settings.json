@@ -118,7 +118,7 @@
     },
     "redhat.telemetry.enabled": false,
     "yaml.schemas": {
-        "file:///home/mio/.vscode/extensions/atlassian.atlascode-2.10.5/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+        "file:///home/mio/.vscode/extensions/atlassian.atlascode-2.10.7/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     },
     "atlascode.bitbucket.enabled": false,
     "jira-plugin.baseUrl": "https://jira.build.ingka.ikea.com",
@@ -155,5 +155,6 @@
         "siteId": "7c8c6956-d7df-4946-b41c-316d4e42d25e",
         "projectKey": "IDLAB"
     },
-    "atlascode.jira.startWorkBranchTemplate.customTemplate": "feature/{{{prefix}}}{{{issueKey}}}-{{{summary}}}"
+    "atlascode.jira.startWorkBranchTemplate.customTemplate": "feature/{{{prefix}}}{{{issueKey}}}-{{{summary}}}",
+    "editor.largeFileOptimizations": false
 }
