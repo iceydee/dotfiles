@@ -118,7 +118,7 @@
     },
     "redhat.telemetry.enabled": false,
     "yaml.schemas": {
-        "file:///home/mio/.vscode/extensions/atlassian.atlascode-2.10.7/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+        "file:///home/mio/.vscode/extensions/atlassian.atlascode-2.10.9/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     },
     "atlascode.bitbucket.enabled": false,
     "jira-plugin.baseUrl": "https://jira.build.ingka.ikea.com",
@@ -147,14 +147,23 @@
             "query": "project = \"Digital Lab Projects\" AND assignee = currentUser() AND resolution = Unresolved ORDER BY Rank ASC",
             "enabled": true,
             "monitor": true
+        },
+        {
+            "id": "8ef9c1bf-7ace-43e4-b222-afb5e22c431c",
+            "siteId": "f2ec5eb1-563c-4cb8-9ba5-738b74338469",
+            "name": "LondonDynamics",
+            "query": "project = LondonDynamics AND status = \"To Do\" ORDER BY rank ASC",
+            "enabled": true,
+            "monitor": true
         }
     ],
     "github-enterprise.uri": "https://git.build.inter.ikea.com",
     "markdown.preview.breaks": true,
     "atlascode.jira.lastCreateSiteAndProject": {
-        "siteId": "7c8c6956-d7df-4946-b41c-316d4e42d25e",
-        "projectKey": "IDLAB"
+        "siteId": "f2ec5eb1-563c-4cb8-9ba5-738b74338469",
+        "projectKey": "LN"
     },
     "atlascode.jira.startWorkBranchTemplate.customTemplate": "feature/{{{prefix}}}{{{issueKey}}}-{{{summary}}}",
-    "editor.largeFileOptimizations": false
+    "editor.largeFileOptimizations": false,
+    "atlascode.jira.enabled": true
 }
