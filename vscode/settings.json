@@ -159,10 +159,6 @@
     ],
     "github-enterprise.uri": "https://git.build.inter.ikea.com",
     "markdown.preview.breaks": true,
-    "atlascode.jira.lastCreateSiteAndProject": {
-        "siteId": "f2ec5eb1-563c-4cb8-9ba5-738b74338469",
-        "projectKey": "LN"
-    },
     "atlascode.jira.startWorkBranchTemplate.customTemplate": "feature/{{{prefix}}}{{{issueKey}}}-{{{summary}}}",
     "editor.largeFileOptimizations": false,
     "atlascode.jira.enabled": true
