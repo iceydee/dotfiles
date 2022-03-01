@@ -88,7 +88,7 @@ fi
 # AWS Vault
 if [ -z "$(which aws-vault | grep -v "not found")" ]; then
   if [ "$(uname -s)" = "Linux" ]; then
-    curl -L -o aws-vault https://github.com/99designs/aws-vault/releases/download/v6.3.1/aws-vault-linux-amd64
+    curl -L -o aws-vault https://github.com/99designs/aws-vault/releases/download/v6.5.0/aws-vault-linux-amd64
     chmod +x aws-vault
     sudo mv aws-vault /usr/local/bin/
   fi
@@ -97,7 +97,7 @@ fi
 # AWS IAM Authenticator
 if [ -z "$(which aws-iam-authenticator | grep -v "not found")" ]; then
   if [ "$(uname -s)" = "Linux" ]; then
-    curl -o aws-iam-authenticator https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/aws-iam-authenticator
+    curl -o aws-iam-authenticator https://amazon-eks.s3.us-west-2.amazonaws.com/1.21.2/2021-07-05/bin/linux/amd64/aws-iam-authenticator
     chmod +x aws-iam-authenticator
     sudo mv aws-iam-authenticator /usr/local/bin/
   fi
@@ -132,7 +132,7 @@ if [ -z "$(which helm2 | grep -v "not found")" ]; then
 fi
 if [ -z "$(which helm3 | grep -v "not found")" ]; then
   if [ "$(uname -s)" = "Linux" ]; then
-    curl -o helm.tar.gz https://get.helm.sh/helm-v3.7.1-linux-amd64.tar.gz
+    curl -o helm.tar.gz https://get.helm.sh/helm-v3.8.0-linux-amd64.tar.gz
     tar zxvf helm.tar.gz
     rm -f helm.tar.gz
     sudo mv linux-amd64/helm /usr/local/bin/helm3
@@ -154,7 +154,7 @@ fi
 # SOPS
 if [ -z "$(which sops | grep -v "not found")" ]; then
   if [ "$(uname -s)" = "Linux" ]; then
-    curl -L -o sops https://github.com/mozilla/sops/releases/download/v3.6.1/sops-v3.6.1.linux
+    curl -L -o sops https://github.com/mozilla/sops/releases/download/v3.7.1/sops-v3.7.1.linux
     chmod +x sops
     sudo mv sops /usr/local/bin/
   fi
