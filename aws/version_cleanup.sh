@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TERRAFORM="v1.0.10"
+TERRAFORM="v1.1.6"
 AWS_VAULT="v6.3.1"
 AWS_IAM_AUTHENTICATOR="v0.5.0"
 KOPS="1.22.4"
@@ -28,7 +28,7 @@ function versionCheck {
 }
 
 checkInstalled terraform && {
-  versionCheck terraform1x "terraform version" "${TERRAFORM}"
+  versionCheck terraform11x "terraform version" "${TERRAFORM}"
 }
 
 checkInstalled aws-vault && {
