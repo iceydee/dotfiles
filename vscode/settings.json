@@ -161,5 +161,9 @@
     "markdown.preview.breaks": true,
     "atlascode.jira.startWorkBranchTemplate.customTemplate": "feature/{{{prefix}}}{{{issueKey}}}-{{{summary}}}",
     "editor.largeFileOptimizations": false,
-    "atlascode.jira.enabled": true
+    "atlascode.jira.enabled": true,
+    "atlascode.jira.lastCreateSiteAndProject": {
+        "siteId": "f2ec5eb1-563c-4cb8-9ba5-738b74338469",
+        "projectKey": "LN"
+    }
 }
