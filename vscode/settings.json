@@ -77,6 +77,7 @@
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
     "cmake.configureOnOpen": true,
+    "cmake.generator": "Ninja",
     "[cpp]": {
         "editor.defaultFormatter": "xaver.clang-format"
     },
@@ -152,7 +153,7 @@
             "id": "8ef9c1bf-7ace-43e4-b222-afb5e22c431c",
             "siteId": "f2ec5eb1-563c-4cb8-9ba5-738b74338469",
             "name": "LondonDynamics",
-            "query": "project = LondonDynamics AND status = \"To Do\" ORDER BY rank ASC",
+            "query": "project = LondonDynamics AND (status = \"To Do\" OR status = \"In Progress\") ORDER BY rank ASC",
             "enabled": true,
             "monitor": true
         }
