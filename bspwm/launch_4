@@ -6,13 +6,14 @@ slowKill code
 slowKill termite
 
 setDesktop IV
-launch code 4
-lockNode
 tmux new -s main -d
-launchWithRule "termite -e 'tmux a -t main'" Termite south 0.6
+launch "termite -e 'tmux a -t main'"
 lockNode
+bspc node -p north -o 0.65
+launch "code" 4
+focus termite
+bspc node -p east -o 0.7
 # launch "google-chrome --app=https://plingot.atlassian.net/secure/BrowseProjects.jspa" 2
 launch "google-chrome --app='https://jira.build.ingka.ikea.com/secure/RapidBoard.jspa?rapidView=6137&projectKey=PNR'" 2
 lockNode
-focus termite
-bspc node -z right 550 0
+focus code
