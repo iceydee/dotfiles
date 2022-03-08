@@ -12,7 +12,7 @@ lockNode
 bspc node -p north -o 0.65
 launch "code" 4
 focus termite
-bspc node -p east -o 0.7
+bspc node -p east -o 0.75
 # launch "google-chrome --app=https://plingot.atlassian.net/secure/BrowseProjects.jspa" 2
 launch "google-chrome --app='https://jira.build.ingka.ikea.com/secure/RapidBoard.jspa?rapidView=6137&projectKey=PNR'" 2
 lockNode
