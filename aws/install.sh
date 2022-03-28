@@ -106,6 +106,8 @@ if [ -z "$(which aws-iam-authenticator | grep -v "not found")" ]; then
     curl -o aws-iam-authenticator https://amazon-eks.s3.us-west-2.amazonaws.com/1.21.2/2021-07-05/bin/linux/amd64/aws-iam-authenticator
     chmod +x aws-iam-authenticator
     sudo mv aws-iam-authenticator /usr/local/bin/
+    elif [ "$(uname -s)" = "Darwin" ]; then
+    brew install aws-iam-authenticator
   fi
 fi
 
@@ -116,7 +118,9 @@ if [ -z "$(which kops | grep -v "not found")" ]; then
     chmod +x kops-linux-amd64
     sudo mv kops-linux-amd64 /usr/local/bin/kops
     elif [ "$(uname -s)" = "Darwin" ]; then
-    brew install aws-iam-authenticator
+    curl -LO https://github.com/kubernetes/kops/releases/download/$(curl -s https://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 4)/kops-darwin-amd64
+    chmod +x kops-darwin-amd64
+    sudo mv kops-darwin-amd64 /usr/local/bin/kops
   fi
 fi
 
