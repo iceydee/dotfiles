@@ -1,7 +1,7 @@
 #!/bin/bash
 
 TERRAFORM="v1.1.6"
-AWS_VAULT="v6.5.0"
+AWS_VAULT="v6.6.0"
 AWS_IAM_AUTHENTICATOR="v0.5.0"
 KOPS="1.23.0"
 HELM="v3.8.0"

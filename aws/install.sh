@@ -64,10 +64,10 @@ fi
 if [ -z "$(which terraform11x | grep -v "not found")" ]; then
   if [ "$(uname -s)" = "Linux" ]; then
     curl -o terraform.zip https://releases.hashicorp.com/terraform/1.1.6/terraform_1.1.6_linux_amd64.zip
-  elif [ "$(uname -s)" = "Darwin" ]; then
+    elif [ "$(uname -s)" = "Darwin" ]; then
     curl -o terraform.zip https://releases.hashicorp.com/terraform/1.1.6/terraform_1.1.6_darwin_amd64.zip
   fi
-
+  
   unzip terraform.zip
   rm -f terraform.zip
   sudo mv terraform /usr/local/bin/terraform11x
@@ -88,9 +88,15 @@ fi
 # AWS Vault
 if [ -z "$(which aws-vault | grep -v "not found")" ]; then
   if [ "$(uname -s)" = "Linux" ]; then
-    curl -L -o aws-vault https://github.com/99designs/aws-vault/releases/download/v6.5.0/aws-vault-linux-amd64
+    curl -L -o aws-vault https://github.com/99designs/aws-vault/releases/download/v6.6.0/aws-vault-linux-amd64
     chmod +x aws-vault
     sudo mv aws-vault /usr/local/bin/
+    elif [ "$(uname -s)" = "Darwin" ]; then
+    curl -L -o aws-vault.dmg https://github.com/99designs/aws-vault/releases/download/v6.6.0/aws-vault-darwin-amd64.dmg
+    hdiutil attach aws-vault.dmg
+    sudo cp /Volumes/aws-vault/aws-vault /usr/local/bin/
+    hdiutil eject /Volumes/aws-vault
+    rm -f aws-vault.dmg
   fi
 fi
 
