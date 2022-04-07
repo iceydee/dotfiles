@@ -67,9 +67,9 @@ alt + {minus,equal}
 alt + ctrl + {1-9}
   bspc window -r 0.{1-9}
 
-# Focus or move window to desktops
-alt + {_,shift + }{1-9,0}
-  bspc {desktop -f, window -d} $(bspc query -M -m)/{i,ii,iii,iv,v,vi,vii,viii,ix,x}
+# Focus or move node to desktop
+alt + shift + {1-6}
+  bspc node -d {I, II, III, IV, V, VI} --follow
 
 # swap the node in the given direction
 super + {a,s,w,d}
