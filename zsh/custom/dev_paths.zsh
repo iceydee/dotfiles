@@ -15,9 +15,10 @@ compdef _dgo dgo
 gprune() {
   LOCAL=$(mktemp)
   REMOTE=$(mktemp)
+  git fetch -p
   git branch | sed 's|* |  |' | sort > "${LOCAL}"
   git branch -r | sed 's|origin/||' | sort > "${REMOTE}"
-  comm -23 "${LOCAL}" "${REMOTE}" | aws '{print $1}' | xargs git branch -D
+  comm -23 "${LOCAL}" "${REMOTE}" | awk '{print $1}' | xargs -r git branch -D
   rm -f "${LOCAL}"
   rm -f "${REMOTE}"
 }
