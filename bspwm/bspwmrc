@@ -6,10 +6,10 @@ xrandr --output DP-2 --mode 2560x1440 --rate 144.00
 sxhkd &
 
 if [ "$(wc -l ~/.polybar-monitor | awk '{print $1}')" -gt 1 ]; then
-  bspc monitor $(tail -n1 ~/.polybar-monitor) -n 1 -d I III V
-  bspc monitor $(head -n1 ~/.polybar-monitor) -n 2 -d II IV VI
+  bspc monitor $(tail -n1 ~/.polybar-monitor) -n 1 -d I III V VII IX
+  bspc monitor $(head -n1 ~/.polybar-monitor) -n 2 -d II IV VI VIII X
 else
-  bspc monitor -d I II III IV V VI
+  bspc monitor -d I II III IV V VI VII VIII IX X
 fi
 
 bspc config border_width         2
