@@ -8,3 +8,6 @@ mfa_serial=arn:aws:iam::660004461829:mfa/mio@plingot.com
 [profile ld]
 region=eu-west-1
 mfa_serial=arn:aws:iam::568259318738:mfa/mio@plingot.com
+
+[profile spf]
+region=eu-west-1
