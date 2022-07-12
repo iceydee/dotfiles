@@ -10,7 +10,6 @@
     ],
     "editor.wordWrapColumn": 140,
     "extensions.ignoreRecommendations": true,
-    "editor.multiCursorModifier": "ctrlCmd",
     "editor.cursorBlinking": "phase",
     "editor.wordWrap": "bounded",
     "editor.snippetSuggestions": "top",
@@ -126,6 +125,22 @@
     "jira-plugin.username": "minil16",
     "atlascode.jira.jqlList": [
         {
+            "id": "41092af8-10e5-4e62-9335-ab6c0ad4eb1e",
+            "enabled": true,
+            "name": "PNR",
+            "query": "project = PNR AND assignee = currentUser() AND (status = \"To Do\" OR status = \"In Progress\") ORDER BY Rank ASC",
+            "siteId": "a39a254c-2749-4e0e-b2c6-36d293603bd7",
+            "monitor": true
+        },
+        {
+            "id": "8ef9c1bf-7ace-43e4-b222-afb5e22c431c",
+            "siteId": "f2ec5eb1-563c-4cb8-9ba5-738b74338469",
+            "name": "LondonDynamics",
+            "query": "project = LondonDynamics AND (status = \"To Do\" OR status = \"In Progress\") ORDER BY rank ASC",
+            "enabled": true,
+            "monitor": true
+        },
+        {
             "id": "5d15363d-948b-4b3e-85c6-15a9f656d077",
             "enabled": true,
             "name": "My plingot Issues",
@@ -148,14 +163,6 @@
             "query": "project = \"Digital Lab Projects\" AND assignee = currentUser() AND resolution = Unresolved ORDER BY Rank ASC",
             "enabled": true,
             "monitor": true
-        },
-        {
-            "id": "8ef9c1bf-7ace-43e4-b222-afb5e22c431c",
-            "siteId": "f2ec5eb1-563c-4cb8-9ba5-738b74338469",
-            "name": "LondonDynamics",
-            "query": "project = LondonDynamics AND (status = \"To Do\" OR status = \"In Progress\") ORDER BY rank ASC",
-            "enabled": true,
-            "monitor": true
         }
     ],
     "github-enterprise.uri": "https://git.build.inter.ikea.com",
@@ -166,5 +173,9 @@
     "atlascode.jira.lastCreateSiteAndProject": {
         "siteId": "f2ec5eb1-563c-4cb8-9ba5-738b74338469",
         "projectKey": "LN"
-    }
+    },
+    "atlascode.jira.explorer.enabled": true,
+    "atlascode.jira.explorer.fetchAllQueryResults": true,
+    "atlascode.useNewAuth": false,
+    "atlascode.jira.explorer.nestSubtasks": false
 }

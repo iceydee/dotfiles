@@ -14,6 +14,6 @@ launch "code" 4
 focus termite
 bspc node -p east -o 0.75
 # launch "google-chrome --app=https://plingot.atlassian.net/secure/BrowseProjects.jspa" 2
-launch "google-chrome --app='https://jira.build.ingka.ikea.com/secure/RapidBoard.jspa?rapidView=6137&projectKey=PNR'" 2
+launch "google-chrome --app='https://inter-ikea.atlassian.net/jira/software/c/projects/PNR/boards/292'" 2
 lockNode
 focus code
