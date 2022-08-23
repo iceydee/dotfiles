@@ -177,5 +177,6 @@
     "atlascode.jira.explorer.enabled": true,
     "atlascode.jira.explorer.fetchAllQueryResults": true,
     "atlascode.useNewAuth": false,
-    "atlascode.jira.explorer.nestSubtasks": false
+    "atlascode.jira.explorer.nestSubtasks": false,
+    "githubPullRequests.pullBranch": "never"
 }
