@@ -163,6 +163,22 @@
             "query": "project = \"Digital Lab Projects\" AND assignee = currentUser() AND resolution = Unresolved ORDER BY Rank ASC",
             "enabled": true,
             "monitor": true
+        },
+        {
+            "id": "ba63c7e6-ed9d-4529-b7f6-ac4183316ddf",
+            "siteId": "f2ec5eb1-563c-4cb8-9ba5-738b74338469",
+            "name": "NFCKort",
+            "query": "project = TacCard AND resolution = Unresolved ORDER BY lastViewed DESC",
+            "enabled": true,
+            "monitor": true
+        },
+        {
+            "id": "04ccc4da-045c-4018-9e44-05595874cd81",
+            "siteId": "f2ec5eb1-563c-4cb8-9ba5-738b74338469",
+            "name": "NFCKort - Launch",
+            "query": "project = TacCard AND resolution = Unresolved AND priority =Highest ORDER BY priority DESC",
+            "enabled": true,
+            "monitor": true
         }
     ],
     "github-enterprise.uri": "https://git.build.inter.ikea.com",
