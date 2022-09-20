@@ -12,3 +12,9 @@ export PATH=$PATH:${JAVA_HOME}/bin:${HOME}/.local/bin
 export AWS_VAULT_BACKEND=file
 
 . ~/.nvm/nvm.sh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/mio/google-cloud-sdk/path.zsh.inc' ]; then . '/home/mio/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/mio/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/mio/google-cloud-sdk/completion.zsh.inc'; fi
