@@ -176,7 +176,7 @@
             "id": "04ccc4da-045c-4018-9e44-05595874cd81",
             "siteId": "f2ec5eb1-563c-4cb8-9ba5-738b74338469",
             "name": "NFCKort - Launch",
-            "query": "project = TacCard AND resolution = Unresolved AND priority =Highest ORDER BY priority DESC",
+            "query": "project = TacCard AND resolution = Unresolved AND priority =Highest ORDER BY Rank ASC",
             "enabled": true,
             "monitor": true
         }
