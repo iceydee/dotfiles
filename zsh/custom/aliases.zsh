@@ -5,6 +5,7 @@ alias gs='git status'
 alias g-='git pull --rebase'
 alias g+='git push'
 alias gu='g- && g+'
+alias gt='git push -u origin $(git branch --show-current)'
 alias t='task add project:scratch'
 if [ "$(uname -s)" = "Darwin" ]; then
   alias google-chrome='open'
