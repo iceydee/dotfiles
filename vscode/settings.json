@@ -134,9 +134,9 @@
         },
         {
             "id": "8ef9c1bf-7ace-43e4-b222-afb5e22c431c",
-            "siteId": "f2ec5eb1-563c-4cb8-9ba5-738b74338469",
-            "name": "LondonDynamics",
-            "query": "project = LondonDynamics AND (status = \"To Do\" OR status = \"In Progress\") ORDER BY rank ASC",
+            "siteId": "72da1962-1e4c-42e6-9440-22a5d0592e55",
+            "name": "London Dynamics",
+            "query": "project = \"London Dynamics\" AND assignee = currentUser() AND (status = \"To Do\" OR status = \"In Progress\") ORDER BY rank ASC",
             "enabled": true,
             "monitor": true
         },
