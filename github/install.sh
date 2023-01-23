@@ -21,3 +21,4 @@ git config --global diff.tool vscode
 git config --global difftool.vscode.cmd "code --wait --diff \$LOCAL \$REMOTE"
 git config --global commit.gpgSign "true"
 git config --global hub.protocol "ssh"
+git config --global init.defaultBranch main
