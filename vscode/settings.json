@@ -89,12 +89,6 @@
             "**/.terraform/**/*"
         ]
     },
-    "terraform.languageServer": {
-        "external": true,
-        "args": [
-            "serve"
-        ]
-    },
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
@@ -118,7 +112,7 @@
     },
     "redhat.telemetry.enabled": false,
     "yaml.schemas": {
-        "file:///home/mio/.vscode/extensions/atlassian.atlascode-2.10.12/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+        "file:///home/mio/.vscode/extensions/atlassian.atlascode-3.0.1/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     },
     "atlascode.bitbucket.enabled": false,
     "jira-plugin.baseUrl": "https://jira.build.ingka.ikea.com",
@@ -194,5 +188,6 @@
     "atlascode.jira.explorer.fetchAllQueryResults": true,
     "atlascode.useNewAuth": false,
     "atlascode.jira.explorer.nestSubtasks": false,
-    "githubPullRequests.pullBranch": "never"
+    "githubPullRequests.pullBranch": "never",
+    "terraform.languageServer.enable": true
 }
