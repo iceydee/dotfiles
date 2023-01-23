@@ -2,11 +2,11 @@
 
 sudo apt install -y \
 cmake \
-clang-12 \
-clang-format-12 \
-lldb-12 \
-lld-12 \
-libc++-12-dev \
-libc++abi-12-dev
+clang-14 \
+clang-format-14 \
+lldb-14 \
+lld-14 \
+libc++-14-dev \
+libc++abi-14-dev
 
 ./clang/set_clang.sh
