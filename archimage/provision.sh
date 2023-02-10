@@ -38,8 +38,14 @@ cat > "${PROVISION}" << EOF
   echo \"${USER}:${USERPASS}\" | chpasswd
   echo "${USER} ALL=(ALL:ALL) ALL" > /etc/sudoers.d/"${USER}"
 
+  # Install yay
+  mkdir -p /home/${USER}/src
+  cd /home/${USER}/src
+  git clone https://aur.archlinux.org/yay.git
+
   # Enable dhcpcd service
   systemctl enable dhcpcd
+  systemctl enable gdm
 
   # Mount bigdrive
   echo \"/dev/sda2 /mnt/bigdrive auto nosuid,nodev,nofail,x-gvfs-show,uid=1000,gid=1000 0 0\" > /etc/fstab
