@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo -n "Root password: "
-read -rs ROOTPASS
+echo -n "User password: "
+read -rs USERPASS
 echo
 
 echo -n "Hostname: "
@@ -9,9 +9,8 @@ read -r NEWHOSTNAME
 
 PROVISION=$(mktemp)
 cat > "${PROVISION}" << EOF
-  # Set root password
-  echo "root:${ROOTPASS}" | chpasswd
-  unset ROOTPASS
+  # Remove root password
+  passwd -l root
 
   # Set time zone
   ln -sf /usr/share/zoneinfo/Europe/Stockholm /etc/localtime
@@ -33,6 +32,10 @@ cat > "${PROVISION}" << EOF
   # Install packages
   pacman -S --needed --noconfirm - < /packages
   rm -f /packages
+
+  # Create user
+  useradd -m -p "${USERPASS}" "${USER}"
+  echo "${USER} ALL=(ALL:ALL) ALL" > /etc/sudoers.d/"${USER}"
 
   # Enable dhcpcd service
   systemctl enable dhcpcd

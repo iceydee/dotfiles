@@ -9,3 +9,5 @@ tmux
 vim
 dhcpcd
 openssh
+sudo
+which
