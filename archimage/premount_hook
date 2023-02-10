@@ -1,0 +1,19 @@
+#!/usr/bin/ash
+
+run_hook() {
+	mount_handler="loopback_mount_handler"
+}
+
+loopback_mount_handler() {
+	# Mount the exfat Partition
+	mkdir /host
+	mount -t exfat /dev/sda2 /host
+
+	ROOTIMG=/host/Arch/archroot.img
+	LOOPDEV=$(losetup -f)
+
+	# Mount the loop filesystem
+	losetup -f "${ROOTIMG}"
+	mount -t ext4 -o rw,defaults "${LOOPDEV}" /new_root
+	mount --move /host /new_root/mnt/bigdrive // To access bigdrive exfat volume
+}

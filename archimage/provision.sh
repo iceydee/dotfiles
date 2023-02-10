@@ -36,11 +36,17 @@ cat > "${PROVISION}" << EOF
 
   # Enable dhcpcd service
   systemctl enable dhcpcd
+
+  # Create initcpio image
+  mkinitcpio -P
 EOF
 
 unset ROOTPASS
 sudo mv "${PROVISION}" /mnt/arch/provision.sh
 sudo cp ./packages /mnt/arch/packages
+sudo cp ./premount_hook /mnt/arch/usr/lib/initcpio/hooks/premount
+sudo cp ./premount_install /mnt/arch/usr/lib/initcpio/install/premount
+sudo cp ./mkinitcpio.conf /mnt/arch/etc/mkinitcpio.conf
 
 sudo arch-chroot /mnt/arch << EOT
   chmod +x /provision.sh

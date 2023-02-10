@@ -2,6 +2,7 @@ base
 linux
 linux-firmware
 mkinitcpio
+btrfs-progs
 man-pages
 man-db
 tmux
