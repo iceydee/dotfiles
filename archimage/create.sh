@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [ -z "${2}" ]; then
-  echo "usage: ${0} [image file] [size in bytes]"
+if [ -z "${1}" ]; then
+  echo "usage: ${0} [image file] ([size in bytes])"
   exit 1
 fi
 
@@ -17,7 +17,7 @@ if [ ! -f "${FALLOC}" ]; then
 fi
 
 IMGFILE="${1}"
-SIZE="${2}"
+SIZE="${2:-21474836480}"
 MOUNTDIR="/mnt/arch"
 
 if [ -f "${IMGFILE}" ]; then

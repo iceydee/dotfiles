@@ -50,6 +50,8 @@ sudo cp ./packages /mnt/arch/packages
 sudo cp ./premount_hook /mnt/arch/usr/lib/initcpio/hooks/premount
 sudo cp ./premount_install /mnt/arch/usr/lib/initcpio/install/premount
 sudo cp ./mkinitcpio.conf /mnt/arch/etc/mkinitcpio.conf
+sudo mkdir -p /mnt/arch/etc/pacman.d/hooks
+sudo cp ./nvidia.hook /mnt/arch/etc/pacman.d/hooks/nvidia.hook
 
 sudo arch-chroot /mnt/arch << EOT
   chmod +x /provision.sh
