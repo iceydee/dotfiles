@@ -34,11 +34,15 @@ cat > "${PROVISION}" << EOF
   rm -f /packages
 
   # Create user
-  useradd -m -p "${USERPASS}" "${USER}"
+  useradd -m \"${USER}\" -s \"/usr/bin/zsh\"
+  echo \"${USER}:${USERPASS}\" | chpasswd
   echo "${USER} ALL=(ALL:ALL) ALL" > /etc/sudoers.d/"${USER}"
 
   # Enable dhcpcd service
   systemctl enable dhcpcd
+
+  # Mount bigdrive
+  echo \"/dev/sda2 /mnt/bigdrive auto nosuid,nodev,nofail,x-gvfs-show,uid=1000,gid=1000 0 0\" > /etc/fstab
 
   # Create initcpio image
   mkinitcpio -P
