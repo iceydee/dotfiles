@@ -1,0 +1,10 @@
+base
+linux
+linux-firmware
+mkinitcpio
+man-pages
+man-db
+tmux
+vim
+dhcpcd
+openssh
