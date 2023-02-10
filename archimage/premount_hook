@@ -9,11 +9,11 @@ loopback_mount_handler() {
 	mkdir /host
 	mount -t exfat /dev/sda2 /host
 
-	ROOTIMG=/host/Arch/archroot.img
+	ROOTIMG=/host/Arch/arch2.img
 	LOOPDEV=$(losetup -f)
 
 	# Mount the loop filesystem
 	losetup -f "${ROOTIMG}"
-	mount -t ext4 -o rw,defaults "${LOOPDEV}" /new_root
+	mount -t btrfs -o rw,defaults "${LOOPDEV}" /new_root
 	mount --move /host /new_root/mnt/bigdrive // To access bigdrive exfat volume
 }
