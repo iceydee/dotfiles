@@ -12,3 +12,6 @@ openssh
 sudo
 which
 nvidia
+zsh
+chromium
+nvidia-settings
