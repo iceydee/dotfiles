@@ -1,7 +1,5 @@
 #!/bin/bash
 
-sudo apt install -y bspwm feh numlockx spacefm xclip
-
 # Setup bspwm
 mkdir -p ~/.config/bspwm
 mkdir -p ~/.config/sxhkd
