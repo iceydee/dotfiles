@@ -1,8 +1,8 @@
 #!/bin/bash
 
 if [ -f "/etc/issue" ]; then
-  if [ -n "$(cat /etc/issue | grep "Ubuntu")" ]; then
-    sudo apt install -y tmux
+  if [ -n "$(cat /etc/issue | grep "Arch")" ]; then
+    sudo pacman -S --noconfirm tmux
   fi
 fi
 
