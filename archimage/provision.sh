@@ -43,6 +43,7 @@ cat > "${PROVISION}" << EOF
   # Enable dhcpcd service
   systemctl enable dhcpcd
   systemctl enable gdm
+  systemctl enable snapd
 
   # Mount bigdrive
   echo "/dev/sda2 /mnt/bigdrive auto nosuid,nodev,nofail,x-gvfs-show,uid=1000,gid=1000 0 0" > /etc/fstab
@@ -81,12 +82,12 @@ EOF
 unset USERPASS
 sudo mv "${PROVISION}" /mnt/arch/provision.sh
 sudo mv "${USERSCRIPT}" /mnt/arch/userscript.sh
-sudo cp ./packages /mnt/arch/packages
-sudo cp ./premount_hook /mnt/arch/usr/lib/initcpio/hooks/premount
-sudo cp ./premount_install /mnt/arch/usr/lib/initcpio/install/premount
-sudo cp ./mkinitcpio.conf /mnt/arch/etc/mkinitcpio.conf
+sudo cp ./archimage/packages /mnt/arch/packages
+sudo cp ./archimage/premount_hook /mnt/arch/usr/lib/initcpio/hooks/premount
+sudo cp ./archimage/premount_install /mnt/arch/usr/lib/initcpio/install/premount
+sudo cp ./archimage/mkinitcpio.conf /mnt/arch/etc/mkinitcpio.conf
 sudo mkdir -p /mnt/arch/etc/pacman.d/hooks
-sudo cp ./nvidia.hook /mnt/arch/etc/pacman.d/hooks/nvidia.hook
+sudo cp ./archimage/nvidia.hook /mnt/arch/etc/pacman.d/hooks/nvidia.hook
 
 sudo arch-chroot /mnt/arch << EOT
   chmod +x /provision.sh
