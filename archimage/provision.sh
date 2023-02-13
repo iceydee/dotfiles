@@ -69,6 +69,18 @@ cat > "${USERSCRIPT}" << EOF
   git clone https://aur.archlinux.org/yay.git
   popd
 
+  # Install nvm and node lts
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+  export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  nvm install --lts
+  nvm use --lts
+
+  # Install rvm and ruby
+  curl -L get.rvm.io > rvm-install
+  bash < ./rvm-install
+  rm -f ./rvm-install
+
   # Finally - output SSH key
   echo
   echo
