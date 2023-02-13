@@ -34,8 +34,8 @@ cat > "${PROVISION}" << EOF
   rm -f /packages
 
   # Create user
-  useradd -m \"${USER}\" -s \"/usr/bin/zsh\"
-  echo \"${USER}:${USERPASS}\" | chpasswd
+  useradd -m "${USER}" -s "/usr/bin/zsh"
+  echo "${USER}:${USERPASS}" | chpasswd
   echo "${USER} ALL=(ALL:ALL) ALL" > /etc/sudoers.d/"${USER}"
 
   # Install yay
@@ -48,13 +48,13 @@ cat > "${PROVISION}" << EOF
   systemctl enable gdm
 
   # Mount bigdrive
-  echo \"/dev/sda2 /mnt/bigdrive auto nosuid,nodev,nofail,x-gvfs-show,uid=1000,gid=1000 0 0\" > /etc/fstab
+  echo "/dev/sda2 /mnt/bigdrive auto nosuid,nodev,nofail,x-gvfs-show,uid=1000,gid=1000 0 0" > /etc/fstab
 
   # Create initcpio image
   mkinitcpio -P
 EOF
 
-unset ROOTPASS
+unset USERPASS
 sudo mv "${PROVISION}" /mnt/arch/provision.sh
 sudo cp ./packages /mnt/arch/packages
 sudo cp ./premount_hook /mnt/arch/usr/lib/initcpio/hooks/premount
