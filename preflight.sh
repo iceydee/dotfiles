@@ -35,7 +35,7 @@ checkDependency node
 checkDependency go golang
 checkDependency curl
 checkDir "${HOME}/.oh-my-zsh" oh-my-zsh
-checkDependency google-chrome chrome
+checkDependency chromium
 checkDependency slack
 checkDependency code vscode
 

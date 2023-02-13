@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt install git-lfs
+sudo pacman -S --noconfirm git-lfs
 
 mkdir -p ~/src
 cd ~/src
