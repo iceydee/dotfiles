@@ -9,6 +9,8 @@ read -r NEWHOSTNAME
 
 PROVISION=$(mktemp)
 cat > "${PROVISION}" << EOF
+  #!/bin/bash
+
   # Remove root password
   passwd -l root
 
@@ -34,14 +36,9 @@ cat > "${PROVISION}" << EOF
   rm -f /packages
 
   # Create user
-  useradd -m "${USER}" -s "/usr/bin/zsh"
+  useradd -m -s "/usr/bin/zsh" "${USER}"
   echo "${USER}:${USERPASS}" | chpasswd
   echo "${USER} ALL=(ALL:ALL) ALL" > /etc/sudoers.d/"${USER}"
-
-  # Install yay
-  mkdir -p /home/${USER}/src
-  cd /home/${USER}/src
-  git clone https://aur.archlinux.org/yay.git
 
   # Enable dhcpcd service
   systemctl enable dhcpcd
@@ -54,8 +51,36 @@ cat > "${PROVISION}" << EOF
   mkinitcpio -P
 EOF
 
+USERSCRIPT=$(mktemp)
+cat > "${USERSCRIPT}" << EOF
+  #!/bin/bash
+
+  cd "${HOME}"
+
+  # Generate SSH key
+  mkdir -p "${HOME}/.ssh"
+  chmod 700 "${HOME}/.ssh"
+  ssh-keygen -f "${HOME}/.ssh/id_rsa" -N '' -t rsa -b 4096
+
+  # Install yay
+  mkdir -p src
+  pushd src
+  git clone https://aur.archlinux.org/yay.git
+  popd
+
+  # Finally - output SSH key
+  echo
+  echo
+  echo
+  echo "User SSH key"
+  echo
+  echo
+  cat "${HOME}/.ssh/id_rsa.pub"
+EOF
+
 unset USERPASS
 sudo mv "${PROVISION}" /mnt/arch/provision.sh
+sudo mv "${USERSCRIPT}" /mnt/arch/userscript.sh
 sudo cp ./packages /mnt/arch/packages
 sudo cp ./premount_hook /mnt/arch/usr/lib/initcpio/hooks/premount
 sudo cp ./premount_install /mnt/arch/usr/lib/initcpio/install/premount
@@ -65,6 +90,11 @@ sudo cp ./nvidia.hook /mnt/arch/etc/pacman.d/hooks/nvidia.hook
 
 sudo arch-chroot /mnt/arch << EOT
   chmod +x /provision.sh
+  chmod +x /userscript.sh
+
   /provision.sh
   rm -f /provision.sh
+
+  su -c /userscript.sh - mio
+  rm -f /userscript.sh
 EOT
