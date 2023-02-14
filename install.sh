@@ -66,17 +66,13 @@ if [ "${FIRST_RUN}" -eq 1 ]; then
   exit 0
 fi
 
-# Install clang
-./clang/install.sh
-
-# Install chrome
-./chrome/install.sh
-
+# TODO: Fix for arch
 # Install docker
-./docker/install.sh
+#./docker/install.sh
 
+# TODO: Switch to picomp?
 # Install Compton
-./compton/install.sh
+#./compton/install.sh
 
 # Install bspwm
 ./bspwm/install.sh
@@ -99,17 +95,11 @@ fi
 # Setup vscode
 ./vscode/install.sh
 
-# Install task warrior
-./task/install.sh
-
-# Install sqitch
-./sqitch/install.sh
-
 # Install aws
-./aws/install.sh
+#./aws/install.sh
 
 # Install rust
 ./rust/install.sh
 
 # Install VPN scripts
-sudo ./vpn/install.sh
+#sudo ./vpn/install.sh

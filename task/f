@@ -1,6 +1,0 @@
-#!/bin/bash
-
-echo -n "Follow up with: "
-read WHO
-
-task add project:followup +${WHO} due:eod $@
