@@ -34,7 +34,6 @@ checkDir "${HOME}/.nvm" nvm
 checkDependency node
 checkDependency go golang
 checkDependency curl
-checkDir "${HOME}/.oh-my-zsh" oh-my-zsh
 checkDependency chromium
 checkDependency slack
 checkDependency code vscode
