@@ -43,10 +43,12 @@ cat > "${PROVISION}" << EOF
   # Enable dhcpcd service
   systemctl enable dhcpcd
   systemctl enable gdm
-  systemctl enable snapd
 
   # Mount bigdrive
   echo "/dev/sda2 /mnt/bigdrive auto nosuid,nodev,nofail,x-gvfs-show,uid=1000,gid=1000 0 0" > /etc/fstab
+
+  # Configure LIBVA_DRIVER
+  echo "LIBVA_DRIVER_NAME=\"vdpau\"" >> /etc/environment
 
   # Create initcpio image
   mkinitcpio -P

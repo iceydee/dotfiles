@@ -12,7 +12,7 @@ gnome
 libc++
 libmpdclient
 libva-utils
-lib-vdpau-driver
+libva-vdpau-driver
 linux
 linux-firmware
 lld
