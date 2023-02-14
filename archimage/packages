@@ -11,6 +11,8 @@ git
 gnome
 libc++
 libmpdclient
+libva-utils
+lib-vdpau-driver
 linux
 linux-firmware
 lld
@@ -22,6 +24,7 @@ net-tools
 numlockx
 nvidia
 nvidia-settings
+nvidia-utils
 openssh
 polybar
 strongswan
