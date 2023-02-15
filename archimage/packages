@@ -6,9 +6,11 @@ chromium
 clang
 cmake
 dhcpcd
+efibootmgr
 feh
 git
 gnome
+grub
 libc++
 libmpdclient
 libva-utils
