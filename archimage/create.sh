@@ -5,10 +5,10 @@ if [ -z "${1}" ]; then
   exit 1
 fi
 
-MKBTRFS=$(which mkfs.btrfs)
+MKEXT4=$(which mkfs.ext4)
 FALLOC=$(which fallocate)
-if [ ! -f "${MKBTRFS}" ]; then
-  echo "error: mkfs.btrfs missing"
+if [ ! -f "${MKEXT4}" ]; then
+  echo "error: mkfs.ext4 missing"
   exit 1
 fi
 if [ ! -f "${FALLOC}" ]; then
@@ -17,7 +17,7 @@ if [ ! -f "${FALLOC}" ]; then
 fi
 
 IMGFILE="${1}"
-SIZE="${2:-21474836480}"
+SIZE="${2:-32212254720}"
 MOUNTDIR="/mnt/arch"
 
 if [ -f "${IMGFILE}" ]; then
@@ -30,7 +30,7 @@ echo -n "Creating img file: "
 echo "finished."
 
 echo "Formatting with btrfs"
-"${MKBTRFS}" "${IMGFILE}"
+"${MKEXT4}" "${IMGFILE}"
 echo "finished."
 
 if [ ! -d "${MOUNTDIR}" ]; then
