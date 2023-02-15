@@ -2,12 +2,6 @@
 
 ./aws/version_cleanup.sh
 
-if [ -f "/etc/issue" ]; then
-  if [ -n "$(cat /etc/issue | grep "Ubuntu")" ]; then
-    sudo apt install -y python3-pip
-  fi
-fi
-
 # Terraform 0.12
 if [ -z "$(which terraform12 | grep -v "not found")" ]; then
   if [ "$(uname -s)" = "Linux" ]; then
@@ -78,7 +72,7 @@ sudo ln -sf /usr/local/bin/terraform11x /usr/local/bin/terraform
 
 # AWS cli
 if [ -z "$(which aws | grep -v "not found")" ]; then
-  pip3 install awscli
+  pip install awscli
 fi
 if [ ! -f "${HOME}/.aws/config" ]; then
   mkdir -p ${HOME}/.aws
