@@ -103,6 +103,7 @@ sudo cp ./archimage/premount_install /mnt/arch/usr/lib/initcpio/install/premount
 sudo cp ./archimage/mkinitcpio.conf /mnt/arch/etc/mkinitcpio.conf
 sudo mkdir -p /mnt/arch/etc/pacman.d/hooks
 sudo cp ./archimage/nvidia.hook /mnt/arch/etc/pacman.d/hooks/nvidia.hook
+cat ./archimage/arch2 | sudo tee -a /mnt/arch/etc/grub.d/40_custom
 
 sudo arch-chroot /mnt/arch << EOT
   chmod +x /provision.sh
