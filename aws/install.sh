@@ -121,7 +121,7 @@ fi
 # Kubectl
 if [ -z "$(which kubectl | grep -v "not found")" ]; then
   if [ "$(uname -s)" = "Linux" ]; then
-    sudo snap install kubectl --classic
+    sudo pacman -S --noconfirm kubectl
   fi
 fi
 
