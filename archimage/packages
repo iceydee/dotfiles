@@ -6,12 +6,15 @@ chromium
 clang
 cmake
 dhcpcd
+docker
+docker-compose
 efibootmgr
 feh
 git
 gnome
 grub
 grub-btrfs
+kubectl
 libc++
 libmpdclient
 libva-utils
@@ -30,6 +33,8 @@ nvidia-settings
 nvidia-utils
 openssh
 polybar
+python
+python-pip
 strongswan
 sudo
 sxhkd
