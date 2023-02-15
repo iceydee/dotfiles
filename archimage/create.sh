@@ -29,7 +29,7 @@ echo -n "Creating img file: "
 "${FALLOC}" -l "${SIZE}" "${IMGFILE}"
 echo "finished."
 
-echo "Formatting with btrfs"
+echo "Formatting with EXT4"
 "${MKEXT4}" "${IMGFILE}"
 echo "finished."
 
