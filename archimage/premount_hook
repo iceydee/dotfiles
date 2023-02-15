@@ -14,6 +14,6 @@ loopback_mount_handler() {
 
 	# Mount the loop filesystem
 	losetup -f "${ROOTIMG}"
-	mount -t btrfs -o rw,defaults "${LOOPDEV}" /new_root
+	mount -t ext4 -o rw,defaults "${LOOPDEV}" /new_root
 	mount --move /host /new_root/mnt/bigdrive // To access bigdrive exfat volume
 }
