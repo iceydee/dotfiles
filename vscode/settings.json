@@ -1,193 +1,175 @@
 {
-    "workbench.colorTheme": "Field Lights",
-    "editor.renderWhitespace": "boundary",
-    "editor.tabSize": 2,
-    "editor.fontSize": 16,
-    "editor.fontFamily": "'Source Code Pro for Powerline', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "editor.rulers": [
-        80,
-        120
-    ],
-    "editor.wordWrapColumn": 140,
-    "extensions.ignoreRecommendations": true,
-    "editor.cursorBlinking": "phase",
-    "editor.wordWrap": "bounded",
-    "editor.snippetSuggestions": "top",
-    "editor.formatOnPaste": true,
-    "editor.formatOnSave": true,
-    "editor.smoothScrolling": true,
-    "files.insertFinalNewline": true,
-    "c-cpp-flylint.flexelint.enable": false,
-    "c-cpp-flylint.cppcheck.enable": true,
-    "c-cpp-flylint.standard": [
-        "c11",
-        "gnu11",
-        "c++17"
-    ],
-    "c-cpp-flylint.clang.standard": [
-        "c11",
-        "gnu11",
-        "c++17"
-    ],
-    "c-cpp-flylint.includePaths": [
-        "${workspaceRoot}"
-    ],
-    "c-cpp-flylint.run": "onType",
-    "c-cpp-flylint.enable": false,
-    "files.associations": {
-        "*.jison": "lex",
-        "*.tag": "jade",
-        "*.dev": "dockerfile",
-        "*.in": "plaintext"
+  "workbench.colorTheme": "Search Lights",
+  "editor.renderWhitespace": "boundary",
+  "editor.tabSize": 2,
+  "editor.fontSize": 16,
+  "editor.fontFamily": "'Source Code Pro for Powerline', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.rulers": [80, 120],
+  "editor.wordWrapColumn": 140,
+  "extensions.ignoreRecommendations": true,
+  "editor.cursorBlinking": "phase",
+  "editor.wordWrap": "bounded",
+  "editor.snippetSuggestions": "top",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.smoothScrolling": true,
+  "files.insertFinalNewline": true,
+  "c-cpp-flylint.flexelint.enable": false,
+  "c-cpp-flylint.cppcheck.enable": true,
+  "c-cpp-flylint.standard": ["c11", "gnu11", "c++17"],
+  "c-cpp-flylint.clang.standard": ["c11", "gnu11", "c++17"],
+  "c-cpp-flylint.includePaths": ["${workspaceRoot}"],
+  "c-cpp-flylint.run": "onType",
+  "c-cpp-flylint.enable": false,
+  "files.associations": {
+    "*.jison": "lex",
+    "*.tag": "jade",
+    "*.dev": "dockerfile",
+    "*.in": "plaintext"
+  },
+  "bashBeautify.tabSize": 2,
+  "workbench.iconTheme": "field-lights-monochrome",
+  "C_Cpp.clang_format_path": "/usr/bin/clang-format",
+  "C_Cpp.clang_format_fallbackStyle": "LLVM",
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "debug.allowBreakpointsEverywhere": true,
+  "breadcrumbs.enabled": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue"
+  ],
+  "typescript.format.enable": false,
+  "typescript.check.npmIsInstalled": false,
+  "typescript.format.insertSpaceAfterCommaDelimiter": false,
+  "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+  "typescript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+  "typescript.format.insertSpaceAfterSemicolonInForStatements": false,
+  "typescript.format.insertSpaceBeforeAndAfterBinaryOperators": false,
+  "typescript.reportStyleChecksAsWarnings": false,
+  "typescript.suggestionActions.enabled": false,
+  "clang-format.language.typescript.enable": false,
+  "clang-format.language.javascript.enable": false,
+  "typescript.validate.enable": false,
+  "javascript.validate.enable": false,
+  "shellcheck.disableVersionCheck": true,
+  "workbench.settings.editor": "json",
+  "C_Cpp.default.cppStandard": "c++11",
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "cmake.configureOnOpen": true,
+  "cmake.generator": "Ninja",
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "terraform.indexing": {
+    "enabled": false,
+    "liveIndexing": false,
+    "delay": 500,
+    "exclude": [".terraform/**/*", "**/.terraform/**/*"]
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "[vue]": {},
+  "vetur.format.defaultFormatter.ts": "none",
+  "vetur.format.defaultFormatter.js": "none",
+  "vs-kubernetes": {
+    "vs-kubernetes.knownKubeconfigs": ["/home/mio/.kube/configs/hap/config"],
+    "vs-kubernetes.kubeconfig": "/home/mio/.kube/configs/hap/config"
+  },
+  "azure.resourceFilter": [
+    "a33c6ac4-a52e-45c5-af07-b972df9bd004/09d5a0d5-7b16-4ec1-a142-f07419b6f596"
+  ],
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "redhat.telemetry.enabled": false,
+  "yaml.schemas": {
+    "file:///home/mio/.vscode-oss/extensions/atlassian.atlascode-3.0.2-universal/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+  },
+  "atlascode.bitbucket.enabled": false,
+  "jira-plugin.baseUrl": "https://jira.build.ingka.ikea.com",
+  "jira-plugin.username": "minil16",
+  "atlascode.jira.jqlList": [
+    {
+      "id": "41092af8-10e5-4e62-9335-ab6c0ad4eb1e",
+      "enabled": true,
+      "name": "PNR",
+      "query": "project = PNR AND assignee = currentUser() AND (status = \"To Do\" OR status = \"In Progress\") ORDER BY Rank ASC",
+      "siteId": "a39a254c-2749-4e0e-b2c6-36d293603bd7",
+      "monitor": true
     },
-    "bashBeautify.tabSize": 2,
-    "workbench.iconTheme": "field-lights-monochrome",
-    "C_Cpp.clang_format_path": "/usr/bin/clang-format",
-    "C_Cpp.clang_format_fallbackStyle": "LLVM",
-    "git.confirmSync": false,
-    "git.autofetch": true,
-    "debug.allowBreakpointsEverywhere": true,
-    "breadcrumbs.enabled": true,
-    "eslint.validate": [
-        "javascript",
-        "javascriptreact",
-        "typescript",
-        "typescriptreact",
-        "vue"
-    ],
-    "typescript.format.enable": false,
-    "typescript.check.npmIsInstalled": false,
-    "typescript.format.insertSpaceAfterCommaDelimiter": false,
-    "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
-    "typescript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
-    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
-    "typescript.format.insertSpaceAfterSemicolonInForStatements": false,
-    "typescript.format.insertSpaceBeforeAndAfterBinaryOperators": false,
-    "typescript.reportStyleChecksAsWarnings": false,
-    "typescript.suggestionActions.enabled": false,
-    "clang-format.language.typescript.enable": false,
-    "clang-format.language.javascript.enable": false,
-    "typescript.validate.enable": false,
-    "javascript.validate.enable": false,
-    "shellcheck.disableVersionCheck": true,
-    "workbench.settings.editor": "json",
-    "C_Cpp.default.cppStandard": "c++11",
-    "[javascript]": {
-        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    {
+      "id": "8ef9c1bf-7ace-43e4-b222-afb5e22c431c",
+      "siteId": "72da1962-1e4c-42e6-9440-22a5d0592e55",
+      "name": "London Dynamics",
+      "query": "project = \"London Dynamics\" AND assignee = currentUser() AND (status = \"To Do\" OR status = \"In Progress\") ORDER BY rank ASC",
+      "enabled": true,
+      "monitor": true
     },
-    "cmake.configureOnOpen": true,
-    "cmake.generator": "Ninja",
-    "[cpp]": {
-        "editor.defaultFormatter": "xaver.clang-format"
+    {
+      "id": "5d15363d-948b-4b3e-85c6-15a9f656d077",
+      "enabled": true,
+      "name": "My plingot Issues",
+      "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
+      "siteId": "f2ec5eb1-563c-4cb8-9ba5-738b74338469",
+      "monitor": true
     },
-    "terraform.indexing": {
-        "enabled": false,
-        "liveIndexing": false,
-        "delay": 500,
-        "exclude": [
-            ".terraform/**/*",
-            "**/.terraform/**/*"
-        ]
+    {
+      "id": "3b02d524-5c1b-482a-a0f2-3bae8441128c",
+      "siteId": "7c8c6956-d7df-4946-b41c-316d4e42d25e",
+      "name": "DoIT - Assigned to me",
+      "query": "project = \"DevOps - 3D\" AND assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
+      "enabled": true,
+      "monitor": true
     },
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
+    {
+      "id": "1af462a7-d12a-43f1-90cb-f0441f3ea157",
+      "siteId": "7c8c6956-d7df-4946-b41c-316d4e42d25e",
+      "name": "IDLab",
+      "query": "project = \"Digital Lab Projects\" AND assignee = currentUser() AND resolution = Unresolved ORDER BY Rank ASC",
+      "enabled": true,
+      "monitor": true
     },
-    "[vue]": {},
-    "vetur.format.defaultFormatter.ts": "none",
-    "vetur.format.defaultFormatter.js": "none",
-    "vs-kubernetes": {
-        "vs-kubernetes.knownKubeconfigs": [
-            "/home/mio/.kube/configs/hap/config"
-        ],
-        "vs-kubernetes.kubeconfig": "/home/mio/.kube/configs/hap/config"
+    {
+      "id": "ba63c7e6-ed9d-4529-b7f6-ac4183316ddf",
+      "siteId": "f2ec5eb1-563c-4cb8-9ba5-738b74338469",
+      "name": "NFCKort",
+      "query": "project = TacCard AND resolution = Unresolved ORDER BY lastViewed DESC",
+      "enabled": true,
+      "monitor": true
     },
-    "azure.resourceFilter": [
-        "a33c6ac4-a52e-45c5-af07-b972df9bd004/09d5a0d5-7b16-4ec1-a142-f07419b6f596"
-    ],
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter.notebook.ipynb"
-    },
-    "[json]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "redhat.telemetry.enabled": false,
-    "yaml.schemas": {
-        "file:///home/mio/.vscode/extensions/atlassian.atlascode-3.0.2/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
-    },
-    "atlascode.bitbucket.enabled": false,
-    "jira-plugin.baseUrl": "https://jira.build.ingka.ikea.com",
-    "jira-plugin.username": "minil16",
-    "atlascode.jira.jqlList": [
-        {
-            "id": "41092af8-10e5-4e62-9335-ab6c0ad4eb1e",
-            "enabled": true,
-            "name": "PNR",
-            "query": "project = PNR AND assignee = currentUser() AND (status = \"To Do\" OR status = \"In Progress\") ORDER BY Rank ASC",
-            "siteId": "a39a254c-2749-4e0e-b2c6-36d293603bd7",
-            "monitor": true
-        },
-        {
-            "id": "8ef9c1bf-7ace-43e4-b222-afb5e22c431c",
-            "siteId": "72da1962-1e4c-42e6-9440-22a5d0592e55",
-            "name": "London Dynamics",
-            "query": "project = \"London Dynamics\" AND assignee = currentUser() AND (status = \"To Do\" OR status = \"In Progress\") ORDER BY rank ASC",
-            "enabled": true,
-            "monitor": true
-        },
-        {
-            "id": "5d15363d-948b-4b3e-85c6-15a9f656d077",
-            "enabled": true,
-            "name": "My plingot Issues",
-            "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
-            "siteId": "f2ec5eb1-563c-4cb8-9ba5-738b74338469",
-            "monitor": true
-        },
-        {
-            "id": "3b02d524-5c1b-482a-a0f2-3bae8441128c",
-            "siteId": "7c8c6956-d7df-4946-b41c-316d4e42d25e",
-            "name": "DoIT - Assigned to me",
-            "query": "project = \"DevOps - 3D\" AND assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
-            "enabled": true,
-            "monitor": true
-        },
-        {
-            "id": "1af462a7-d12a-43f1-90cb-f0441f3ea157",
-            "siteId": "7c8c6956-d7df-4946-b41c-316d4e42d25e",
-            "name": "IDLab",
-            "query": "project = \"Digital Lab Projects\" AND assignee = currentUser() AND resolution = Unresolved ORDER BY Rank ASC",
-            "enabled": true,
-            "monitor": true
-        },
-        {
-            "id": "ba63c7e6-ed9d-4529-b7f6-ac4183316ddf",
-            "siteId": "f2ec5eb1-563c-4cb8-9ba5-738b74338469",
-            "name": "NFCKort",
-            "query": "project = TacCard AND resolution = Unresolved ORDER BY lastViewed DESC",
-            "enabled": true,
-            "monitor": true
-        },
-        {
-            "id": "04ccc4da-045c-4018-9e44-05595874cd81",
-            "siteId": "f2ec5eb1-563c-4cb8-9ba5-738b74338469",
-            "name": "NFCKort - Launch",
-            "query": "project = TacCard AND resolution = Unresolved AND priority =Highest ORDER BY Rank ASC",
-            "enabled": true,
-            "monitor": true
-        }
-    ],
-    "github-enterprise.uri": "https://git.build.inter.ikea.com",
-    "markdown.preview.breaks": true,
-    "atlascode.jira.startWorkBranchTemplate.customTemplate": "feature/{{{prefix}}}{{{issueKey}}}-{{{summary}}}",
-    "editor.largeFileOptimizations": false,
-    "atlascode.jira.enabled": true,
-    "atlascode.jira.lastCreateSiteAndProject": {
-        "siteId": "f2ec5eb1-563c-4cb8-9ba5-738b74338469",
-        "projectKey": "LN"
-    },
-    "atlascode.jira.explorer.enabled": true,
-    "atlascode.jira.explorer.fetchAllQueryResults": true,
-    "atlascode.useNewAuth": false,
-    "atlascode.jira.explorer.nestSubtasks": false,
-    "githubPullRequests.pullBranch": "never",
-    "terraform.languageServer.enable": true
+    {
+      "id": "04ccc4da-045c-4018-9e44-05595874cd81",
+      "siteId": "f2ec5eb1-563c-4cb8-9ba5-738b74338469",
+      "name": "NFCKort - Launch",
+      "query": "project = TacCard AND resolution = Unresolved AND priority =Highest ORDER BY Rank ASC",
+      "enabled": true,
+      "monitor": true
+    }
+  ],
+  "github-enterprise.uri": "https://git.build.inter.ikea.com",
+  "markdown.preview.breaks": true,
+  "atlascode.jira.startWorkBranchTemplate.customTemplate": "feature/{{{prefix}}}{{{issueKey}}}-{{{summary}}}",
+  "editor.largeFileOptimizations": false,
+  "atlascode.jira.enabled": true,
+  "atlascode.jira.lastCreateSiteAndProject": {
+    "siteId": "f2ec5eb1-563c-4cb8-9ba5-738b74338469",
+    "projectKey": "LN"
+  },
+  "atlascode.jira.explorer.enabled": true,
+  "atlascode.jira.explorer.fetchAllQueryResults": true,
+  "atlascode.useNewAuth": false,
+  "atlascode.jira.explorer.nestSubtasks": false,
+  "githubPullRequests.pullBranch": "never",
+  "terraform.languageServer.enable": true
 }
