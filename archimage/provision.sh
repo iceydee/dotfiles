@@ -49,6 +49,7 @@ cat > "${PROVISION}" << EOF
 
   # Configure LIBVA_DRIVER
   echo "LIBVA_DRIVER_NAME=\"vdpau\"" >> /etc/environment
+  echo "VDPAU_DRIVER=\"nvidia\"" >> /etc/environment
 
   # Create initcpio image
   mkinitcpio -P
