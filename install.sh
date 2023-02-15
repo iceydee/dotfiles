@@ -66,10 +66,6 @@ if [ "${FIRST_RUN}" -eq 1 ]; then
   exit 0
 fi
 
-# TODO: Fix for arch
-# Install docker
-#./docker/install.sh
-
 # TODO: Switch to picomp?
 # Install Compton
 #./compton/install.sh
@@ -96,7 +92,7 @@ fi
 ./vscode/install.sh
 
 # Install aws
-#./aws/install.sh
+./aws/install.sh
 
 # Install rust
 ./rust/install.sh
