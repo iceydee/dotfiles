@@ -171,5 +171,6 @@
   "atlascode.useNewAuth": false,
   "atlascode.jira.explorer.nestSubtasks": false,
   "githubPullRequests.pullBranch": "never",
-  "terraform.languageServer.enable": true
+  "terraform.languageServer.enable": true,
+  "window.zoomLevel": 3
 }
