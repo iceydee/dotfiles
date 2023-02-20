@@ -50,7 +50,7 @@ font-2 = siji:pixelsize=16;0
 
 modules-left = bspwm
 modules-center = xwindow
-modules-right = volume xkeyboard memory cpu eth temperature date powermenu
+modules-right = mic-volume volume xkeyboard memory cpu eth temperature date powermenu
 
 ;tray-position = right
 ;tray-padding = 2
@@ -68,6 +68,16 @@ wm-restack = bspwm
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
 
+[module/mic-volume]
+type = custom/script
+interval = 1
+format = Mic: <label>
+exec = bash mic-volume.sh show-vol alsa_input.usb-Creative_Technology_Ltd_Sound_Blaster_Play__3_00204431-00.analog-stereo
+
+; Control actions (using pactl)
+click-left = bash mic-volume.sh mute-vol alsa_input.usb-Creative_Technology_Ltd_Sound_Blaster_Play__3_00204431-00.analog-stereo
+scroll-up = bash mic-volume.sh inc-vol alsa_input.usb-Creative_Technology_Ltd_Sound_Blaster_Play__3_00204431-00.analog-stereo
+scroll-down = bash mic-volume.sh dec-vol alsa_input.usb-Creative_Technology_Ltd_Sound_Blaster_Play__3_00204431-00.analog-stereo
 
 [module/xwindow]
 type = internal/xwindow
