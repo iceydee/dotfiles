@@ -94,7 +94,7 @@
   },
   "redhat.telemetry.enabled": false,
   "yaml.schemas": {
-    "file:///home/mio/.vscode-oss/extensions/atlassian.atlascode-3.0.2-universal/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    "file:///home/mio/.vscode/extensions/atlassian.atlascode-3.0.2/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
   },
   "atlascode.bitbucket.enabled": false,
   "jira-plugin.baseUrl": "https://jira.build.ingka.ikea.com",
