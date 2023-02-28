@@ -172,5 +172,8 @@
   "atlascode.jira.explorer.nestSubtasks": false,
   "githubPullRequests.pullBranch": "never",
   "terraform.languageServer.enable": true,
-  "window.zoomLevel": 3
+  "window.zoomLevel": 3,
+  "[python]": {
+    "editor.formatOnType": true
+  }
 }
