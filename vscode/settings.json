@@ -4,7 +4,10 @@
   "editor.tabSize": 2,
   "editor.fontSize": 16,
   "editor.fontFamily": "'Source Code Pro for Powerline', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-  "editor.rulers": [80, 120],
+  "editor.rulers": [
+    80,
+    120
+  ],
   "editor.wordWrapColumn": 140,
   "extensions.ignoreRecommendations": true,
   "editor.cursorBlinking": "phase",
@@ -16,9 +19,19 @@
   "files.insertFinalNewline": true,
   "c-cpp-flylint.flexelint.enable": false,
   "c-cpp-flylint.cppcheck.enable": true,
-  "c-cpp-flylint.standard": ["c11", "gnu11", "c++17"],
-  "c-cpp-flylint.clang.standard": ["c11", "gnu11", "c++17"],
-  "c-cpp-flylint.includePaths": ["${workspaceRoot}"],
+  "c-cpp-flylint.standard": [
+    "c11",
+    "gnu11",
+    "c++17"
+  ],
+  "c-cpp-flylint.clang.standard": [
+    "c11",
+    "gnu11",
+    "c++17"
+  ],
+  "c-cpp-flylint.includePaths": [
+    "${workspaceRoot}"
+  ],
   "c-cpp-flylint.run": "onType",
   "c-cpp-flylint.enable": false,
   "files.associations": {
@@ -71,7 +84,10 @@
     "enabled": false,
     "liveIndexing": false,
     "delay": 500,
-    "exclude": [".terraform/**/*", "**/.terraform/**/*"]
+    "exclude": [
+      ".terraform/**/*",
+      "**/.terraform/**/*"
+    ]
   },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
@@ -80,7 +96,9 @@
   "vetur.format.defaultFormatter.ts": "none",
   "vetur.format.defaultFormatter.js": "none",
   "vs-kubernetes": {
-    "vs-kubernetes.knownKubeconfigs": ["/home/mio/.kube/configs/hap/config"],
+    "vs-kubernetes.knownKubeconfigs": [
+      "/home/mio/.kube/configs/hap/config"
+    ],
     "vs-kubernetes.kubeconfig": "/home/mio/.kube/configs/hap/config"
   },
   "azure.resourceFilter": [
@@ -94,12 +112,20 @@
   },
   "redhat.telemetry.enabled": false,
   "yaml.schemas": {
-    "file:///home/mio/.vscode/extensions/atlassian.atlascode-3.0.2/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    "file:///home/mio/.vscode/extensions/atlassian.atlascode-3.0.3/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
   },
   "atlascode.bitbucket.enabled": false,
   "jira-plugin.baseUrl": "https://jira.build.ingka.ikea.com",
   "jira-plugin.username": "minil16",
   "atlascode.jira.jqlList": [
+    {
+      "id": "a7bc9c07-bd8f-447f-b2b5-08b5c37cfb88",
+      "siteId": "f2ec5eb1-563c-4cb8-9ba5-738b74338469",
+      "name": "AlkesAHTracker",
+      "query": "project = AlkesAHTracker AND resolution = Unresolved ORDER BY Rank ASC",
+      "enabled": true,
+      "monitor": true
+    },
     {
       "id": "41092af8-10e5-4e62-9335-ab6c0ad4eb1e",
       "enabled": true,
@@ -153,6 +179,12 @@
       "siteId": "f2ec5eb1-563c-4cb8-9ba5-738b74338469",
       "name": "NFCKort - Launch",
       "query": "project = TacCard AND resolution = Unresolved AND priority =Highest ORDER BY Rank ASC",
+      "enabled": true,
+      "monitor": true
+    },
+    {
+      "id": "e8ce616f-d4e4-4510-8122-af3b282ebbf8",
+      "query": "project = AlkesAHTracker AND resolution = Unresolved ORDER BY priority DESC",
       "enabled": true,
       "monitor": true
     }
