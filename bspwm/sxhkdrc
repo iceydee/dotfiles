@@ -135,7 +135,11 @@ super + f
   spacefm
 
 Print
-  scrot -q 100
+  scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures && mv $f ~/Pictures && xclip -selection clipboard -t image/png -i ~/Pictures/`ls -1 -t ~/Pictures | head -1`'
+
+shift + Print
+  scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures && mv $f ~/Pictures && xclip -selection clipboard -t image/png -i ~/Pictures/`ls -1 -t ~/Pictures | head -1`'
+
 
 #
 # Media keys
