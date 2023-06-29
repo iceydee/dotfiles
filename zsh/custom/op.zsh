@@ -9,18 +9,18 @@ function opf {
   local QUERY
   local TAGS
   local VAULT
-
+  
   if [ -z "${1}" ]; then
     echo "usage: ${0} [query] (tags) (vault)"
     return -1
   fi
-
+  
   ensureSignIn
-
+  
   QUERY="${1}"
   TAGS="${2}"
   VAULT="${3:-Personal}"
-
+  
   op item list --vault "${VAULT}" --tags "${TAGS}" --format=json | jq -r ".[] | select(.title | ascii_downcase | contains(\"${QUERY}\"))"
 }
 
@@ -32,5 +32,5 @@ function ops {
 function opc {
   ensureSignIn
   local ID=$(ops $@)
-  op item get "${ID}" --fields password | jq -r | pbcopy
+  op item get "${ID}" --fields password --format json | jq -r '.value' | pbcopy
 }
