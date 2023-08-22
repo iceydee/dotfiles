@@ -47,6 +47,10 @@ shift + alt + {Right,Down,Left,Up}
 ctrl + q
   bspc node -k
 
+# Close node
+ctrl + alt + q
+  bspc node -c
+
 # Balance tree
 alt + b
   bspc desktop -B
