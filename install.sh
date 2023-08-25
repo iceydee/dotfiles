@@ -76,8 +76,8 @@ fi
 # Install polybar
 ./polybar/install.sh
 
-# Install termite
-./termite/install.sh
+# Install alacritty
+./alacritty/install.sh
 
 # Install dmenu2
 ./dmenu2/install.sh

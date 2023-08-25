@@ -33,7 +33,7 @@ ctrl + super + alt + l
 
 # Focus termite
 ctrl + grave
-  focus termite ; bspc desktop -l next
+  focus Alacritty ; bspc desktop -l next
 
 # Cycle desktops
 alt + ctrl + {Right,Down,Left,Up}

@@ -3,15 +3,15 @@
 . ~/my/dotfiles/bspwm/startup_functions
 
 slowKill code
-slowKill termite
+slowKill alacritty
 
 setDesktop IV
 tmux new -s main -d
-launch "termite -e 'tmux a -t main'"
+launch alacritty
 lockNode
 bspc node -p north -o 0.65
 launch "code" 4
-focus termite
+focus Alacritty
 bspc node -p east -o 0.75
 # launch "google-chrome --app=https://plingot.atlassian.net/secure/BrowseProjects.jspa" 2
 launch "google-chrome --app='https://inter-ikea.atlassian.net/jira/software/c/projects/PNR/boards/292'" 2
