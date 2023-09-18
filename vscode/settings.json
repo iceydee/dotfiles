@@ -73,7 +73,7 @@
   "workbench.settings.editor": "json",
   "C_Cpp.default.cppStandard": "c++11",
   "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "cmake.configureOnOpen": true,
   "cmake.generator": "Ninja",
@@ -112,7 +112,7 @@
   },
   "redhat.telemetry.enabled": false,
   "yaml.schemas": {
-    "file:///home/mio/.vscode/extensions/atlassian.atlascode-3.0.4/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    "file:///home/mio/.vscode/extensions/atlassian.atlascode-3.0.6/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
   },
   "atlascode.bitbucket.enabled": false,
   "jira-plugin.baseUrl": "https://jira.build.ingka.ikea.com",
