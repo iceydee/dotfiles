@@ -207,5 +207,8 @@
   "window.zoomLevel": 2,
   "[python]": {
     "editor.formatOnType": true
+  },
+  "[helm]": {
+    "editor.formatOnSave": false
   }
 }
