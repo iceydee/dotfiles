@@ -67,8 +67,21 @@ if [ -z "$(which terraform11x | grep -v "not found")" ]; then
   sudo mv terraform /usr/local/bin/terraform11x
 fi
 
+# Terraform 1.6.x
+if [ -z "$(which terraform16x | grep -v "not found")" ]; then
+  if [ "$(uname -s)" = "Linux" ]; then
+    curl -o terraform.zip https://releases.hashicorp.com/terraform/1.6.1/terraform_1.6.1_linux_amd64.zip
+    elif [ "$(uname -s)" = "Darwin" ]; then
+    curl -o terraform.zip https://releases.hashicorp.com/terraform/1.6.1/terraform_1.6.1_darwin_amd64.zip
+  fi
+  
+  unzip terraform.zip
+  rm -f terraform.zip
+  sudo mv terraform /usr/local/bin/terraform16x
+fi
+
 sudo rm -f /usr/local/bin/terraform
-sudo ln -sf /usr/local/bin/terraform11x /usr/local/bin/terraform
+sudo ln -sf /usr/local/bin/terraform16x /usr/local/bin/terraform
 
 # AWS cli
 if [ -z "$(which aws | grep -v "not found")" ]; then
