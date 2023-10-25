@@ -7,6 +7,16 @@ echo
 echo -n "Hostname: "
 read -r NEWHOSTNAME
 
+CUR_ROOT_DISK=$(cat /etc/mtab | grep -E "^[^\ ]+ / " | awk '{print $1}')
+echo -n "Root disk (${CUR_ROOT_DISK}): "
+read -r ROOT_DISK
+ROOT_DISK=${ROOT_DISK:-${CUR_ROOT_DISK}}
+
+CUR_FS_TYPE=$(cat /etc/mtab | grep "${ROOT_DISK}" | head -n1 | awk '{print $3}')
+echo -n "FS type (${CUR_FS_TYPE}): "
+read -r FS_TYPE
+FS_TYPE=${FS_TYPE:-${CUR_FS_TYPE}}
+
 PROVISION=$(mktemp)
 cat > "${PROVISION}" << EOF
   #!/bin/bash
@@ -98,7 +108,10 @@ unset USERPASS
 sudo mv "${PROVISION}" /mnt/arch/provision.sh
 sudo mv "${USERSCRIPT}" /mnt/arch/userscript.sh
 sudo cp ./archimage/packages /mnt/arch/packages
-sudo cp ./archimage/premount_hook /mnt/arch/usr/lib/initcpio/hooks/premount
+HOOKFILE=$(mktemp)
+cat ./archimage/premount_hook | sed 's/${FS_TYPE}/'${FS_TYPE}'/g' | sed 's|${ROOT_DISK}|'${ROOT_DISK}'|g' > "${HOOKFILE}"
+sudo cp "${HOOKFILE}" /mnt/arch/usr/lib/initcpio/hooks/premount
+rm -f "${HOOKFILE}"
 sudo cp ./archimage/premount_install /mnt/arch/usr/lib/initcpio/install/premount
 sudo cp ./archimage/mkinitcpio.conf /mnt/arch/etc/mkinitcpio.conf
 sudo mkdir -p /mnt/arch/etc/pacman.d/hooks

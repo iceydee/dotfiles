@@ -7,7 +7,7 @@ run_hook() {
 loopback_mount_handler() {
 	# Mount the exfat Partition
 	mkdir /host
-	mount -t exfat /dev/sda2 /host
+	mount -t ${FS_TYPE} ${ROOT_DISK} /host
 
 	ROOTIMG=/host/Arch/arch2.img
 	LOOPDEV=$(losetup -f)
