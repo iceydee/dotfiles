@@ -4,10 +4,7 @@
   "editor.tabSize": 2,
   "editor.fontSize": 16,
   "editor.fontFamily": "'Source Code Pro for Powerline', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-  "editor.rulers": [
-    80,
-    120
-  ],
+  "editor.rulers": [80, 120],
   "editor.wordWrapColumn": 140,
   "extensions.ignoreRecommendations": true,
   "editor.cursorBlinking": "phase",
@@ -19,19 +16,9 @@
   "files.insertFinalNewline": true,
   "c-cpp-flylint.flexelint.enable": false,
   "c-cpp-flylint.cppcheck.enable": true,
-  "c-cpp-flylint.standard": [
-    "c11",
-    "gnu11",
-    "c++17"
-  ],
-  "c-cpp-flylint.clang.standard": [
-    "c11",
-    "gnu11",
-    "c++17"
-  ],
-  "c-cpp-flylint.includePaths": [
-    "${workspaceRoot}"
-  ],
+  "c-cpp-flylint.standard": ["c11", "gnu11", "c++17"],
+  "c-cpp-flylint.clang.standard": ["c11", "gnu11", "c++17"],
+  "c-cpp-flylint.includePaths": ["${workspaceRoot}"],
   "c-cpp-flylint.run": "onType",
   "c-cpp-flylint.enable": false,
   "files.associations": {
@@ -84,10 +71,7 @@
     "enabled": false,
     "liveIndexing": false,
     "delay": 500,
-    "exclude": [
-      ".terraform/**/*",
-      "**/.terraform/**/*"
-    ]
+    "exclude": [".terraform/**/*", "**/.terraform/**/*"]
   },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
@@ -96,9 +80,7 @@
   "vetur.format.defaultFormatter.ts": "none",
   "vetur.format.defaultFormatter.js": "none",
   "vs-kubernetes": {
-    "vs-kubernetes.knownKubeconfigs": [
-      "/home/mio/.kube/configs/hap/config"
-    ],
+    "vs-kubernetes.knownKubeconfigs": ["/home/mio/.kube/configs/hap/config"],
     "vs-kubernetes.kubeconfig": "/home/mio/.kube/configs/hap/config"
   },
   "azure.resourceFilter": [
@@ -112,7 +94,7 @@
   },
   "redhat.telemetry.enabled": false,
   "yaml.schemas": {
-    "file:///home/mio/.vscode/extensions/atlassian.atlascode-3.0.6/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    "file:///home/mio/.vscode/extensions/atlassian.atlascode-3.0.7/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
   },
   "atlascode.bitbucket.enabled": false,
   "jira-plugin.baseUrl": "https://jira.build.ingka.ikea.com",
