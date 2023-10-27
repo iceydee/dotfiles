@@ -9,7 +9,7 @@ super + space
 
 # Launcher
 super + Tab
-  launcher
+  rofi -show combi
 
 # Reload startup screen
 super + alt + r

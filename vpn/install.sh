@@ -1,6 +1,6 @@
 #!/bin/bash
 
-yay -S strongswan xl2tpd bind
+yay -S strongswan networkmanager-l2tp xl2tpd bind
 
 sudo ln -sf $(pwd)/vpn/vpn-start /usr/local/bin/vpn-start
 sudo ln -sf $(pwd)/vpn/vpn-stop /usr/local/bin/vpn-stop

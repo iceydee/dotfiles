@@ -21,8 +21,8 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config click_to_focus       any
 
-if [ -n "$(cat ~/.compton-config | grep "yes")" ]; then
-  compton --config "${HOME}/.config/compton/compton.conf" -b
+if [ -n "$(cat ~/.picom-config | grep "yes")" ]; then
+  picom --config "${HOME}/.config/picom/picom.conf" -b
 fi
 feh --bg-tile ~/Pictures/Wallpapers/surreal_underwater.jpg
 numlockx on &

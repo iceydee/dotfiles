@@ -9,16 +9,16 @@ if [ ! -f "${HOME}/.compton-config" ]; then
   
   echo "Which config?"
   echo
-  echo "1) Compton (screen bling - requires GPU)"
-  echo "2) Non-compton (for VMs etc, where GPU is missing)"
+  echo "1) Picom (screen bling - requires GPU)"
+  echo "2) No-compositor (for VMs etc, where GPU is missing)"
   echo
   echo -n "? "
   read A
   
   if [ "${A}" -eq "2" ]; then
-    echo "no" > ~/.compton-config
+    echo "no" > ~/.picom-config
   else
-    echo "yes" > ~/.compton-config
+    echo "yes" > ~/.picom-config
   fi
 fi
 
@@ -66,9 +66,8 @@ if [ "${FIRST_RUN}" -eq 1 ]; then
   exit 0
 fi
 
-# TODO: Switch to picomp?
-# Install Compton
-#./compton/install.sh
+# Install Picom
+./picom/install.sh
 
 # Install bspwm
 ./bspwm/install.sh
@@ -79,8 +78,8 @@ fi
 # Install alacritty
 ./alacritty/install.sh
 
-# Install dmenu2
-./dmenu2/install.sh
+# Install Rofi
+./rofi/install.sh
 
 # Install hub command
 ./github/install.sh

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Needs jq
+yay -S jq
+
 # Setup bspwm
 mkdir -p ~/.config/bspwm
 mkdir -p ~/.config/sxhkd

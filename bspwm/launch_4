@@ -2,9 +2,6 @@
 
 . ~/my/dotfiles/bspwm/startup_functions
 
-ALACRITTY=0
-which alacritty && ALACRITTY=1
-
 slowKill code
 if [ "${ALACRITTY}" -eq 1 ]; then
   slowKill alacritty
@@ -14,11 +11,7 @@ fi
 
 setDesktop IV
 tmux new -s main -d
-if [ "${ALACRITTY}" -eq 1 ]; then
-  launch alacritty
-else
-  launch "termite -e 'tmux a -t main'"
-fi
+launch alacritty
 lockNode
 bspc node -p north -o 0.65
 launch "code" 4
