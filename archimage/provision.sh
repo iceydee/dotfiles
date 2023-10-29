@@ -17,6 +17,11 @@ echo -n "FS type (${CUR_FS_TYPE}): "
 read -r FS_TYPE
 FS_TYPE=${FS_TYPE:-${CUR_FS_TYPE}}
 
+CUR_ARCH_IMG="/Arch/arch2.img"
+echo -n "Arch image (${CUR_ARCH_IMG}): "
+read -r ARCH_IMG
+ARCH_IMG=${ARCH_IMG:-${CUR_ARCH_IMG}}
+
 PROVISION=$(mktemp)
 cat > "${PROVISION}" << EOF
   #!/bin/bash
@@ -55,7 +60,7 @@ cat > "${PROVISION}" << EOF
   systemctl enable gdm
 
   # Mount bigdrive
-  echo "/dev/sda2 /mnt/bigdrive auto nosuid,nodev,nofail,x-gvfs-show,uid=1000,gid=1000 0 0" > /etc/fstab
+  #echo "/dev/sda2 /mnt/bigdrive auto nosuid,nodev,nofail,x-gvfs-show,uid=1000,gid=1000 0 0" > /etc/fstab
 
   # Configure LIBVA_DRIVER
   echo "LIBVA_DRIVER_NAME=\"vdpau\"" >> /etc/environment
@@ -109,7 +114,10 @@ sudo mv "${PROVISION}" /mnt/arch/provision.sh
 sudo mv "${USERSCRIPT}" /mnt/arch/userscript.sh
 sudo cp ./archimage/packages /mnt/arch/packages
 HOOKFILE=$(mktemp)
-cat ./archimage/premount_hook | sed 's/${FS_TYPE}/'${FS_TYPE}'/g' | sed 's|${ROOT_DISK}|'${ROOT_DISK}'|g' > "${HOOKFILE}"
+cat ./archimage/premount_hook | \
+  sed 's/${FS_TYPE}/'${FS_TYPE}'/g' | \
+  sed 's|${ROOT_DISK}|'${ROOT_DISK}'|g' | \
+  sed 's|${ARCH_IMG}|'${ARCH_IMG}'|g' > "${HOOKFILE}"
 sudo cp "${HOOKFILE}" /mnt/arch/usr/lib/initcpio/hooks/premount
 rm -f "${HOOKFILE}"
 sudo cp ./archimage/premount_install /mnt/arch/usr/lib/initcpio/install/premount
