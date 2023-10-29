@@ -4,7 +4,7 @@
 
 FIRST_RUN=0
 
-if [ ! -f "${HOME}/.compton-config" ]; then
+if [ ! -f "${HOME}/.picom-config" ]; then
   FIRST_RUN=1
   
   echo "Which config?"
