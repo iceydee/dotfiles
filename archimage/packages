@@ -1,6 +1,7 @@
 arch-install-scripts
 base
 base-devel
+broadcom-wl
 bspwm
 btrfs-progs
 chromium
