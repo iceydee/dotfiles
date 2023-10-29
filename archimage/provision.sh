@@ -58,6 +58,7 @@ cat > "${PROVISION}" << EOF
   # Enable dhcpcd service
   systemctl enable dhcpcd
   systemctl enable gdm
+  systemctl enable NetworkManager
 
   # Mount bigdrive
   #echo "/dev/sda2 /mnt/bigdrive auto nosuid,nodev,nofail,x-gvfs-show,uid=1000,gid=1000 0 0" > /etc/fstab

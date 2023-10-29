@@ -16,6 +16,7 @@ gnome
 grub
 grub-btrfs
 kubectl
+libbpf
 libc++
 libmpdclient
 libva-utils
@@ -28,6 +29,7 @@ man-db
 man-pages
 mkinitcpio
 net-tools
+networkmanager
 numlockx
 nvidia
 nvidia-settings
