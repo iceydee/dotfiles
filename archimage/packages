@@ -24,11 +24,13 @@ libva-utils
 libva-vdpau-driver
 linux
 linux-firmware
+linux-headers
 lld
 lldb
 man-db
 man-pages
 mkinitcpio
+mtools
 net-tools
 networkmanager
 numlockx
@@ -36,6 +38,7 @@ nvidia
 nvidia-settings
 nvidia-utils
 openssh
+os-prober
 pavucontrol
 polybar
 python
