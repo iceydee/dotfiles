@@ -16,6 +16,7 @@ git
 gnome
 grub
 grub-btrfs
+grub-customizer
 kubectl
 libbpf
 libc++
