@@ -26,7 +26,7 @@ if [ -f "${IMGFILE}" ]; then
 fi
 
 echo -n "Creating img file: "
-"${FALLOC}" -l "${SIZE}" "${IMGFILE}"
+"${FALLOC}" -l "${SIZE}" "${IMGFILE}" 2>/dev/null || rm -f "${IMGFILE}"; "${FALLOC}" -xl "${SIZE}" "${IMGFILE}"
 echo "finished."
 
 echo "Formatting with EXT4"
