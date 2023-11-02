@@ -10,6 +10,7 @@ clang
 cmake
 dhcpcd
 docker
+docker-buildx
 docker-compose
 dust
 efibootmgr
