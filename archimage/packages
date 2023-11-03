@@ -38,6 +38,7 @@ mkinitcpio
 mtools
 net-tools
 networkmanager
+ninja
 numlockx
 nvidia
 nvidia-settings
