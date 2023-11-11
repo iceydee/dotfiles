@@ -30,7 +30,6 @@ janisdd.vscode-edit-csv
 jbenden.c-cpp-flylint
 joeandaverde.sqitch-plan
 karunamurti.haml
-Kasik96.swift
 kube.clangcomplete
 MariusAlchimavicius.json-to-ts
 michelemelluso.code-beautifier
@@ -72,6 +71,7 @@ Shopify.ruby-lsp
 SimonSiefke.svg-preview
 sveggiani.vscode-field-lights
 sysoev.language-stylus
+tamasfe.even-better-toml
 teabyii.ayu
 timonwong.shellcheck
 twxs.cmake
