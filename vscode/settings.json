@@ -96,94 +96,11 @@
   "yaml.schemas": {
     "file:///home/mio/.vscode/extensions/atlassian.atlascode-3.0.7/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
   },
-  "atlascode.bitbucket.enabled": false,
-  "jira-plugin.baseUrl": "https://jira.build.ingka.ikea.com",
-  "jira-plugin.username": "minil16",
-  "atlascode.jira.jqlList": [
-    {
-      "id": "a7bc9c07-bd8f-447f-b2b5-08b5c37cfb88",
-      "siteId": "f2ec5eb1-563c-4cb8-9ba5-738b74338469",
-      "name": "AlkesAHTracker",
-      "query": "project = AlkesAHTracker AND resolution = Unresolved ORDER BY Rank ASC",
-      "enabled": true,
-      "monitor": true
-    },
-    {
-      "id": "41092af8-10e5-4e62-9335-ab6c0ad4eb1e",
-      "enabled": true,
-      "name": "PNR",
-      "query": "project = PNR AND assignee = currentUser() AND (status = \"To Do\" OR status = \"In Progress\") ORDER BY Rank ASC",
-      "siteId": "a39a254c-2749-4e0e-b2c6-36d293603bd7",
-      "monitor": true
-    },
-    {
-      "id": "8ef9c1bf-7ace-43e4-b222-afb5e22c431c",
-      "siteId": "72da1962-1e4c-42e6-9440-22a5d0592e55",
-      "name": "London Dynamics",
-      "query": "project = \"London Dynamics\" AND assignee = currentUser() AND (status = \"To Do\" OR status = \"In Progress\") ORDER BY rank ASC",
-      "enabled": true,
-      "monitor": true
-    },
-    {
-      "id": "5d15363d-948b-4b3e-85c6-15a9f656d077",
-      "enabled": true,
-      "name": "My plingot Issues",
-      "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
-      "siteId": "f2ec5eb1-563c-4cb8-9ba5-738b74338469",
-      "monitor": true
-    },
-    {
-      "id": "3b02d524-5c1b-482a-a0f2-3bae8441128c",
-      "siteId": "7c8c6956-d7df-4946-b41c-316d4e42d25e",
-      "name": "DoIT - Assigned to me",
-      "query": "project = \"DevOps - 3D\" AND assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
-      "enabled": true,
-      "monitor": true
-    },
-    {
-      "id": "1af462a7-d12a-43f1-90cb-f0441f3ea157",
-      "siteId": "7c8c6956-d7df-4946-b41c-316d4e42d25e",
-      "name": "IDLab",
-      "query": "project = \"Digital Lab Projects\" AND assignee = currentUser() AND resolution = Unresolved ORDER BY Rank ASC",
-      "enabled": true,
-      "monitor": true
-    },
-    {
-      "id": "ba63c7e6-ed9d-4529-b7f6-ac4183316ddf",
-      "siteId": "f2ec5eb1-563c-4cb8-9ba5-738b74338469",
-      "name": "NFCKort",
-      "query": "project = TacCard AND resolution = Unresolved ORDER BY lastViewed DESC",
-      "enabled": true,
-      "monitor": true
-    },
-    {
-      "id": "04ccc4da-045c-4018-9e44-05595874cd81",
-      "siteId": "f2ec5eb1-563c-4cb8-9ba5-738b74338469",
-      "name": "NFCKort - Launch",
-      "query": "project = TacCard AND resolution = Unresolved AND priority =Highest ORDER BY Rank ASC",
-      "enabled": true,
-      "monitor": true
-    },
-    {
-      "id": "e8ce616f-d4e4-4510-8122-af3b282ebbf8",
-      "query": "project = AlkesAHTracker AND resolution = Unresolved ORDER BY priority DESC",
-      "enabled": true,
-      "monitor": true
-    }
-  ],
+  "jira-plugin.baseUrl": "https://plingot.atlassian.net",
+  "jira-plugin.username": "mio@plingot.com",
   "github-enterprise.uri": "https://git.build.inter.ikea.com",
   "markdown.preview.breaks": true,
-  "atlascode.jira.startWorkBranchTemplate.customTemplate": "feature/{{{prefix}}}{{{issueKey}}}-{{{summary}}}",
   "editor.largeFileOptimizations": false,
-  "atlascode.jira.enabled": true,
-  "atlascode.jira.lastCreateSiteAndProject": {
-    "siteId": "f2ec5eb1-563c-4cb8-9ba5-738b74338469",
-    "projectKey": "LN"
-  },
-  "atlascode.jira.explorer.enabled": true,
-  "atlascode.jira.explorer.fetchAllQueryResults": true,
-  "atlascode.useNewAuth": false,
-  "atlascode.jira.explorer.nestSubtasks": false,
   "githubPullRequests.pullBranch": "never",
   "terraform.languageServer.enable": true,
   "window.zoomLevel": 2,
@@ -192,5 +109,6 @@
   },
   "[helm]": {
     "editor.formatOnSave": false
-  }
+  },
+  "C_Cpp.intelliSenseEngine": "disabled"
 }
