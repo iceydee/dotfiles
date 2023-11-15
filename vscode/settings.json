@@ -101,7 +101,6 @@
   "editor.largeFileOptimizations": false,
   "githubPullRequests.pullBranch": "never",
   "terraform.languageServer.enable": true,
-  "window.zoomLevel": 2,
   "[python]": {
     "editor.formatOnType": true
   },
@@ -110,5 +109,6 @@
   },
   "C_Cpp.intelliSenseEngine": "disabled",
   "jira-plugin.baseUrl": "https://plingot.atlassian.net",
-  "jira-plugin.username": "mio@plingot.com"
+  "jira-plugin.username": "mio@plingot.com",
+  "window.zoomLevel": 2
 }
