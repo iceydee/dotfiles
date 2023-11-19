@@ -387,16 +387,12 @@ bind -n M-o \
     set prefix2 None \;\
     set key-table off \;\
     set-option status off
-#    set status-left "" \;\
-#    set status-right "🔒"
 
 # Disable OFF mode
 bind -T off M-O \
     set -u prefix2 \;\
     set -u key-table \;\
     set-option status on
-#    set -u status-left \;\
-#    set -u status-right
 
 
 # -- tpm -----------------------------------------------------------------------
