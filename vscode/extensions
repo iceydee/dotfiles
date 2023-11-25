@@ -15,6 +15,7 @@ eamodio.gitlens
 EditorConfig.EditorConfig
 erd0s.terraform-autocomplete
 esbenp.prettier-vscode
+fredwangwang.vscode-hcl-format
 gioboa.jira-plugin
 GitHub.vscode-pull-request-github
 Gruntfuggly.todo-tree
@@ -26,6 +27,7 @@ lijiang314.code2snippet
 llvm-vs-code-extensions.vscode-clangd
 MariusAlchimavicius.json-to-ts
 michelemelluso.code-beautifier
+mindaro-dev.file-downloader
 mitaki28.vscode-clang
 mjmcloug.vscode-elixir
 ms-azuretools.vscode-docker
