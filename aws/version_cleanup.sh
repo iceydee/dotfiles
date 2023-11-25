@@ -1,11 +1,11 @@
 #!/bin/bash
 
 TERRAFORM="v1.6.1"
-AWS_VAULT="v6.6.0"
-AWS_IAM_AUTHENTICATOR="v0.5.0"
-KOPS="1.28.0"
-HELM="v3.8.0"
-SOPS="3.7.1"
+AWS_VAULT="v7.2.0"
+AWS_IAM_AUTHENTICATOR="0.6.11"
+KOPS="1.28.1"
+HELM="v3.13.2"
+SOPS="3.8.1"
 
 function checkInstalled {
   local CMD
