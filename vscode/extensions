@@ -18,6 +18,7 @@ esbenp.prettier-vscode
 gioboa.jira-plugin
 GitHub.vscode-pull-request-github
 Gruntfuggly.todo-tree
+hashicorp.hcl
 hashicorp.terraform
 janisdd.vscode-edit-csv
 jbenden.c-cpp-flylint
@@ -61,7 +62,6 @@ shanoor.vscode-nginx
 SimonSiefke.svg-preview
 sveggiani.vscode-field-lights
 sysoev.language-stylus
-szTheory.vscode-packer-powertools
 tamasfe.even-better-toml
 timonwong.shellcheck
 twxs.cmake
