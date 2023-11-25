@@ -3,6 +3,7 @@
 ./aws/version_cleanup.sh
 
 ./aws/terraform.sh
+./aws/packer.sh
 ./aws/aws.sh
 ./aws/aws-vault.sh
 ./aws/iam-authenticator.sh
