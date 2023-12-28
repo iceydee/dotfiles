@@ -74,7 +74,7 @@
     "exclude": [".terraform/**/*", "**/.terraform/**/*"]
   },
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "[vue]": {},
   "vetur.format.defaultFormatter.ts": "none",
@@ -110,5 +110,6 @@
   "C_Cpp.intelliSenseEngine": "disabled",
   "jira-plugin.baseUrl": "https://plingot.atlassian.net",
   "jira-plugin.username": "mio@plingot.com",
-  "window.zoomLevel": 2
+  "window.zoomLevel": 2,
+  "git.openRepositoryInParentFolders": "never"
 }
