@@ -1,0 +1,48 @@
+live_config_reload = true
+
+[colors.primary]
+background = "#2e3440"
+foreground = "#d8dee9"
+
+[cursor.style]
+blinking = "Always"
+shape = "Block"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+builtin_box_drawing = true
+size = 16.0
+
+[font.bold]
+family = "Source Code Pro"
+style = "Bold"
+
+[font.bold_italic]
+family = "Source Code Pro"
+style = "Bold Italic"
+
+[font.italic]
+family = "Source Code Pro"
+style = "Italic"
+
+[font.normal]
+family = "Source Code Pro"
+style = "Regular"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[shell]
+args = ["-l", "-c", "tmux a -t main || tmux new -s main"]
+program = "/bin/zsh"
+
+[window]
+dynamic_padding = true
+dynamic_title = true
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"

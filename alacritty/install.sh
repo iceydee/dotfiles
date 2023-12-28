@@ -3,4 +3,4 @@
 yay -S alacritty
 
 mkdir -p ~/.config/alacritty
-ln -sf ~/my/dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+ln -sf ~/my/dotfiles/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
