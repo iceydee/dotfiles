@@ -7,4 +7,4 @@ pkill slack
 slowKill slack
 
 setDesktop I
-launch slack 15
+launch slack 5

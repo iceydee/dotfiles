@@ -14,7 +14,7 @@ tmux new -s main -d
 launch alacritty
 lockNode
 bspc node -p north -o 0.65
-launch "code" 4
+launch "code" 2
 focus Alacritty
 bspc node -p east -o 0.75
 # launch "google-chrome --app=https://plingot.atlassian.net/secure/BrowseProjects.jspa" 2
