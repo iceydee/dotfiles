@@ -12,6 +12,7 @@ fi
 
 mkdir -p "${CODE_PATH}"
 ln -sf ~/my/dotfiles/vscode/settings.json "${CODE_PATH}"/settings.json
+ln -sf ~/my/dotfiles/vscode/keybindings.json "${CODE_PATH}"/keybindings.json
 
 CODE=$(which code)
 if [ -n "${CODE}" ]; then
