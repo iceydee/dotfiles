@@ -34,3 +34,10 @@ function opc {
   local ID=$(ops $@)
   op item get "${ID}" --fields password --format json | jq -r '.value' | pbcopy
 }
+
+function tot {
+  ensureSignIn
+  local ID=$(ops $@)
+  op item get "${ID}" --format json | jq -r '.fields[].totp' | grep -v 'null'
+  op item get "${ID}" --fields password --format json | jq -r '.value' | pbcopy
+}
