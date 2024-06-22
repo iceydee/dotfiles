@@ -134,5 +134,7 @@
   "cmake.pinnedCommands": [
     "workbench.action.tasks.configureTaskRunner",
     "workbench.action.tasks.runTask"
-  ]
+  ],
+  "dart.flutterSdkPath": "/home/mio/src/flutter",
+  "cmake.showOptionsMovedNotification": false
 }

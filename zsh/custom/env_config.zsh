@@ -9,7 +9,7 @@ export NODE_ENV=development
 export ANDROID_HOME=${HOME}/Android/Sdk
 export _JAVA_AWT_WM_NONREPARENTING=1
 export JAVA_HOME=/usr/lib/jvm/default-java/jre
-export PATH=$PATH:${JAVA_HOME}/bin:${HOME}/.local/bin:${HOME}/android-studio/bin:${ANDROID_HOME}/platform-tools
+export PATH=$PATH:${JAVA_HOME}/bin:${HOME}/.local/bin:${HOME}/android-studio/bin:${ANDROID_HOME}/platform-tools:${HOME}/src/flutter/bin
 
 export AWS_VAULT_BACKEND=file
 
