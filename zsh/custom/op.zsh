@@ -41,3 +41,19 @@ function tot {
   op item get "${ID}" --format json | jq -r '.fields[].totp' | grep -v 'null'
   op item get "${ID}" --fields password --format json | jq -r '.value' | pbcopy
 }
+
+function laws {
+  local PROF="${1}"
+
+  case "${PROF}" in
+    "ld")
+      tot london aws-vault
+      ;;
+
+    *)
+      tot "${PROF}" aws-vault
+      ;;
+  esac
+
+  aws-vault exec -d 8h "${PROF}"
+}
