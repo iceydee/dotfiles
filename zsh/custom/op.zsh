@@ -42,7 +42,7 @@ function tot {
   op item get "${ID}" --fields password --format json | jq -r '.value' | pbcopy
 }
 
-function laws {
+function totp {
   local PROF="${1}"
 
   case "${PROF}" in
@@ -54,6 +54,18 @@ function laws {
       tot "${PROF}" aws-vault
       ;;
   esac
+}
 
-  aws-vault exec -d 8h "${PROF}"
+function laws2 {
+  aws-vault exec -d 8h $1
+}
+
+function laws {
+  totp $1
+  laws2 $1
+}
+
+function waws {
+  totp $1
+  aws-vault login $1
 }
