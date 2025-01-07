@@ -1,4 +1,3 @@
-live_config_reload = true
 
 [colors.primary]
 background = "#2e3440"
@@ -35,7 +34,7 @@ style = "Regular"
 history = 10000
 multiplier = 3
 
-[shell]
+[terminal.shell]
 args = ["-l", "-c", "tmux a -t main || tmux new -s main"]
 program = "/bin/zsh"
 
@@ -46,3 +45,8 @@ dynamic_title = true
 [window.class]
 general = "Alacritty"
 instance = "Alacritty"
+
+[general]
+live_config_reload = true
+
+[terminal]
