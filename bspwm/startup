@@ -27,8 +27,8 @@ fi
 . ~/my/dotfiles/bspwm/launch_2
 . ~/my/dotfiles/bspwm/launch_3
 . ~/my/dotfiles/bspwm/launch_4
-. ~/my/dotfiles/bspwm/launch_5
-. ~/my/dotfiles/bspwm/launch_6
+# . ~/my/dotfiles/bspwm/launch_5
+# . ~/my/dotfiles/bspwm/launch_6
 
 setDesktop III
 setDesktop IV
