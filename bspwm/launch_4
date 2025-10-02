@@ -18,6 +18,6 @@ launch "cursor" 2
 focus Alacritty
 bspc node -p east -o 0.75
 # launch "google-chrome --app=https://plingot.atlassian.net/secure/BrowseProjects.jspa" 2
-launch "google-chrome --app='https://inter-ikea.atlassian.net/jira/software/c/projects/PNR/boards/292'" 2
+launch "google-chrome --app='https://inter-ikea.atlassian.net/jira/software/c/projects/PNRV2/boards/13206'" 2
 lockNode
 focus cursor
