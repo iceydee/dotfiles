@@ -11,3 +11,7 @@ mfa_serial=arn:aws:iam::568259318738:mfa/mio@plingot.com
 
 [profile spf]
 region=eu-west-1
+
+[profile ld-root]
+
+[profile ld-su]
