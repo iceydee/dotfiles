@@ -55,8 +55,6 @@ cat > "${PROVISION}" << EOF
   echo "${USER}:${USERPASS}" | chpasswd
   echo "${USER} ALL=(ALL:ALL) ALL" > /etc/sudoers.d/"${USER}"
 
-  # Enable dhcpcd service
-  systemctl enable dhcpcd
   systemctl enable gdm
   systemctl enable NetworkManager
 

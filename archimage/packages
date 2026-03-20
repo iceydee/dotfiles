@@ -8,7 +8,6 @@ btrfs-progs
 chromium
 clang
 cmake
-dhcpcd
 docker
 docker-buildx
 docker-compose
