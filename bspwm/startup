@@ -8,6 +8,15 @@ fi
 # Setup tmux for bg processes
 tmux new -s bgprocs -d
 
+# Cleanup second-brain session
+if [ -n "$(tmux ls | cut -d":" -f1 | grep "second-brain")" ]; then
+  tmux kill-session -t second-brain
+fi
+
+# Setup second brain bot
+tmux new -s second-brain -d
+tmux send-keys -t second-brain "cd /home/mio/src/aerunit/second-brain && .venv/bin/python .claude/chat/server.py" C-m
+
 . ~/my/dotfiles/bspwm/startup_functions
 
 slowKill polybar
