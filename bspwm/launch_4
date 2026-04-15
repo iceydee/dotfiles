@@ -3,7 +3,7 @@
 . ~/my/dotfiles/bspwm/startup_functions
 
 slowKill cursor
-if [ "${ALACRITTY}" -eq 1 ]; then
+if [ "${ALACRITTY:-0}" -eq 1 ]; then
   slowKill alacritty
 else
   slowKill termite

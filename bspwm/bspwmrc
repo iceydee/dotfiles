@@ -1,8 +1,13 @@
 #! /bin/sh
 
-xrandr --output DP-0 --mode 2560x1440 --rate 144.00
-xrandr --output DP-2 --mode 2560x1440 --rate 144.00
-xrandr --output DP-4 --mode 2560x1440 --rate 144.00
+# GDM/logind marks this X11+bspwm session as Type=wayland; Chromium/Electron then
+# pick Ozone/Wayland and exit (no compositor socket). Force the real stack.
+export XDG_SESSION_TYPE=x11
+unset WAYLAND_DISPLAY
+
+# Connected outputs (DP-0 is unused on this machine); explicit layout avoids boot errors.
+xrandr --output DP-4 --mode 2560x1440 --rate 144.00 --pos 0x0
+xrandr --output DP-2 --mode 2560x1440 --rate 144.00 --pos 2560x0
 
 sxhkd &
 
