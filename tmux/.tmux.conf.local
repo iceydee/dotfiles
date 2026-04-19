@@ -394,6 +394,8 @@ bind -T off M-O \
     set -u key-table \;\
     set-option status on
 
+set -g set-clipboard on
+set -g allow-passthrough on
 
 # -- tpm -----------------------------------------------------------------------
 
