@@ -41,6 +41,7 @@ program = "/bin/zsh"
 [window]
 dynamic_padding = true
 dynamic_title = true
+option_as_alt = "Both"
 
 [window.class]
 general = "Alacritty"
