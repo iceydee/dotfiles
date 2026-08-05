@@ -63,6 +63,3 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/mio/gcloud/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/mio/gcloud/google-cloud-sdk/completion.zsh.inc'; fi

@@ -9,6 +9,10 @@ mfa_serial=arn:aws:iam::660004461829:mfa/mio@plingot.com
 region=eu-west-1
 mfa_serial=arn:aws:iam::568259318738:mfa/mio@plingot.com
 
+[profile aerdrim]
+region=eu-central-1
+mfa_serial=arn:aws:iam::574818947189:mfa/1password
+
 [profile spf]
 region=eu-west-1
 

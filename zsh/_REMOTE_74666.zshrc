@@ -55,14 +55,9 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # tabtab source for electron-forge package
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
-[[ -f /Users/mio/src/personas/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /Users/mio/src/personas/node_modules/tabtab/.completions/electron-forge.zsheval "$(rbenv init - zsh)"
-
-# bun completions
-[ -s "/Users/mio/.bun/_bun" ] && source "/Users/mio/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+[[ -f /Users/mio/src/personas/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /Users/mio/src/personas/node_modules/tabtab/.completions/electron-forge.zsh
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/mio/gcloud/google-cloud-sdk/path.zsh.inc' ]; then . '/home/mio/gcloud/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/mio/gcloud/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/mio/gcloud/google-cloud-sdk/completion.zsh.inc'; fi

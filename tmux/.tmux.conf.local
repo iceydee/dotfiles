@@ -395,7 +395,15 @@ bind -T off M-O \
     set-option status on
 
 set -g set-clipboard on
-set -g allow-passthrough on
+
+# tmux 3.7 draws command prompts as partial overlays on the status bar unless
+# fill is set; restore full-line replacement (pre-3.7 behavior).
+set -g message-style "fg=#080808,bg=#ffff00,bold,fill=#ffff00" #!important
+set -g message-command-style "fg=#ffff00,bg=#080808,bold,fill=#080808" #!important
+
+# OSC52 clipboard from apps inside tmux (nvim, etc.) needs passthrough in many setups.
+# The tmux 3.7 prompt-on-status-bar fix is handled via message-style fill below, not here.
+set -g allow-passthrough on #!important
 
 # -- tpm -----------------------------------------------------------------------
 
