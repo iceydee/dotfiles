@@ -252,9 +252,10 @@ tmux_conf_theme_right_separator_sub='\uE0B3'  #   PowerlineSymbols.otf font, see
 #     - #{username}
 #     - #{username_ssh}
 tmux_conf_theme_status_left=" ❐ #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} "
-# Aerunit staging dynos (~/src/aerunit/staging.sh) draws its own chevron, so it
-# lives inside the first section and renders nothing where the script is absent.
-tmux_conf_theme_status_right="#(s=~/src/aerunit/staging.sh; [ -x \"\$s\" ] && \"\$s\" tmux) #{prefix}#{mouse}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | #{username}#{root} | #{hostname} "
+# Aerunit staging dynos (~/src/aerunit/staging.sh) draws its own chevrons, so it
+# sits at the end of the first section, next to the time, and renders nothing
+# where the script is absent.
+tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},}#(s=~/src/aerunit/staging.sh; [ -x \"\$s\" ] && \"\$s\" tmux), %R , %d %b | #{username}#{root} | #{hostname} "
 
 # status left style
 tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_6,$tmux_conf_theme_colour_7,$tmux_conf_theme_colour_8"
