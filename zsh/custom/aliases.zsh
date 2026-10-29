@@ -61,3 +61,21 @@ function vt {
   git log --oneline ${PREVIOUS_TAG}..HEAD
   git log --oneline ${PREVIOUS_TAG}..HEAD | cut -d" " -f2- | pbcopy
 }
+
+# Pick a remote branch with gum, switch to it, then pull it up to date.
+# Replaces oh-my-zsh git plugin's `gsw='git switch'` alias.
+unalias gsw 2>/dev/null
+function gsw {
+  git rev-parse --git-dir >/dev/null 2>&1 || { echo "gsw: not a git repository" >&2; return 1; }
+
+  # Fetch first so branches pushed since the last fetch show up in the list
+  gum spin --show-error --title "Fetching origin…" -- git fetch --prune origin || return
+
+  local branch
+  branch=$(git branch -r --list 'origin/*' --format='%(refname:lstrip=3)' \
+    | grep -vx HEAD \
+    | gum filter --placeholder "Switch to branch…" --value "$*") || return
+  [ -n "$branch" ] || return
+
+  git switch "$branch" && git pull --ff-only
+}
