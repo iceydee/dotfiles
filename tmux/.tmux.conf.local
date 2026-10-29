@@ -397,6 +397,9 @@ bind -T off M-O \
     set -u key-table \;\
     set-option status on
 
+# Toggle sending keystrokes to all panes in the window
+bind S setw synchronize-panes \; display "sync #{?synchronize-panes,ON,OFF}"
+
 set -g set-clipboard on
 
 # tmux 3.7 draws command prompts as partial overlays on the status bar unless
