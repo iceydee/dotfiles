@@ -1,0 +1,83 @@
+[global]
+    # Placement
+    monitor = 0
+    follow = mouse
+    origin = top-right
+    offset = (20, 20)
+    width = (320, 400)
+    height = (0, 300)
+    notification_limit = 5
+    gap_size = 10
+
+    # Look
+    corner_radius = 14
+    frame_width = 2
+    frame_color = "#45475a"
+    separator_height = 0
+    padding = 16
+    horizontal_padding = 18
+    text_icon_padding = 16
+    transparency = 0
+    progress_bar = true
+    progress_bar_height = 8
+    progress_bar_frame_width = 0
+    progress_bar_corner_radius = 4
+    progress_bar_min_width = 150
+    indicate_hidden = yes
+
+    # Text
+    font = Inter 11
+    markup = full
+    format = "<b>%s</b>\n%b"
+    alignment = left
+    vertical_alignment = center
+    show_age_threshold = 60
+    ellipsize = end
+    word_wrap = yes
+    hyphenation = yes
+
+    # Icons
+    icon_position = left
+    min_icon_size = 40
+    max_icon_size = 56
+    icon_corner_radius = 8
+    enable_recursive_icon_lookup = true
+    icon_theme = "Papirus-Dark, Adwaita"
+
+    # Behaviour
+    sticky_history = yes
+    history_length = 30
+    dmenu = /usr/bin/rofi -dmenu -p dunst
+    browser = /usr/bin/xdg-open
+    mouse_left_click = close_current
+    mouse_middle_click = do_action, close_current
+    mouse_right_click = close_all
+    stack_duplicates = true
+    hide_duplicate_count = false
+
+[urgency_low]
+    background = "#1e1e2eee"
+    foreground = "#a6adc8"
+    frame_color = "#45475a"
+    timeout = 5
+
+[urgency_normal]
+    background = "#1e1e2eee"
+    foreground = "#cdd6f4"
+    frame_color = "#89b4fa"
+    timeout = 8
+
+[urgency_critical]
+    background = "#1e1e2eee"
+    foreground = "#cdd6f4"
+    frame_color = "#f38ba8"
+    timeout = 0
+
+# Volume/brightness style notifications: show the bar, keep them short
+[osd]
+    appname = "osd"
+    set_stack_tag = "osd"
+    timeout = 2
+
+[stack-by-tag]
+    stack_tag = "*"

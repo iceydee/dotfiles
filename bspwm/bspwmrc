@@ -32,6 +32,10 @@ fi
 feh --bg-tile ~/Pictures/Wallpapers/surreal_underwater.jpg
 numlockx on &
 
+# Notification daemon (restart on reload so config changes apply)
+pkill -x dunst
+dunst &
+
 # Fix sceen blanking issue
 xset dpms 0 0 0 -dpms
 xset s 0 0

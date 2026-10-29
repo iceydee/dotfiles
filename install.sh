@@ -81,6 +81,9 @@ fi
 # Install Rofi
 ./rofi/install.sh
 
+# Install dunst
+./dunst/install.sh
+
 # Install hub command
 ./github/install.sh
 

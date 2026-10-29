@@ -13,6 +13,7 @@ compdef _dgo dgo
 
 
 gprune() {
+  local LOCAL REMOTE
   LOCAL=$(mktemp)
   REMOTE=$(mktemp)
   git fetch -p
